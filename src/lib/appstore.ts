@@ -1,0 +1,142 @@
+import "server-only";
+
+export type AppInfo = {
+  id: string;
+  name: string;
+  seller: string;
+  rating: number;
+  ratingCount: number;
+  price: string;
+  genre: string;
+  icon: string;
+  url: string;
+  description: string;
+};
+
+export type Review = {
+  id: string;
+  appId: string;
+  author: string;
+  rating: number;
+  title: string;
+  content: string;
+  version: string;
+  date: string;
+  votes: number;
+};
+
+const label = (v: unknown): string =>
+  v && typeof v === "object" && "label" in v ? String((v as { label: unknown }).label ?? "") : "";
+
+/** App StoreのURLから国コードとアプリIDを取り出す */
+export function parseAppStoreUrl(raw: string): { appId: string; country: string } | null {
+  let url: URL;
+  try {
+    url = new URL(raw.trim());
+  } catch {
+    return null;
+  }
+  if (!/(^|\.)apps?\.apple\.com$|(^|\.)itunes\.apple\.com$/.test(url.hostname)) return null;
+  const appId = url.pathname.match(/id(\d{5,})/)?.[1];
+  if (!appId) return null;
+  const country = url.pathname.match(/^\/([a-z]{2})\//i)?.[1]?.toLowerCase() ?? "us";
+  return { appId, country };
+}
+
+type ItunesResult = {
+  trackId: number;
+  trackName: string;
+  sellerName: string;
+  averageUserRating?: number;
+  userRatingCount?: number;
+  formattedPrice?: string;
+  primaryGenreName?: string;
+  artworkUrl100?: string;
+  trackViewUrl: string;
+  description?: string;
+};
+
+function toAppInfo(r: ItunesResult): AppInfo {
+  return {
+    id: String(r.trackId),
+    name: r.trackName,
+    seller: r.sellerName,
+    rating: Math.round((r.averageUserRating ?? 0) * 10) / 10,
+    ratingCount: r.userRatingCount ?? 0,
+    price: r.formattedPrice ?? "",
+    genre: r.primaryGenreName ?? "",
+    icon: r.artworkUrl100 ?? "",
+    url: r.trackViewUrl.replace(/\?.*$/, ""),
+    description: (r.description ?? "").slice(0, 600),
+  };
+}
+
+export async function searchApps(term: string, country: string, limit = 15): Promise<AppInfo[]> {
+  const url = new URL("https://itunes.apple.com/search");
+  url.searchParams.set("term", term);
+  url.searchParams.set("entity", "software");
+  url.searchParams.set("country", country);
+  url.searchParams.set("limit", String(limit));
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`App Store検索に失敗しました (${res.status})`);
+  const data = (await res.json()) as { results: ItunesResult[] };
+  return data.results.map(toAppInfo);
+}
+
+export async function lookupApp(appId: string, country: string): Promise<AppInfo | null> {
+  const res = await fetch(`https://itunes.apple.com/lookup?id=${appId}&country=${country}`, { cache: "no-store" });
+  if (!res.ok) return null;
+  const data = (await res.json()) as { results: ItunesResult[] };
+  return data.results[0] ? toAppInfo(data.results[0]) : null;
+}
+
+/**
+ * 公開RSSから最新レビューを取得する（Appleの仕様で国ごと最大10ページ×50件）
+ */
+export async function fetchReviews(appId: string, country: string, maxPages = 10): Promise<Review[]> {
+  const reviews: Review[] = [];
+  for (let page = 1; page <= maxPages; page++) {
+    const res = await fetch(
+      `https://itunes.apple.com/${country}/rss/customerreviews/page=${page}/id=${appId}/sortby=mostrecent/json`,
+      { cache: "no-store" },
+    );
+    if (!res.ok) break;
+    let entries: unknown;
+    try {
+      entries = ((await res.json()) as { feed?: { entry?: unknown } }).feed?.entry;
+    } catch {
+      break;
+    }
+    if (!entries) break;
+    const list = (Array.isArray(entries) ? entries : [entries]) as Record<string, unknown>[];
+    for (const e of list) {
+      if (!e["im:rating"]) continue; // 古いフィードでは先頭がアプリ情報
+      reviews.push({
+        id: label(e.id),
+        appId,
+        author: label((e.author as Record<string, unknown>)?.name),
+        rating: Number(label(e["im:rating"])),
+        title: label(e.title),
+        content: label(e.content),
+        version: label(e["im:version"]),
+        date: label(e.updated),
+        votes: Number(label(e["im:voteCount"]) || 0),
+      });
+    }
+    if (list.length < 50) break;
+  }
+  return reviews;
+}
+
+export function reviewsToCsv(app: AppInfo | null, reviews: Review[]): string {
+  const esc = (v: string | number) => {
+    const s = String(v);
+    return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+  };
+  const header = ["app_name", "review_id", "date", "rating", "title", "review", "author", "app_version", "helpful_votes"];
+  const rows = reviews.map((r) =>
+    [app?.name ?? r.appId, r.id, r.date, r.rating, r.title, r.content, r.author, r.version, r.votes].map(esc).join(","),
+  );
+  // ExcelでのUTF-8文字化け対策にBOMを付ける
+  return "﻿" + [header.join(","), ...rows].join("\r\n");
+}

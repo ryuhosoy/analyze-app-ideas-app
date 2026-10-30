@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐷 OinkCheck
 
-## Getting Started
+アプリを作る**前に**、そのアイデアを検証するWebアプリ。
+メインキャラクターの探偵ブタ「ブーちゃん」が、競合アプリのApp Storeレビューを読み込んでレポートにまとめます。
 
-First, run the development server:
+## 機能
+
+- **競合分析レポート（$5.99 / 1クレジット）** — アイデアを1文で入力 → Claudeが検索キーワードを考える → App Storeで競合を探して上位5件を選ぶ → 各アプリの最新レビュー（1アプリ最大500件）を取得 → テーマ別に分析
+  - 結論スコア（GO / MAYBE / RISKY）、ユーザーが好きな点、避けるべき点、課金ポイント、要望の多い機能、参入チャンス、MVPの提案
+  - 失敗したらクレジットを自動で返す
+- **レビュースプレッドシート（$0.99）** — App StoreのURLとメールアドレスを入力 → 最新レビューをCSV（Excelで文字化けしないBOM付き）でメール送信。ログイン不要
+- **マジックリンク認証**（パスワードなし。リンクは15分有効・1回だけ使える）
+- **クレジット購入**（Stripe Checkout。1〜20個まとめ買い、サブスクなし）
+- **サンプルレポート4件**（架空データ）、レポート一覧、サポートフォーム（240文字まで）、プライバシーポリシー、利用規約
+
+## セットアップ
 
 ```bash
+cp .env.example .env.local   # ANTHROPIC_API_KEY を設定
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Node.js 22.5以上が必要です（DBにNode内蔵の `node:sqlite` を使っています）。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 開発モード
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `STRIPE_SECRET_KEY` が未設定 → 決済をスキップして、クレジットやスプレッドシートをすぐ付与
+- `SMTP_HOST` が未設定 → ログインリンクやメール本文をサーバーのコンソールに出力
 
-## Learn More
+### 本番
 
-To learn more about Next.js, take a look at the following resources:
+- Stripe Webhook: `POST /api/stripe/webhook`（`checkout.session.completed`）。決済後のリダイレクトでも反映するので、Webhookが遅れても二重付与にはなりません
+- レポート生成はサーバープロセス内のバックグラウンドで動くため、`next start` などの常駐Nodeサーバーで動かしてください（サーバーレスでは途中で止まります）
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 構成
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| パス | 内容 |
+| --- | --- |
+| `src/lib/analyze.ts` | レポート生成パイプライン（Claude `claude-opus-5-5`、構造化出力） |
+| `src/lib/appstore.ts` | iTunes Search API / レビューRSS / CSV生成 |
+| `src/lib/auth.ts` | マジックリンクとセッション |
+| `src/lib/payments.ts` | Stripe Checkout と、二重付与しない付与処理 |
+| `src/components/Pig.tsx` | ブーちゃん（SVG、表情4種＋虫めがね） |
