@@ -1,6 +1,6 @@
 type Mood = "happy" | "thinking" | "sleepy" | "wow";
 
-/** OinkCheckのメインキャラクター「ブーちゃん」 */
+/** BooScout のメインキャラクター「ブーちゃん」 */
 export function Pig({
   size = 120,
   mood = "happy",

@@ -1,4 +1,4 @@
-export const APP_NAME = "OinkCheck";
+export const APP_NAME = "BooScout";
 export const MASCOT_NAME = "ブーちゃん";
 export const REPORT_PRICE_CENTS = 599;
 export const SPREADSHEET_PRICE_CENTS = 99;

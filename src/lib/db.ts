@@ -3,12 +3,17 @@ import { DatabaseSync } from "node:sqlite";
 import fs from "node:fs";
 import path from "node:path";
 
-const DB_PATH = process.env.DATABASE_PATH ?? path.join(process.cwd(), "data", "oinkcheck.db");
+const DATA_DIR = path.join(process.cwd(), "data");
+const DB_PATH = process.env.DATABASE_PATH ?? path.join(DATA_DIR, "booscout.db");
+const LEGACY_DB_PATH = path.join(DATA_DIR, "oinkcheck.db");
 
-const globalForDb = globalThis as unknown as { __oinkDb?: DatabaseSync };
+const globalForDb = globalThis as unknown as { __booscoutDb?: DatabaseSync };
 
 function open(): DatabaseSync {
   fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
+  if (!fs.existsSync(DB_PATH) && fs.existsSync(LEGACY_DB_PATH)) {
+    fs.copyFileSync(LEGACY_DB_PATH, DB_PATH);
+  }
   const db = new DatabaseSync(DB_PATH, { timeout: 5000 });
   db.exec(`
     PRAGMA journal_mode = WAL;
@@ -82,8 +87,8 @@ function open(): DatabaseSync {
 // 初回アクセス時に開く（ビルド時の並列ワーカーでロック競合しないように）
 export const db = {
   prepare(sql: string) {
-    globalForDb.__oinkDb ??= open();
-    return globalForDb.__oinkDb.prepare(sql);
+    globalForDb.__booscoutDb ??= open();
+    return globalForDb.__booscoutDb.prepare(sql);
   },
 };
 

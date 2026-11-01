@@ -1,7 +1,7 @@
 import "server-only";
 import Stripe from "stripe";
 import { db } from "./db";
-import { appUrl, REPORT_PRICE_CENTS, SPREADSHEET_PRICE_CENTS } from "./config";
+import { APP_NAME, appUrl, REPORT_PRICE_CENTS, SPREADSHEET_PRICE_CENTS } from "./config";
 import { fulfillReviewOrder } from "./review-orders";
 
 let stripe: Stripe | null = null;
@@ -20,7 +20,7 @@ export async function createCreditsCheckout(userId: string, email: string, quant
         price_data: {
           currency: "usd",
           unit_amount: REPORT_PRICE_CENTS,
-          product_data: { name: "OinkCheck レポートクレジット", description: "1クレジット = 競合分析レポート1件" },
+          product_data: { name: `${APP_NAME} レポートクレジット`, description: "1クレジット = 競合分析レポート1件" },
         },
       },
     ],

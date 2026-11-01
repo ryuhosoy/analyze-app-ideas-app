@@ -5,7 +5,7 @@ import { db, id } from "./db";
 import { sendEmail } from "./email";
 import { APP_NAME, appUrl } from "./config";
 
-const SESSION_COOKIE = "oink_session";
+const SESSION_COOKIE = "booscout_session";
 const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 const LOGIN_TOKEN_TTL_MS = 15 * 60 * 1000;
 
