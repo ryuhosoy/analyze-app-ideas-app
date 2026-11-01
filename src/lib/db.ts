@@ -4,17 +4,19 @@ import fs from "node:fs";
 import path from "node:path";
 
 const DATA_DIR = path.join(process.cwd(), "data");
-const DB_PATH = process.env.DATABASE_PATH ?? path.join(DATA_DIR, "booscout.db");
-const LEGACY_DB_PATH = path.join(DATA_DIR, "oinkcheck.db");
 
 const globalForDb = globalThis as unknown as { __booscoutDb?: DatabaseSync };
 
+function resolveDbPath(): string {
+  const configured = process.env.DATABASE_PATH?.trim();
+  if (configured) return configured;
+  return path.join(DATA_DIR, "booscout.db");
+}
+
 function open(): DatabaseSync {
-  fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
-  if (!fs.existsSync(DB_PATH) && fs.existsSync(LEGACY_DB_PATH)) {
-    fs.copyFileSync(LEGACY_DB_PATH, DB_PATH);
-  }
-  const db = new DatabaseSync(DB_PATH, { timeout: 5000 });
+  const dbPath = resolveDbPath();
+  fs.mkdirSync(path.dirname(dbPath), { recursive: true });
+  const db = new DatabaseSync(dbPath, { timeout: 5000 });
   db.exec(`
     PRAGMA journal_mode = WAL;
     PRAGMA foreign_keys = ON;

@@ -21,7 +21,7 @@ npm install
 npm run dev
 ```
 
-Node.js 22.5以上が必要です（DBにNode内蔵の `node:sqlite` を使っています）。
+Node.js 22.5以上が必要です（DBにNode内蔵の `node:sqlite` を使っています。ローカルは `./data/booscout.db`）。
 
 ### 開発モード
 
@@ -41,4 +41,5 @@ Node.js 22.5以上が必要です（DBにNode内蔵の `node:sqlite` を使っ�
 | `src/lib/appstore.ts` | iTunes Search API / レビューRSS / CSV生成 |
 | `src/lib/auth.ts` | マジックリンクとセッション |
 | `src/lib/payments.ts` | Stripe Checkout と、二重付与しない付与処理 |
+| `src/lib/db.ts` | SQLite（`booscout.db`） |
 | `src/components/Pig.tsx` | ブーちゃん（SVG、表情4種＋虫めがね） |
