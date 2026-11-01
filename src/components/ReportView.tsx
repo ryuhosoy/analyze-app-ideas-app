@@ -2,6 +2,26 @@ import type { CompetitorSummary, ReportResult } from "@/lib/report-schema";
 import { Pig } from "./Pig";
 
 type Insight = ReportResult["whatUsersLove"][number];
+type LegacyQuote = string | { appId: string; text: string };
+
+function normalizeQuote(q: LegacyQuote): { appId?: string; text: string } {
+  return typeof q === "string" ? { text: q } : q;
+}
+
+function QuoteAttribution({ app }: { app?: CompetitorSummary }) {
+  if (!app) return null;
+  return (
+    <div className="mb-1 flex items-center gap-2 not-italic">
+      {app.icon ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={app.icon} alt="" className="h-6 w-6 shrink-0 rounded-md" />
+      ) : (
+        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-oink-100 text-xs">📱</span>
+      )}
+      <span className="truncate text-xs font-bold text-ink/70">{app.name}</span>
+    </div>
+  );
+}
 
 const VERDICT_STYLE = {
   GO: { text: "作ってOK！", color: "bg-emerald-100 text-emerald-700 border-emerald-300", mood: "wow" as const },
@@ -9,7 +29,15 @@ const VERDICT_STYLE = {
   RISKY: { text: "慎重に", color: "bg-rose-100 text-rose-700 border-rose-300", mood: "sleepy" as const },
 };
 
-function InsightList({ items, tone }: { items: Insight[]; tone: "good" | "bad" | "neutral" }) {
+function InsightList({
+  items,
+  tone,
+  competitorsById,
+}: {
+  items: Insight[];
+  tone: "good" | "bad" | "neutral";
+  competitorsById: Map<string, CompetitorSummary>;
+}) {
   const dot = tone === "good" ? "bg-emerald-400" : tone === "bad" ? "bg-rose-400" : "bg-oink-400";
   return (
     <ul className="space-y-4">
@@ -26,12 +54,17 @@ function InsightList({ items, tone }: { items: Insight[]; tone: "good" | "bad" |
           </div>
           <p className="mt-1.5 text-sm leading-relaxed text-ink/80">{it.detail}</p>
           {it.quotes.length > 0 && (
-            <div className="mt-2 space-y-1.5">
-              {it.quotes.slice(0, 3).map((q, qi) => (
-                <blockquote key={qi} className="border-l-4 border-oink-200 pl-3 text-sm italic text-ink/60">
-                  “{q}”
-                </blockquote>
-              ))}
+            <div className="mt-2 space-y-2">
+              {it.quotes.slice(0, 3).map((raw, qi) => {
+                const q = normalizeQuote(raw as LegacyQuote);
+                const app = q.appId ? competitorsById.get(q.appId) : undefined;
+                return (
+                  <blockquote key={qi} className="rounded-xl border border-oink-100 bg-white/80 px-3 py-2 text-sm text-ink/60">
+                    <QuoteAttribution app={app} />
+                    <p className="italic">“{q.text}”</p>
+                  </blockquote>
+                );
+              })}
             </div>
           )}
         </li>
@@ -65,6 +98,7 @@ export function ReportView({
 }) {
   const v = VERDICT_STYLE[result.verdict.label];
   const notes = new Map(result.competitorNotes.map((n) => [n.appId, n]));
+  const competitorsById = new Map(competitors.map((c) => [c.id, c]));
 
   return (
     <div className="space-y-6">
@@ -138,16 +172,16 @@ export function ReportView({
 
       <div className="grid gap-6 lg:grid-cols-2">
         <Section emoji="💖" title="ユーザーが気に入っている点">
-          <InsightList items={result.whatUsersLove} tone="good" />
+          <InsightList items={result.whatUsersLove} tone="good" competitorsById={competitorsById} />
         </Section>
         <Section emoji="⚠️" title="避けるべき点">
-          <InsightList items={result.whatToAvoid} tone="bad" />
+          <InsightList items={result.whatToAvoid} tone="bad" competitorsById={competitorsById} />
         </Section>
       </div>
 
       <Section emoji="🐷💰" title="お金を払ってくれるポイント">
         <p className="mb-4 leading-relaxed">{result.willingnessToPay.summary}</p>
-        <InsightList items={result.willingnessToPay.signals} tone="neutral" />
+        <InsightList items={result.willingnessToPay.signals} tone="neutral" competitorsById={competitorsById} />
         <div className="mt-4 rounded-2xl border-2 border-dashed border-oink-300 bg-white p-4">
           <p className="text-sm font-bold text-oink-600">💡 おすすめの価格戦略</p>
           <p className="mt-1">{result.willingnessToPay.suggestedPricing}</p>
@@ -155,7 +189,7 @@ export function ReportView({
       </Section>
 
       <Section emoji="🙋" title="要望の多い機能">
-        <InsightList items={result.featureRequests} tone="neutral" />
+        <InsightList items={result.featureRequests} tone="neutral" competitorsById={competitorsById} />
       </Section>
 
       <Section emoji="🌱" title="参入チャンス">

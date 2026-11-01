@@ -1,10 +1,15 @@
 import { z } from "zod";
 
+const InsightQuote = z.object({
+  appId: z.string().describe("引用元アプリの id（入力 corpus の app id）"),
+  text: z.string().describe("レビューからの短い原文引用（原文のまま）"),
+});
+
 const Insight = z.object({
   title: z.string().describe("短い見出し"),
   detail: z.string().describe("2〜3文の説明"),
   mentions: z.number().int().describe("このテーマに該当するおおよそのレビュー数"),
-  quotes: z.array(z.string()).describe("レビューからの短い原文引用（最大3件、原文のまま）"),
+  quotes: z.array(InsightQuote).describe("レビューからの短い原文引用（最大3件、各引用に必ず appId を付ける）"),
 });
 
 export const ReportSchema = z.object({

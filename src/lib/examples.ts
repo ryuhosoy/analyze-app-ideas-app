@@ -23,7 +23,13 @@ const comp = (id: string, name: string, rating: number, ratingCount: number, pri
   reviewsAnalyzed,
 });
 
-const i = (title: string, detail: string, mentions: number, quotes: string[]) => ({ title, detail, mentions, quotes });
+const q = (appId: string, text: string) => ({ appId, text });
+const i = (title: string, detail: string, mentions: number, quotes: { appId: string; text: string }[]) => ({
+  title,
+  detail,
+  mentions,
+  quotes,
+});
 
 // ※ すべて架空のアプリ・架空のレビューによるサンプルです
 export const EXAMPLES: ExampleReport[] = [
@@ -51,27 +57,33 @@ export const EXAMPLES: ExampleReport[] = [
       marketOverview:
         "上位4アプリはいずれもストリーク（連続記録）を中心に設計されています。評価は高いものの、最近のレビューでは値上げや無料機能の削減への不満が増えています。",
       whatUsersLove: [
-        i("ワンタップの手軽さ", "開いてすぐ記録できるシンプルさが最も評価されています。", 310, ["Takes literally two seconds a day.", "So simple, that's why I keep using it."]),
-        i("ストリークのモチベーション", "連続日数が伸びることが継続の動機になっています。", 245, ["My 200 day streak keeps me going!"]),
-        i("ウィジェット", "ホーム画面から記録できることが習慣化を助けています。", 132, ["The widget is the best part."]),
+        i("ワンタップの手軽さ", "開いてすぐ記録できるシンプルさが最も評価されています。", 310, [
+          q("ex1", "Takes literally two seconds a day."),
+          q("ex2", "So simple, that's why I keep using it."),
+        ]),
+        i("ストリークのモチベーション", "連続日数が伸びることが継続の動機になっています。", 245, [q("ex2", "My 200 day streak keeps me going!")]),
+        i("ウィジェット", "ホーム画面から記録できることが習慣化を助けています。", 132, [q("ex1", "The widget is the best part.")]),
       ],
       whatToAvoid: [
-        i("強引なサブスク誘導", "起動直後のペイウォールや、無料機能の後からの有料化に強い反発があります。", 288, ["Paywall before I could even try it.", "They moved basic features behind a subscription."]),
-        i("ストリークが切れた時の挫折", "1日忘れただけでゼロになり、やめてしまうユーザーが多数います。", 176, ["Missed one day and lost 90 days. Deleted."]),
-        i("同期・データ消失", "機種変更やアップデートで記録が消えた報告があります。", 94, ["Lost all my data after the update."]),
+        i("強引なサブスク誘導", "起動直後のペイウォールや、無料機能の後からの有料化に強い反発があります。", 288, [
+          q("ex1", "Paywall before I could even try it."),
+          q("ex2", "They moved basic features behind a subscription."),
+        ]),
+        i("ストリークが切れた時の挫折", "1日忘れただけでゼロになり、やめてしまうユーザーが多数います。", 176, [q("ex2", "Missed one day and lost 90 days. Deleted.")]),
+        i("同期・データ消失", "機種変更やアップデートで記録が消えた報告があります。", 94, [q("ex3", "Lost all my data after the update.")]),
       ],
       willingnessToPay: {
         summary: "買い切りや手頃な年額には好意的ですが、月額の高価格プランには否定的です。",
         signals: [
-          i("買い切りを支持", "「一度払えば使い続けられる」形式を求める声が多いです。", 120, ["I'd happily pay $10 once."]),
-          i("年額なら許容", "年額$10〜20程度なら払うという声があります。", 64, ["$15 a year is fair for this."]),
+          i("買い切りを支持", "「一度払えば使い続けられる」形式を求める声が多いです。", 120, [q("ex3", "I'd happily pay $10 once.")]),
+          i("年額なら許容", "年額$10〜20程度なら払うという声があります。", 64, [q("ex1", "$15 a year is fair for this.")]),
         ],
         suggestedPricing: "基本機能は無料、テーマや統計を$9.99の買い切り（または年額$14.99）で提供。",
       },
       featureRequests: [
-        i("お休み日（ストリーク保護）", "体調不良や旅行の日にストリークを守る機能。", 141, ["Please add skip days!"]),
-        i("柔軟なスケジュール", "週3回など、毎日ではない習慣への対応。", 88, ["Not every habit is daily."]),
-        i("Apple Watch対応", "腕から記録したいという要望。", 57, ["Need a watch app."]),
+        i("お休み日（ストリーク保護）", "体調不良や旅行の日にストリークを守る機能。", 141, [q("ex2", "Please add skip days!")]),
+        i("柔軟なスケジュール", "週3回など、毎日ではない習慣への対応。", 88, [q("ex4", "Not every habit is daily.")]),
+        i("Apple Watch対応", "腕から記録したいという要望。", 57, [q("ex1", "Need a watch app.")]),
       ],
       opportunities: [
         { title: "挫折しないストリーク設計", detail: "途切れても励ましてくれるキャラクターと「お休み券」で、離脱の最大要因を解消できます。" },
@@ -111,22 +123,22 @@ export const EXAMPLES: ExampleReport[] = [
       },
       marketOverview: "上位アプリは銀行連携や資産管理まで機能を広げており、シンプルさを求める層との乖離が見られます。",
       whatUsersLove: [
-        i("グラフで支出が見える", "カテゴリ別の円グラフが分かりやすいと好評です。", 260, ["The charts finally made me understand my spending."]),
-        i("入力の速さ", "よく使う項目のテンプレートが評価されています。", 180, ["Logging takes seconds."]),
+        i("グラフで支出が見える", "カテゴリ別の円グラフが分かりやすいと好評です。", 260, [q("ex1", "The charts finally made me understand my spending.")]),
+        i("入力の速さ", "よく使う項目のテンプレートが評価されています。", 180, [q("ex5", "Logging takes seconds.")]),
       ],
       whatToAvoid: [
-        i("OCRの誤認識", "金額や店名の読み取りミスで結局手入力になるという不満。", 340, ["Scanner gets the total wrong half the time."]),
-        i("機能が多すぎる", "アップデートで画面が複雑になったという声。", 150, ["Too cluttered now."]),
-        i("広告が多い", "入力ごとの全画面広告への強い不満。", 132, ["Ad after every entry, no thanks."]),
+        i("OCRの誤認識", "金額や店名の読み取りミスで結局手入力になるという不満。", 340, [q("ex2", "Scanner gets the total wrong half the time.")]),
+        i("機能が多すぎる", "アップデートで画面が複雑になったという声。", 150, [q("ex1", "Too cluttered now.")]),
+        i("広告が多い", "入力ごとの全画面広告への強い不満。", 132, [q("ex3", "Ad after every entry, no thanks.")]),
       ],
       willingnessToPay: {
         summary: "広告削除とOCR無制限には課金意欲がありますが、月額は敬遠されがちです。",
-        signals: [i("広告削除に課金", "広告を消すためなら数ドル払うという声。", 98, ["I'd pay just to remove ads."])],
+        signals: [i("広告削除に課金", "広告を消すためなら数ドル払うという声。", 98, [q("ex3", "I'd pay just to remove ads.")])],
         suggestedPricing: "広告なし・OCR月30回まで無料、無制限を$2.99/月 または $19.99/年。",
       },
       featureRequests: [
-        i("修正しやすいOCR", "読み取り結果をすぐ直せるUI。", 110, ["Let me fix the scan quickly."]),
-        i("CSV書き出し", "データを持ち出したいという要望。", 64, ["Need CSV export."]),
+        i("修正しやすいOCR", "読み取り結果をすぐ直せるUI。", 110, [q("ex2", "Let me fix the scan quickly.")]),
+        i("CSV書き出し", "データを持ち出したいという要望。", 64, [q("ex4", "Need CSV export.")]),
       ],
       opportunities: [
         { title: "一人暮らし特化", detail: "家族共有などを省き、自炊・外食・固定費に絞ったUIで差別化。" },
@@ -164,21 +176,21 @@ export const EXAMPLES: ExampleReport[] = [
       },
       marketOverview: "植物判定と水やり通知を組み合わせたアプリが中心。季節や室内環境を考慮したアドバイスは手薄です。",
       whatUsersLove: [
-        i("植物が元気になった", "通知のおかげで枯らさなくなったという声が多数。", 290, ["My plants have never been healthier."]),
-        i("判定の楽しさ", "写真を撮って名前がわかる体験自体が好評です。", 150, ["So fun to identify plants on walks."]),
+        i("植物が元気になった", "通知のおかげで枯らさなくなったという声が多数。", 290, [q("ex2", "My plants have never been healthier.")]),
+        i("判定の楽しさ", "写真を撮って名前がわかる体験自体が好評です。", 150, [q("ex3", "So fun to identify plants on walks.")]),
       ],
       whatToAvoid: [
-        i("通知が環境に合わない", "季節や室内環境を考慮せず、水のやりすぎになるという指摘。", 170, ["Told me to water every 3 days in winter. Root rot."]),
-        i("高額なサブスク", "年額$30以上のプランへの不満。", 210, ["$40 a year for reminders? No."]),
+        i("通知が環境に合わない", "季節や室内環境を考慮せず、水のやりすぎになるという指摘。", 170, [q("ex2", "Told me to water every 3 days in winter. Root rot.")]),
+        i("高額なサブスク", "年額$30以上のプランへの不満。", 210, [q("ex1", "$40 a year for reminders? No.")]),
       ],
       willingnessToPay: {
         summary: "診断機能には払う価値を感じていますが、通知だけには払いたくないという傾向です。",
-        signals: [i("病気の診断に価値", "葉の病気を診断できるなら払うという声。", 76, ["Diagnosis feature is worth paying for."])],
+        signals: [i("病気の診断に価値", "葉の病気を診断できるなら払うという声。", 76, [q("ex1", "Diagnosis feature is worth paying for.")])],
         suggestedPricing: "通知は無料、病気診断を月5回まで無料・無制限を年額$14.99。",
       },
       featureRequests: [
-        i("季節に合わせた調整", "冬は通知頻度を自動で減らしてほしい。", 92, ["Adjust for seasons please."]),
-        i("家族と共有", "同居人と水やり担当を分けたい。", 48, ["Let my partner see the schedule."]),
+        i("季節に合わせた調整", "冬は通知頻度を自動で減らしてほしい。", 92, [q("ex2", "Adjust for seasons please.")]),
+        i("家族と共有", "同居人と水やり担当を分けたい。", 48, [q("ex1", "Let my partner see the schedule.")]),
       ],
       opportunities: [
         { title: "環境に合わせた通知", detail: "季節・日当たり・鉢の大きさを考慮するだけで最大の不満を解決できます。" },
@@ -216,21 +228,21 @@ export const EXAMPLES: ExampleReport[] = [
       },
       marketOverview: "上位アプリはゲーミフィケーションと音声に投資しており、機能面での差別化余地は小さいです。",
       whatUsersLove: [
-        i("ゲーム感覚", "ゲームのように続けられる点が最も評価されています。", 420, ["Feels like a game, not studying."]),
-        i("復習のタイミング", "忘れた頃に出題される仕組みが好評。", 180, ["Spaced repetition actually works."]),
+        i("ゲーム感覚", "ゲームのように続けられる点が最も評価されています。", 420, [q("ex1", "Feels like a game, not studying.")]),
+        i("復習のタイミング", "忘れた頃に出題される仕組みが好評。", 180, [q("ex2", "Spaced repetition actually works.")]),
       ],
       whatToAvoid: [
-        i("簡単すぎる・難しすぎる", "レベルが合わないという不満。", 150, ["Way too easy even on hard mode."]),
-        i("オフラインで使えない", "通勤中の電波が悪い場所で使えない。", 88, ["Doesn't work on the subway."]),
+        i("簡単すぎる・難しすぎる", "レベルが合わないという不満。", 150, [q("ex5", "Way too easy even on hard mode.")]),
+        i("オフラインで使えない", "通勤中の電波が悪い場所で使えない。", 88, [q("ex2", "Doesn't work on the subway.")]),
       ],
       willingnessToPay: {
         summary: "課金ユーザーは多いものの、すでに大手に払っているため乗り換え動機が必要です。",
-        signals: [i("試験対策なら払う", "特定の試験向けなら追加で払うという声。", 70, ["Would pay for a TOEIC-focused deck."])],
+        signals: [i("試験対策なら払う", "特定の試験向けなら追加で払うという声。", 70, [q("ex4", "Would pay for a TOEIC-focused deck.")])],
         suggestedPricing: "試験別の単語帳を$4.99ずつの買い切りで販売。",
       },
       featureRequests: [
-        i("オフライン対応", "通勤中に使いたい。", 88, ["Offline mode please."]),
-        i("自分で単語を追加", "仕事で使う単語を覚えたい。", 61, ["Let me add my own words."]),
+        i("オフライン対応", "通勤中に使いたい。", 88, [q("ex2", "Offline mode please.")]),
+        i("自分で単語を追加", "仕事で使う単語を覚えたい。", 61, [q("ex3", "Let me add my own words.")]),
       ],
       opportunities: [
         { title: "ニッチな試験・職種特化", detail: "医療英語や特定試験など、大手が手薄な分野に絞る。" },
