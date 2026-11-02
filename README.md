@@ -26,10 +26,11 @@ Node.js 22.5以上が必要です（DBにNode内蔵の `node:sqlite` を使っ�
 ### 開発モード
 
 - `STRIPE_SECRET_KEY` が未設定 → 決済をスキップして、クレジットやスプレッドシートをすぐ付与
-- `SMTP_HOST` が未設定 → ログインリンクやメール本文をサーバーのコンソールに出力
+- `RESEND_API_KEY` / `SMTP_HOST` が未設定 → ログインリンクやメール本文をサーバーのコンソールに出力
 
 ### 本番
 
+- **メール（Resend）**: [Resend](https://resend.com) で API キーを発行し、`RESEND_API_KEY` と `EMAIL_FROM`（認証済みドメイン）を設定。`APP_URL` は本番 URL にすること
 - Stripe Webhook: `POST /api/stripe/webhook`（`checkout.session.completed`）。決済後のリダイレクトでも反映するので、Webhookが遅れても二重付与にはなりません
 - レポート生成はサーバープロセス内のバックグラウンドで動くため、`next start` などの常駐Nodeサーバーで動かしてください（サーバーレスでは途中で止まります）
 
