@@ -26,14 +26,6 @@ export async function createCreditsCheckout(
     mode: "payment",
     locale: stripeLocale,
     customer_email: email,
-    custom_text: {
-      submit: {
-        message:
-          locale === "en"
-            ? "Credits are added to your account right after payment."
-            : "お支払い完了後、すぐにアカウントへクレジットが付与されます。",
-      },
-    },
     line_items: [
       {
         quantity,
