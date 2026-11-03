@@ -4,6 +4,11 @@ import { db } from "./db";
 import { APP_NAME, appUrl, REPORT_PRICE_CENTS, SPREADSHEET_PRICE_CENTS } from "./config";
 import { fulfillReviewOrder } from "./review-orders";
 
+/** Managed Payments: AIaaS (cloud AI report credits) */
+const TAX_CODE_REPORT_CREDIT = "txcd_10105002";
+/** Managed Payments: downloadable digital document (review CSV) */
+const TAX_CODE_REVIEW_CSV = "txcd_10503000";
+
 let stripe: Stripe | null = null;
 export function getStripe(): Stripe {
   stripe ??= new Stripe(process.env.STRIPE_SECRET_KEY!);
@@ -20,7 +25,11 @@ export async function createCreditsCheckout(userId: string, email: string, quant
         price_data: {
           currency: "usd",
           unit_amount: REPORT_PRICE_CENTS,
-          product_data: { name: `${APP_NAME} レポートクレジット`, description: "1クレジット = 競合分析レポート1件" },
+          product_data: {
+            name: `${APP_NAME} レポートクレジット`,
+            description: "1クレジット = 競合分析レポート1件",
+            tax_code: TAX_CODE_REPORT_CREDIT,
+          },
         },
       },
     ],
@@ -41,7 +50,10 @@ export async function createSpreadsheetCheckout(orderId: string, email: string, 
         price_data: {
           currency: "usd",
           unit_amount: SPREADSHEET_PRICE_CENTS,
-          product_data: { name: `レビュースプレッドシート: ${appName}`.slice(0, 120) },
+          product_data: {
+            name: `レビュースプレッドシート: ${appName}`.slice(0, 120),
+            tax_code: TAX_CODE_REVIEW_CSV,
+          },
         },
       },
     ],
