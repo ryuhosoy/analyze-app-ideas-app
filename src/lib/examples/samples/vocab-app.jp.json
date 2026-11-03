@@ -1,0 +1,588 @@
+{
+  "slug": "vocab-app",
+  "title": "英単語アプリ",
+  "idea": "1日5分、通勤中に使える英単語の暗記アプリ",
+  "topCompetitor": "Vocabulary - Learn words daily",
+  "reviewCount": 2049,
+  "competitors": [
+    {
+      "id": "1084540807",
+      "name": "Vocabulary - Learn words daily",
+      "seller": "Monkey Taps",
+      "rating": 4.8,
+      "ratingCount": 221685,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8a/eb/21/8aeb2135-f8be-9515-dfd7-ec7f6de95fdb/0_voc-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/vocabulary-learn-words-daily/id1084540807",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1365078730",
+      "name": "WordUp - Vocabulary Builder",
+      "seller": "Geeks ltd",
+      "rating": 4.8,
+      "ratingCount": 13853,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c9/2a/2b/c92a2b07-1da5-6ef4-fb6b-7617826aa32e/AppIcon-wordup_full-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/wordup-vocabulary-builder/id1365078730",
+      "reviewsAnalyzed": 450
+    },
+    {
+      "id": "987136347",
+      "name": "Word of the Day・Vocabulary",
+      "seller": "Vocabulous US, Inc.",
+      "rating": 4.7,
+      "ratingCount": 39014,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d1/97/f9/d197f931-1bd6-eb99-6358-63108c30e408/AppIcon_Sky-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/word-of-the-day-vocabulary/id987136347",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1438344260",
+      "name": "Atlas・Daily Vocabulary Builder",
+      "seller": "SAYAN YAZILIM TEKNOLOJI ANONIM SIRKETI",
+      "rating": 4.8,
+      "ratingCount": 12594,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/31/0d/6b/310d6bbd-c193-9698-1260-d0724123a2fb/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/atlas-daily-vocabulary-builder/id1438344260",
+      "reviewsAnalyzed": 314
+    },
+    {
+      "id": "1418579583",
+      "name": "WordPal - Vocabulary Builder",
+      "seller": "Dynamic Apps Ltd",
+      "rating": 4.7,
+      "ratingCount": 10409,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/30/0f/43/300f433e-2500-5f9a-108f-4b58e6e60ab2/AppIconNew-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/wordpal-vocabulary-builder/id1418579583",
+      "reviewsAnalyzed": 285
+    }
+  ],
+  "result": {
+    "verdict": {
+      "score": 66,
+      "label": "MAYBE",
+      "headline": "需要は確実だが、競合は多い。「日本人向け×通勤×誠実な課金」に絞れば勝ち筋がある",
+      "summary": "5つの競合はいずれも評価4.7〜4.8と高く、短時間で毎日続けられる語彙学習の需要は非常に強いことがわかります。一方で、低評価レビューの大半は課金の不透明さ(長い初期設定の後のペイウォール、トライアル後の予告なし請求)、不正確な定義やAIによる音声・画像、通知の多すぎ、過剰なゲーム化に集中しています。いずれも個人開発でも避けられる失敗です。分析した競合は主に英語ネイティブ向けの「難語」学習アプリで、母語訳や音声中心の学習は弱点になっています。そのため、日本人学習者向けに5分完結・音声中心・誠実な価格設計で作れば差別化できます。ただし日本市場の国産競合はこのデータに含まれていないため、別途調査が必要です。"
+    },
+    "marketOverview": "語彙学習アプリ市場は、Vocabulary(約22万件の評価)を筆頭に評価4.7〜4.8のアプリが並ぶ成熟市場です。主流は「ロック画面ウィジェットで受動的に触れる型」(Vocabulary、Word of the Day)と、「レベル判定+間隔反復で能動的に覚える型」(Atlas、WordPal、WordUp)の2つです。収益化は年額$35〜$60のサブスクリプションと3〜7日間の無料トライアルが標準ですが、これが低評価の最大の原因になっています。WordUpを除く多くのアプリは英語ネイティブ向けの難語学習が中心で、非ネイティブ向けの母語訳や音声学習のニーズは十分に満たされていません。",
+    "whatUsersLove": [
+      {
+        "title": "ロック画面・ウィジェットで「勉強感なく」触れられる",
+        "detail": "アプリを開かなくても単語が目に入る仕組みが最も支持されています。歯磨きや行列待ちのような隙間時間に自然と学べる点が評価されています。",
+        "mentions": 40,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "I especially like having the word of the day widget because it makes learning something new feel effortless instead of like studying."
+          },
+          {
+            "appId": "1084540807",
+            "text": "Everyday when I'm doing something mindless like brushing my teeth or waiting in a line, I see the hourly vocab update on my phone and frequently check it."
+          },
+          {
+            "appId": "1438344260",
+            "text": "the regularly changing widget vocab images are so pretty"
+          }
+        ]
+      },
+      {
+        "title": "SNSの代わりになる短時間の生産的な習慣",
+        "detail": "「スマホを触る時間を有意義にしたい」という動機で使われています。短時間で手応えを得られることが継続の理由になっており、通勤中の5分利用と相性が良い傾向です。",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "rewarding to use in short bursts"
+          },
+          {
+            "appId": "1084540807",
+            "text": "I replaced scrolling in TikTok with this and I love it"
+          },
+          {
+            "appId": "1418579583",
+            "text": "Instead of mindless scrolling, I spend 10-15 minutes (and often more) improving my vocabulary and strengthening my memory!"
+          }
+        ]
+      },
+      {
+        "title": "間違えた単語が繰り返し出る(間隔反復)",
+        "detail": "苦手な単語が定着するまで再出題される仕組みが「本当に覚えられる」と好評です。逆に、Vocabularyのように復習機能が弱いアプリには不満が出ています。",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "1418579583",
+            "text": "I like how it continues to include words with which I've struggled, cementing them in my mind even after I've gotten them correct."
+          },
+          {
+            "appId": "1438344260",
+            "text": "What really makes this app effective in retaining what you learn is spaced repetition."
+          },
+          {
+            "appId": "1365078730",
+            "text": "Reminding of the new words learned previously is quietly helpful way to place them in your mind permanently."
+          }
+        ]
+      },
+      {
+        "title": "最初のレベル判定でちょうど良い難易度から始められる",
+        "detail": "最初にテストを受け、自分のレベルに合った単語から学べる点が高く評価されています。簡単すぎず難しすぎない出題が、継続のしやすさにつながっています。",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1438344260",
+            "text": "it first tests your level, then provides personalized sets of words that perfectly match your ability."
+          },
+          {
+            "appId": "1418579583",
+            "text": "since it gauges your vocabulary level originally it makes it much more personalized and you don’t feel out of your level!!"
+          }
+        ]
+      },
+      {
+        "title": "例文・画像・頻出語リストによる文脈理解",
+        "detail": "例文や画像が記憶の助けになっています。非ネイティブの利用者は特に、「よく使われる語から学べる」ことを効率が良いと評価しています。",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "1365078730",
+            "text": "Lots of examples sentences help me understand words"
+          },
+          {
+            "appId": "1365078730",
+            "text": "I like the most common words lists, best ROI on learning"
+          },
+          {
+            "appId": "987136347",
+            "text": "The visuals really do help to better contextualize and remember the the vocabulary."
+          }
+        ]
+      },
+      {
+        "title": "少量ずつで負担にならない設計",
+        "detail": "1セット5語程度の小さな単位と、多様な小テストの組み合わせが「圧倒されない」と好まれています。",
+        "mentions": 15,
+        "quotes": [
+          {
+            "appId": "1438344260",
+            "text": "Nice format. Easy to follow. Not overwhelming."
+          },
+          {
+            "appId": "1438344260",
+            "text": "The lesson it bite size with exercises to help me remember the words."
+          },
+          {
+            "appId": "1418579583",
+            "text": "It’s just challenging enough without being overwhelming."
+          }
+        ]
+      }
+    ],
+    "whatToAvoid": [
+      {
+        "title": "長い初期設定の後に出るペイウォール、トライアル後の予告なし請求",
+        "detail": "低評価の最大の原因です。質問に何分も答えさせた後で有料と明かす手法は「おとり商法」と非難されています。「終了前に通知する」と約束しながら通知せずに年額を請求する、トライアル中に即請求する、といった問題が多数報告されています。",
+        "mentions": 120,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "Only after you spend 5 minutes setting up your preferences are you presented with the paywall stopping block."
+          },
+          {
+            "appId": "1084540807",
+            "text": "I explicitly checked the option to notify me before the subscription was renewed. It did not notify me, and I woke up to a $48 charge."
+          },
+          {
+            "appId": "1418579583",
+            "text": "I clicked on the FREE TRIAL and you immediately charged me instead."
+          }
+        ]
+      },
+      {
+        "title": "不正確な定義・AIによる音声や画像",
+        "detail": "学習アプリで誤った定義や発音を出すと、信頼が一気に失われます。人間がチェックしていないAIコンテンツは「slop(粗悪品)」として退会理由になっています。",
+        "mentions": 60,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "Too many inaccurate definitions."
+          },
+          {
+            "appId": "1365078730",
+            "text": "Some words are ridiculous, some definitions are off, some images are bad."
+          },
+          {
+            "appId": "1418579583",
+            "text": "Pronunciation is by a bot which is not only robotic but also completely wrong."
+          }
+        ]
+      },
+      {
+        "title": "通知が多すぎる・学習ペースを調整できない",
+        "detail": "1日に何十回も届く通知や、設定したのに増える単語数に強い不満が出ています。「ついていけない」と感じたユーザーはアプリを開かなくなっています。",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "I’m constantly getting notifications sometimes several times an hour."
+          },
+          {
+            "appId": "1084540807",
+            "text": "20 notifications a day, not of vocab, just trying to get you to open the app"
+          },
+          {
+            "appId": "1438344260",
+            "text": "I just want to be reminded to do a little bit each day but not reminded every 15 minutes after already using the app for 45mins."
+          }
+        ]
+      },
+      {
+        "title": "過剰なゲーム化・ストリークのバグ・単語の前に広告",
+        "detail": "ポイント演出やストリーク、閲覧前の強制広告が「ただ単語を見たいだけ」というユーザーを怒らせています。ストリークが誤ってリセットされるバグも、退会の引き金になっています。",
+        "mentions": 50,
+        "quotes": [
+          {
+            "appId": "987136347",
+            "text": "I just want to see the word, the definition, and the example sentence, that’s all."
+          },
+          {
+            "appId": "987136347",
+            "text": "Whenever I have a high streak, the app tells me that I have missed a day when I know I have not."
+          },
+          {
+            "appId": "987136347",
+            "text": "Every word 2 minutes ad it’s crazy"
+          }
+        ]
+      },
+      {
+        "title": "アップデートによる機能削除・データ消失・クラッシュ",
+        "detail": "保存した単語や学習履歴が消えることは、長期ユーザーにとって致命的です。WordUpは更新のたびにクラッシュが起き、有料会員でも使えなくなる事態が続いています。",
+        "mentions": 50,
+        "quotes": [
+          {
+            "appId": "987136347",
+            "text": "all of my favorite words that I have been collecting for over 10 years are all gone forever."
+          },
+          {
+            "appId": "1365078730",
+            "text": "Spent hundreds of hours in the app and one update I lost all my data"
+          },
+          {
+            "appId": "1438344260",
+            "text": "Over a year and half of adding words and it is all gone"
+          }
+        ]
+      },
+      {
+        "title": "使わない難語・難易度のずれ・既知語の繰り返し",
+        "detail": "古語や専門語ばかり、あるいは簡単すぎる語ばかりといった難易度のずれがよく指摘されています。知っている単語を何度も学ばされることも、時間の無駄と感じられています。",
+        "mentions": 45,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "Hard to prioritize which words to know vs learning words that are so archaic or field-specific"
+          },
+          {
+            "appId": "1365078730",
+            "text": "I had to go through literally hundreds of words that an elementary school student would know."
+          },
+          {
+            "appId": "1438344260",
+            "text": "Forces you to “learn” and be quizzed on words you may already know."
+          }
+        ]
+      }
+    ],
+    "willingnessToPay": {
+      "summary": "支払意欲自体は存在します。ただし、年額$50〜$60のサブスクリプションは「単語アプリには高すぎる」という反発が非常に強い状況です。一方で、買い切り(ライフタイム)なら払うという声や、実際に$75の買い切りを満足して購入した声が複数あります。無料版で中核の学習(復習・保存した単語の閲覧)まで制限すると強い怒りを買います。広告付きの無料版は、広告の量が控えめであれば受け入れられています。",
+      "signals": [
+        {
+          "title": "買い切り・ライフタイムなら払いたい",
+          "detail": "「サブスクリプション疲れ」が明確で、一度の支払いを望む声が多くあります。買い切りプランがあったから購入した、という実例も見られます。",
+          "mentions": 20,
+          "quotes": [
+            {
+              "appId": "1084540807",
+              "text": "Would have gave it five star if given the option for a one time payment rather an monthly or yearly subscription"
+            },
+            {
+              "appId": "1438344260",
+              "text": "The premium is worth it and it wonderful that I can pay for a lifetime. I wouldn’t have gotten it otherwise."
+            },
+            {
+              "appId": "1365078730",
+              "text": "So I paid the lifetime fee without thinking too much."
+            }
+          ]
+        },
+        {
+          "title": "年額$50〜$60は高すぎる、月$3程度が適正という感覚",
+          "detail": "価格への不満は非常に多くあります。「半額なら会員が増える」「月3ドルなら払った」など、具体的な許容価格も示されています。",
+          "mentions": 60,
+          "quotes": [
+            {
+              "appId": "987136347",
+              "text": "Reduce it by 50 percent and you’ll get triple the volume in memberships."
+            },
+            {
+              "appId": "1418579583",
+              "text": "I would have been willing to spend maybe 3 bucks a month on this until I was done with it"
+            },
+            {
+              "appId": "1438344260",
+              "text": "Should be month to month 3bucks"
+            }
+          ]
+        },
+        {
+          "title": "広告付き無料版は許容されるが、過剰な広告は不可",
+          "detail": "Duolingoのように広告視聴で続けられる仕組みは歓迎されています。ただし、1語ごとに長い広告を入れるやり方は逆効果になっています。",
+          "mentions": 30,
+          "quotes": [
+            {
+              "appId": "1084540807",
+              "text": "I wish there was a free way to do the lessons bit, like similar to Duolingo where you can just watch ads"
+            },
+            {
+              "appId": "1438344260",
+              "text": "You don’t NEED premium to enjoy this app and I am okay with watching an ad or two to continue."
+            }
+          ]
+        },
+        {
+          "title": "保存した単語・復習の有料化は不信を招く。中間プランの要望もある",
+          "detail": "保存はできるのに閲覧には課金が必要、という設計は「不誠実」と受け止められています。より安い中間プランを求める声もあります。",
+          "mentions": 25,
+          "quotes": [
+            {
+              "appId": "1084540807",
+              "text": "to view ur saved/hearted words, u have to join their membership."
+            },
+            {
+              "appId": "1084540807",
+              "text": "Or maybe add a smaller paid plan that enables a few features but not as much as the current premium."
+            }
+          ]
+        }
+      ],
+      "suggestedPricing": "1日5分の基本学習(新出語と間隔反復による復習、保存した単語の閲覧)は無料にし、広告はセッション終了後に1回までとします。有料プランは、広告非表示、全単語帳(英検・TOEIC別など)、音声通勤モード、詳細な統計を提供します。価格は月額300〜400円、年額2,400〜3,000円程度に抑え、5,000〜6,000円前後の買い切りも併設すると、サブスクリプションに抵抗のある層を取り込めます。価格はダウンロード直後に明示し、トライアルを設ける場合は終了前の通知を確実に送ってください。"
+    },
+    "featureRequests": [
+      {
+        "title": "「知っている」ボタン・既知語のスキップや非表示",
+        "detail": "すでに知っている単語を出題対象から外したいという要望が、競合横断で最も多く見られます。5分という限られた時間を有効に使うためにも重要な機能です。",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "there should be a button to mark the words that you already know so you never see them / get tested on them again"
+          },
+          {
+            "appId": "1418579583",
+            "text": "It also needs to quickly remove words I do know."
+          },
+          {
+            "appId": "1438344260",
+            "text": "Forces you to “learn” and be quizzed on words you may already know."
+          }
+        ]
+      },
+      {
+        "title": "単語検索と自分の単語の追加",
+        "detail": "読書や仕事で出会った単語を検索し、学習リストに入れたいというニーズです。検索機能がないことを理由にアプリを削除した例もあります。",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "I wish I could search words through the app."
+          },
+          {
+            "appId": "1418579583",
+            "text": "Please include the ability to search and add our own words that we’d like to include in our practice."
+          },
+          {
+            "appId": "987136347",
+            "text": "Why can’t I add the words from the daily quizzes to my bookmarks?"
+          }
+        ]
+      },
+      {
+        "title": "学習ペースと通知時刻の細かな設定",
+        "detail": "1日1語・週数語といった量の調整や、通知の時間帯指定を求める声です。通勤の時刻に合わせたリマインドとして、そのまま応用できます。",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "I would like to set timers for the reminders so I don’t receive words too early or way past my bed time."
+          },
+          {
+            "appId": "1084540807",
+            "text": "A simple once-daily refresh setting would make this app significantly more useful"
+          },
+          {
+            "appId": "987136347",
+            "text": "It should be a new word weekly or biweekly, not daily."
+          }
+        ]
+      },
+      {
+        "title": "例文の音声読み上げ・ながら聞きモード",
+        "detail": "単語だけでなく例文全体を音声で聞きたい、歩きながら耳で学びたいという要望です。満員電車での通勤学習に直結する機能です。",
+        "mentions": 12,
+        "quotes": [
+          {
+            "appId": "1438344260",
+            "text": "but I wish it has a listening feature to be used when I walk or I am doing something else."
+          },
+          {
+            "appId": "1418579583",
+            "text": "I can learn a lot better by hearing then by reading"
+          },
+          {
+            "appId": "1084540807",
+            "text": "At last I wanna recommend you should add whole sentences’ audio playing function"
+          }
+        ]
+      },
+      {
+        "title": "母語訳の表示",
+        "detail": "非ネイティブの利用者から、カードに母語訳を表示してほしいという要望が繰り返し出ています。日本語訳を前提にしたアプリには明確な余地があります。",
+        "mentions": 10,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "One feature I would love to see added is an option to display a translation in another language directly on each word card."
+          },
+          {
+            "appId": "1365078730",
+            "text": "also it would be good if had a small option to translate the \"example\" of the word into our language"
+          }
+        ]
+      },
+      {
+        "title": "語源・語根、複数の意味、派生語",
+        "detail": "語源や語根を示すと記憶に残りやすい、複数の意味から選んで学びたい、派生語もまとめて見たい、といった深い理解を求める声です。",
+        "mentions": 15,
+        "quotes": [
+          {
+            "appId": "1418579583",
+            "text": "One really easy thing that I think would be hugely helpful is adding etymology to definitions."
+          },
+          {
+            "appId": "1365078730",
+            "text": "I think it would be great if you allowed us to study all the meanings or choose which meaning of the word we want to study."
+          },
+          {
+            "appId": "1084540807",
+            "text": "I want to see all the different derivations (adjective, adverb, verb forms, etc.)."
+          }
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "日本人学習者向けに特化する(日本語訳+試験頻出語)",
+        "detail": "今回分析した競合の多くは英語ネイティブ向けの難語中心で、母語訳がないことや難易度のずれが不満になっています。英検、TOEIC、ビジネス頻出語のように目的別・頻度順に並べ、日本語訳と自然な例文を付ければ、既存アプリとは別の市場を取れます。"
+      },
+      {
+        "title": "音声中心の「通勤モード」",
+        "detail": "例文の読み上げやながら聞きの要望は多いものの、満たしているアプリはありません。単語、意味、例文を自動で連続再生し、片手やイヤホンだけで操作でき、オフラインでも使える通勤専用モードは明確な差別化要素になります。"
+      },
+      {
+        "title": "誠実な課金設計そのものを売りにする",
+        "detail": "競合の低評価の大半は課金の手口に起因しています。価格を最初に明示する、初期設定を短くする、中核機能は無料、買い切りも選べる、といった方針自体が口コミとレビュー評価での優位につながります。"
+      },
+      {
+        "title": "「5分で必ず終わる」固定量と賢い復習",
+        "detail": "通知の洪水やペース調整ができないことへの反発があるため、逆に「1日5分・新出語数語+復習」で確実に終わる設計が刺さります。「知っている」ボタンと間隔反復を組み合わせ、毎日の達成感を得られるようにします。"
+      },
+      {
+        "title": "人がチェックした正確なコンテンツと安定運用",
+        "detail": "AIによる誤った定義や音声、更新によるデータ消失への不信が広がっています。監修済みの単語データ、品質の高い音声、クラウドバックアップを徹底するだけでも、信頼面で差別化できます。"
+      }
+    ],
+    "competitorNotes": [
+      {
+        "appId": "1084540807",
+        "strengths": [
+          "ロック画面やホーム画面のウィジェットで受動的に学べる体験が圧倒的に支持されている",
+          "デザインが美しく、テーマのカスタマイズ性が高い",
+          "評価数約22万件という巨大なユーザー基盤"
+        ],
+        "weaknesses": [
+          "長い初期設定の後にペイウォールが出る、トライアル終了の通知がないまま年額を請求するなど、課金への苦情が非常に多い",
+          "不正確な定義、AIによる発音ミス、性的な単語の多発",
+          "通知が多すぎ、単語数のペースも調整できない",
+          "既知語のスキップや過去語の復習ができず、保存した単語の閲覧も有料"
+        ]
+      },
+      {
+        "appId": "1365078730",
+        "strengths": [
+          "非ネイティブ向けで、頻出語順の学習と例文・画像による文脈理解が評価されている",
+          "間隔反復とAIチャットで復習が充実している",
+          "買い切りプランがあり、ペルシャ語など多言語に対応している"
+        ],
+        "weaknesses": [
+          "アップデートのたびにクラッシュ、ログイン不能、データ消失が起きる",
+          "AI生成画像の質が低く、単語と関係ない画像もある。ロボット的な音声も不評",
+          "無料版は数語ごとに広告が入り、機能も削られている",
+          "有料購入が反映されず、サポートの返信もない"
+        ]
+      },
+      {
+        "appId": "987136347",
+        "strengths": [
+          "1日1語の手軽さと、手描きイラストによる記憶補助",
+          "ゲームやクイズが充実し、長期ユーザーが多い"
+        ],
+        "weaknesses": [
+          "単語を見る前に広告や課金が入り、ストリークが誤ってリセットされる",
+          "過剰なゲーム化で単語にたどり着くまでが遠い",
+          "大型アップデートで保存した単語や履歴が消え、UIも頻繁に変わる",
+          "年額サブスクリプションに加えて単語パックが別売り。AIアートへの反発もある"
+        ]
+      },
+      {
+        "appId": "1438344260",
+        "strengths": [
+          "レベル判定、5語単位の小さなセット、多様なクイズ、間隔反復で定着しやすい",
+          "比較的安価で、買い切り$74.99が選べる",
+          "広告付き無料版があり、ジャーナル(自作単語帳)機能も好評"
+        ],
+        "weaknesses": [
+          "アップデートで広告視聴による解放が廃止され、無料ユーザーが離脱している",
+          "端末間の同期が弱く、ジャーナルが消失する事例がある",
+          "既知語をスキップできず、スペル問題も強制される",
+          "定義や文法の誤り、例文の政治色への不満がある"
+        ]
+      },
+      {
+        "appId": "1418579583",
+        "strengths": [
+          "シンプルなUIと、苦手語が繰り返し出る仕組み",
+          "広告がほぼない(有料版)",
+          "シノニムクイズやクロスワードなどのミニゲーム"
+        ],
+        "weaknesses": [
+          "収録語数が少なく(無料100語、有料でも400語程度)、すぐに使い切る",
+          "トライアルの即請求や解約しにくさへの苦情",
+          "ロボット的で誤った発音、正解表示が速すぎて確認できない",
+          "自作単語の追加や語源表示がなく、レビュー依頼がしつこい"
+        ]
+      }
+    ],
+    "mvpPlan": [
+      "1日5分の固定セッション:新出語3〜5語と間隔反復による復習を組み合わせ、毎回必ず5分以内で完了する設計にする",
+      "「知っている」ボタンと3分以内の簡易レベル判定(スキップ可)を用意し、既知語を即座に除外する",
+      "日本語訳、自然な例文、品質の高い音声(単語と例文)を表示する。人がチェックした目的別単語帳(英検・TOEIC頻出語)から始める",
+      "通勤モード:単語、意味、例文を自動で連続再生し、片手やイヤホンで操作できるようにする。オフラインにも対応する",
+      "ロック画面・ホーム画面のウィジェットで、その日の復習単語を表示する",
+      "1日1回の時刻指定リマインド(通勤時刻)とクラウド同期・バックアップを実装する。価格は最初の画面で明示する"
+    ]
+  }
+}

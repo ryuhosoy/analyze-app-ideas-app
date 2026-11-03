@@ -1,7 +1,7 @@
 import type { ExampleReport } from "./types";
-import budgetApp from "./data/budget-app.jp.json";
-import plantCare from "./data/plant-care.jp.json";
-import vocabApp from "./data/vocab-app.jp.json";
+import budgetApp from "./samples/budget-app.jp.json";
+import plantCare from "./samples/plant-care.jp.json";
+import vocabApp from "./samples/vocab-app.jp.json";
 
 export type { ExampleReport } from "./types";
 

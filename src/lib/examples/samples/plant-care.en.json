@@ -1,0 +1,573 @@
+{
+  "slug": "plant-care",
+  "title": "Plant care app",
+  "idea": "Identify plants from photos and get watering reminders",
+  "topCompetitor": "PictureThis - Plant Identifier",
+  "reviewCount": 2200,
+  "competitors": [
+    {
+      "id": "1252497129",
+      "name": "PictureThis - Plant Identifier",
+      "seller": "Glority Global Group Ltd.",
+      "rating": 4.8,
+      "ratingCount": 1122130,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ea/af/f0/eaaff0c6-768e-9d0c-df44-128ab0c8d258/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/picturethis-plant-identifier/id1252497129",
+      "reviewsAnalyzed": 200
+    },
+    {
+      "id": "1527399597",
+      "name": "PlantIn: Plant Identifier・Care",
+      "seller": "Vortemol Limited",
+      "rating": 4.6,
+      "ratingCount": 230474,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/13/f9/10/13f91081-be88-cab1-4538-0be15ff0c679/AppIconGlass-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/plantin-plant-identifier-care/id1527399597",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1410126781",
+      "name": "Planta: Plant & Garden Care",
+      "seller": "Planta AB",
+      "rating": 4.8,
+      "ratingCount": 114450,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f1/86/72/f18672ab-858f-5f41-0ecf-773a505280f2/AppIcon-Prod-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/planta-plant-garden-care/id1410126781",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1612792132",
+      "name": "Plant Parent: Plant Care Guide",
+      "seller": "Glority Global Group Ltd.",
+      "rating": 4.7,
+      "ratingCount": 92854,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3d/3e/fb/3d3efbda-93f0-b2e2-f0f9-5a9058f86227/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/plant-parent-plant-care-guide/id1612792132",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1487453649",
+      "name": "Blossom - Plant Care Guide",
+      "seller": "Mosaic S.r.l.",
+      "rating": 4.6,
+      "ratingCount": 68773,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1a/97/b9/1a97b9f3-ceef-9d2d-3ff5-8d7ec052480e/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/blossom-plant-care-guide/id1487453649",
+      "reviewsAnalyzed": 500
+    }
+  ],
+  "result": {
+    "verdict": {
+      "score": 58,
+      "label": "MAYBE",
+      "headline": "Proven demand in a crowded market where users distrust incumbents. A trustworthy, reminders-first app could win.",
+      "summary": "Demand is clearly real. Thousands of reviewers credit watering reminders and photo ID with keeping their plants alive, and many pay $30–40/year happily. Incumbents (PictureThis, PlantIn, Planta, Plant Parent, Blossom) are deeply resented for trial traps, weekly pricing, surprise price hikes, overwatering schedules and generic 'too much or too little water' diagnoses. Photo ID alone is commoditized: users say Google Lens and ChatGPT do it for free. An indie entrant cannot win on identification accuracy, but it can win on honest pricing, a schedule that adapts to soil checks and weather, and a simple reminders-first UX. Risk comes from huge incumbent ad budgets and low switching motivation among satisfied users. The opening is the large pool of churning, angry users."
+    },
+    "marketOverview": "The category is dominated by five well-funded apps with 68k–1.1M ratings each. All bundle AI photo ID, disease diagnosis and care reminders behind aggressive subscriptions that include weekly plans of $5–18. PictureThis leads on ID accuracy and Planta leads on collection management and scheduling. PlantIn, Plant Parent and Blossom are judged weaker on diagnosis and draw heavy billing complaints. Across all five, the most common negative themes are being charged despite cancelling a trial, schedules that overwater, and diagnoses that are generic or wrong. Blossom is currently bleeding long-time users after raising its annual price from about $20 to $70.",
+    "whatUsersLove": [
+      {
+        "title": "Reminders keep forgetful owners' plants alive",
+        "detail": "The most common positive theme across all apps is that scheduled watering and fertilizing reminders turn 'plant killers' into successful owners. ADHD, busy schedules and memory issues come up repeatedly. Many users keep paying for this alone.",
+        "mentions": 180,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "My ADHD brain needs the reminders to keep my plants alive!"
+          },
+          {
+            "appId": "1527399597",
+            "text": "Historically I either water too much or too little. This app helps to keep me on track.👍"
+          },
+          {
+            "appId": "1612792132",
+            "text": "As memory slips this app is an absolute lifesaver use it every day"
+          }
+        ]
+      },
+      {
+        "title": "Instant photo ID on walks, hikes and nurseries",
+        "detail": "Users love pointing the camera at an unknown plant anywhere and getting a name in seconds. This is PictureThis's core loyalty driver. Many use it at nurseries before buying, or to tell a weed from a flower.",
+        "mentions": 110,
+        "quotes": [
+          {
+            "appId": "1252497129",
+            "text": "I’ve been known to use this app 6 times on a walk."
+          },
+          {
+            "appId": "1252497129",
+            "text": "It is right probably 95% the time"
+          },
+          {
+            "appId": "1612792132",
+            "text": "I rely heavily on it when I’m purchasing new plants."
+          }
+        ]
+      },
+      {
+        "title": "Organizing large collections",
+        "detail": "Collectors with 30 to 250+ plants rely on daily to-do lists, rooms/sites and per-plant schedules. Without them, they say, managing many watering intervals would be impossible.",
+        "mentions": 60,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "I have 142 plants in my collection and this app has been amazing for helping me to organize tasks"
+          },
+          {
+            "appId": "1410126781",
+            "text": "Instead of thinking of all 40 plants every time I pick up the watering can, I can just water the ones I have scheduled that day."
+          },
+          {
+            "appId": "1612792132",
+            "text": "With over 50 plants and succulents I could not do it without plant parent!"
+          }
+        ]
+      },
+      {
+        "title": "Toxicity and safety info for pets and kids",
+        "detail": "Knowing whether a plant is poisonous to cats, dogs or children is a valued, frequently cited benefit. Users feel strongly that this information should not be paywalled.",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1527399597",
+            "text": "any possible hazards with animals or children."
+          },
+          {
+            "appId": "1252497129",
+            "text": "if they are safe for pets and humans"
+          },
+          {
+            "appId": "1410126781",
+            "text": "Tells me my plant is poisonous and then proceeds to have a paywall to tell me more information"
+          }
+        ]
+      },
+      {
+        "title": "Progress photos and plant journal",
+        "detail": "Engaged users enjoy logging photos over time and seeing growth across seasons. Some also value a 'plant graveyard' that remembers plants that died.",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "It’s fun to look at the monthly photos of your plants and see how much they’ve grown over a growing season."
+          },
+          {
+            "appId": "1487453649",
+            "text": "I love that I can track my plant progress!!"
+          }
+        ]
+      },
+      {
+        "title": "Cheap household remedies",
+        "detail": "Users love DIY fixes such as coffee grounds, eggshells and banana-peel water instead of store-bought chemicals. Several complain when apps push products instead.",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1612792132",
+            "text": "The basic remedies are made of common household items so no need for expensive chemicals."
+          },
+          {
+            "appId": "1612792132",
+            "text": "Who would have ever thought egg shells would help my African Sumatra come back to life."
+          }
+        ]
+      }
+    ],
+    "whatToAvoid": [
+      {
+        "title": "Trial traps and charges after cancellation",
+        "detail": "This is the single largest complaint across every competitor. Users report being billed on day one of a 'free' trial, charged after cancelling, missing promised pre-renewal reminders, and having no human support or refunds. Some say the resulting Apple account debt locked them out of the App Store.",
+        "mentions": 200,
+        "quotes": [
+          {
+            "appId": "1252497129",
+            "text": "canceled on the day it was supposed to end, yet I was still left with a $40 charge"
+          },
+          {
+            "appId": "1410126781",
+            "text": "I subscribed on June 9 for the seven day trial, and was charged for a full years subscription on June 12."
+          },
+          {
+            "appId": "1487453649",
+            "text": "canceled after 5 days on Apple as advised, but then got billed their ridiculous weekly rate"
+          }
+        ]
+      },
+      {
+        "title": "Fixed schedules that overwater and kill plants",
+        "detail": "Many users say following the app's schedule caused root rot or death. Schedules ignore soil moisture, drainage and season, and do not reset when users water early or late. Experienced users say they only trust the app when paired with a moisture meter.",
+        "mentions": 90,
+        "quotes": [
+          {
+            "appId": "1612792132",
+            "text": "I have killed several(12+) plants by watering per timing and amount instructions within the app"
+          },
+          {
+            "appId": "1410126781",
+            "text": "I have overwatered a few plants following the schedule, resulting in root rot and a few lost plants."
+          },
+          {
+            "appId": "1252497129",
+            "text": "it ended up making me kill one of my plants because I watered the it too much."
+          }
+        ]
+      },
+      {
+        "title": "Generic or wrong diagnoses",
+        "detail": "Diagnosis tools are widely mocked for always answering 'over or under watering', calling dead plants healthy, or ignoring the photo in favor of a questionnaire. Users who paid specifically for diagnosis feel cheated.",
+        "mentions": 110,
+        "quotes": [
+          {
+            "appId": "1487453649",
+            "text": "Your plant either needs water or has too much water and that’s it."
+          },
+          {
+            "appId": "1410126781",
+            "text": "every single response has been that the issue is “either too much or not enough water.”"
+          },
+          {
+            "appId": "1527399597",
+            "text": "My plant was clearly dead and it said it was healthy."
+          }
+        ]
+      },
+      {
+        "title": "'Free' listing with nothing usable before paying",
+        "detail": "Users feel deceived when an app listed as free forces account creation and onboarding, then demands payment before any real use. Scare tactics, such as telling free users that healthy plants are diseased, badly erode trust.",
+        "mentions": 90,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "Cannot try before buy"
+          },
+          {
+            "appId": "1612792132",
+            "text": "Advertised as “free.” But before you can use it a pop up indicates you will be charged after “trial.”"
+          },
+          {
+            "appId": "1527399597",
+            "text": "It said \"Your plant has a DISEASE❗️Pay now to see what it is.\" Just seems disingenuous."
+          }
+        ]
+      },
+      {
+        "title": "Disjointed tasks and notification spam",
+        "detail": "Separate water and fertilize tasks lead to double-watering. Mandatory misting and progress-update nags, marketing pushes about the app's store, and review prompts bury the one notification users actually want.",
+        "mentions": 45,
+        "quotes": [
+          {
+            "appId": "1252497129",
+            "text": "Why would you fertilize a day or two after watering? Makes no sense."
+          },
+          {
+            "appId": "1410126781",
+            "text": "I’m a paid user and now the app starts to spam me with push notifications to buy plants from their store."
+          },
+          {
+            "appId": "1410126781",
+            "text": "There doesn’t seem to be a way to just turn off the status update reminders without turning off the reminders for everything."
+          }
+        ]
+      },
+      {
+        "title": "Bloat, lag, broken updates and lost data",
+        "detail": "Users report frozen screens after updates, phones overheating, slow loads just to see today's tasks, and years of plant data lost on a phone switch or reinstall.",
+        "mentions": 50,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "it freezes up my entire phone, every option I might try to press takes 10+ seconds to do anything"
+          },
+          {
+            "appId": "1527399597",
+            "text": "now an “Introducing to you” screen pops up and freezes the screen"
+          },
+          {
+            "appId": "1487453649",
+            "text": "I have lost all of my data and I am apparently not eligible for a refund"
+          }
+        ]
+      }
+    ],
+    "willingnessToPay": {
+      "summary": "Engaged plant owners clearly will pay, and many describe $30–40/year as fair or 'worth every penny'. They resent weekly plans, opaque tiers, extra upcharges on top of a subscription, and sudden hikes. A sizable segment wants only reminders and would pay less, or prefers a one-time or lifetime purchase.",
+      "signals": [
+        {
+          "title": "$35–40/year is accepted by collectors",
+          "detail": "Users with many plants rationalize the cost per plant or against the price of dead plants they no longer replace.",
+          "mentions": 30,
+          "quotes": [
+            {
+              "appId": "1410126781",
+              "text": "i have 30 plants so i figure it’s a dollar and some change per plant"
+            },
+            {
+              "appId": "1410126781",
+              "text": "I think the $40 a year cost is reasonable based on the money I’ve lost from killing plants in the past."
+            }
+          ]
+        },
+        {
+          "title": "Price hikes and weekly plans trigger mass churn",
+          "detail": "Blossom's jump from about $20 to $70/year produced dozens of immediate cancellations. Weekly pricing of $5–18 is viewed as predatory.",
+          "mentions": 70,
+          "quotes": [
+            {
+              "appId": "1487453649",
+              "text": "a subscription increase from $19.99/year to $69.99/year is beyond ridiculous"
+            },
+            {
+              "appId": "1527399597",
+              "text": "8 dollars a week is disgustingly greedy for this app."
+            }
+          ]
+        },
+        {
+          "title": "Reminder-only users want a cheap tier",
+          "detail": "Some users ignore AI features and want inexpensive or free reminders. They point out that phone reminders are free.",
+          "mentions": 25,
+          "quotes": [
+            {
+              "appId": "1252497129",
+              "text": "$40 a year for basic reminders is too steep"
+            },
+            {
+              "appId": "1487453649",
+              "text": "I would accept a $30 one time fee but they want yearly subscription."
+            }
+          ]
+        },
+        {
+          "title": "Demand for lifetime or one-time purchase",
+          "detail": "Users praise one-time options and ask for them where missing. Upcharges on top of lifetime plans, however, cause anger.",
+          "mentions": 20,
+          "quotes": [
+            {
+              "appId": "1527399597",
+              "text": "I love that I can now just pay once and never again…like back in the day!"
+            },
+            {
+              "appId": "1612792132",
+              "text": "I would probably pay around $15-$25 for this app but even $50 is way too steep for me."
+            }
+          ]
+        }
+      ],
+      "suggestedPricing": "Make reminders free for a generous number of plants, or unlimited, plus a few photo IDs per month, so users can genuinely try the app. Offer a Pro tier at $19.99–29.99/year for unlimited ID, weather-adaptive schedules, household sharing and backups. Add a one-time lifetime option around $39–49. Avoid weekly plans and extra upcharges inside paid tiers. Send an in-app and push reminder 2 days before any trial ends, and show clear cancel instructions in the app. Make price honesty a marketing message."
+    },
+    "featureRequests": [
+      {
+        "title": "Weather-, season- and climate-aware watering",
+        "detail": "Users want reminders that skip outdoor watering after rain, pause during winter dormancy or snow, and handle hot desert climates. Several report the wrong city or zone being used.",
+        "mentions": 40,
+        "quotes": [
+          {
+            "appId": "1612792132",
+            "text": "I’ve been told to water my plants when it’s winter and they’re covered with snow."
+          },
+          {
+            "appId": "1487453649",
+            "text": "there is no button for “it just rained” to modify the watering schedule"
+          },
+          {
+            "appId": "1487453649",
+            "text": "I live in Arizona and the temperatures during much of the year are much higher than the top range in the app."
+          }
+        ]
+      },
+      {
+        "title": "Soil-check feedback and flexible logging",
+        "detail": "Users want to report how the soil feels (dry, moist or wet) so the schedule adapts. They also want to backdate waterings and have the schedule recalculate from the actual watering date.",
+        "mentions": 35,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "I feel like the check moisture task should have input on what the soil feels/looks like to advise the best schedule."
+          },
+          {
+            "appId": "1410126781",
+            "text": "it still would be nice to backdate a task"
+          },
+          {
+            "appId": "1612792132",
+            "text": "let us indicate when we do water, then return to schedule"
+          }
+        ]
+      },
+      {
+        "title": "Household and plant-sitter sharing",
+        "detail": "Couples, families and travelers want several people to see and complete the same schedule.",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1252497129",
+            "text": "Please provide an update to share the app for other household members."
+          },
+          {
+            "appId": "1487453649",
+            "text": "can you implement a way for me to share the care instructions with someone else?"
+          },
+          {
+            "appId": "1612792132",
+            "text": "When I travel I hire a plant sitter and it would be great to just give her my account info"
+          }
+        ]
+      },
+      {
+        "title": "Bulk actions and vacation mode",
+        "detail": "Large-collection owners want to mark many plants watered, change settings in bulk and turn off misting globally. They also want a vacation mode that plans watering around trips.",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "It would be incredibly helpful if there were an option to disable fertilizing reminders for all plants at once"
+          },
+          {
+            "appId": "1410126781",
+            "text": "set my days I’ll be gone and have the app adjust watering based on plant needs just around that one trip"
+          },
+          {
+            "appId": "1612792132",
+            "text": "I wish there was a way to select several plants at once to water when you’re a day late."
+          }
+        ]
+      },
+      {
+        "title": "Combined water + fertilizer task",
+        "detail": "Users want liquid fertilizer treated as part of a watering, not as a separate event that leads to overwatering.",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "it would be way nicer if they treated it as one with the option of adding fertilizer to the water"
+          },
+          {
+            "appId": "1612792132",
+            "text": "Fertilizing should be done on watering days."
+          }
+        ]
+      },
+      {
+        "title": "Manual plant entry, watering amounts and pot types",
+        "detail": "Users want to add plants missing from the database or keep the nursery-tag name when ID fails. They also ask for watering-amount guidance by pot size and options for self-watering, hydro and terrarium setups.",
+        "mentions": 35,
+        "quotes": [
+          {
+            "appId": "1527399597",
+            "text": "The app would be improved if you had the ability to manually enter the identification of your plants"
+          },
+          {
+            "appId": "1410126781",
+            "text": "I’d love to see watering amount recommendations based on plant, soil, pot type & size"
+          }
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Trust-first, honest pricing as the brand",
+        "detail": "Billing anger is the loudest theme across all five competitors. A usable free tier, a trial-end reminder, in-app cancel guidance, no weekly plans and a lifetime option can be marketed directly to the churning users who write these reviews."
+      },
+      {
+        "title": "An adaptive schedule that doesn't drown plants",
+        "detail": "Start reminders as 'check soil' rather than 'water now'. Learn from dry/moist/wet answers, recalculate from the actual watering date, and factor in drainage and pot type. This directly addresses the overwatering deaths that are the main reason users abandon competitor schedules."
+      },
+      {
+        "title": "Reminders-first simplicity",
+        "detail": "Many users say they 'just want watering reminders'. Ship a fast, uncluttered app with one combined daily list, optional misting and progress nags, and zero marketing pushes. This targets users overwhelmed by Planta-style task overload and Blossom's lag."
+      },
+      {
+        "title": "Weather and season intelligence",
+        "detail": "Use local rain forecasts and frost dates to auto-skip outdoor watering and pause dormant plants. This has been a long-standing request in Plant Parent and Blossom reviews that their teams still haven't fixed."
+      },
+      {
+        "title": "Household sharing and vacation mode",
+        "detail": "Offer shared schedules and a plant-sitter link that sends daily tasks to a guest for set dates. It is a clear differentiator, and one reviewer already switched apps specifically for spouse and sitter sharing."
+      }
+    ],
+    "competitorNotes": [
+      {
+        "appId": "1252497129",
+        "strengths": [
+          "Best-in-class photo ID accuracy, repeatedly preferred over Planta, PlantIn and Blossom",
+          "Rich care, history and usage info that suits hikers, gardeners and landscapers",
+          "Strong long-term loyalty from multi-year subscribers"
+        ],
+        "weaknesses": [
+          "Dozens of reports of being charged despite trial cancellation, with no refund",
+          "$40/year seen as too steep for users who only want reminders",
+          "Watering advice blamed for plant deaths; water and fertilizer reminders are disjointed",
+          "No household sharing; slow onboarding; misleading AI ads"
+        ]
+      },
+      {
+        "appId": "1527399597",
+        "strengths": [
+          "Simple reminders that beginners love",
+          "Lifetime purchase option appreciated by some users",
+          "Good customer service anecdotes"
+        ],
+        "weaknesses": [
+          "Diagnosis widely seen as generic or wrong, often calling dead plants healthy",
+          "Weekly plans of $7–18, double charges, and extra fees even for lifetime buyers",
+          "A recent update froze the app on a modal, locking users out of their plant data",
+          "Tells free users healthy plants are diseased to drive upsells"
+        ]
+      },
+      {
+        "appId": "1410126781",
+        "strengths": [
+          "Strongest collection management, praised for 100–250+ plant collections",
+          "Custom schedules, snooze, sites, community and progress photos",
+          "Price around $36/year generally considered fair"
+        ],
+        "weaknesses": [
+          "Schedules frequently overwater; separate water and fertilize tasks cause root rot",
+          "Free tier is nearly useless and there is no real trial",
+          "Lag, freezes and phone overheating",
+          "Marketing push notifications and store upsells; AI backlash; weak plant ID"
+        ]
+      },
+      {
+        "appId": "1612792132",
+        "strengths": [
+          "Good ID and diagnosis with organic, household remedies",
+          "Generous free tier praised by some users",
+          "Weather-aware features and a well-liked UI"
+        ],
+        "weaknesses": [
+          "Reminds users to water outdoor plants in snow and winter despite knowing their location",
+          "Unreliable notifications; schedules overwater for some users",
+          "No household sharing; limited database for rare cultivars",
+          "Marketed as 'free' but trial-gated; only 2 expert consultations per subscription"
+        ]
+      },
+      {
+        "appId": "1487453649",
+        "strengths": [
+          "Long-time users liked it as a simple reminder and catalog app",
+          "Water-amount calculator by pot size",
+          "Clean design"
+        ],
+        "weaknesses": [
+          "Price hike from about $20 to $70–80/year causing mass cancellations",
+          "Repeated reports of charges after cancellation and no in-app cancel",
+          "Diagnosis always returns 'watering issue'; only 3 free plants or IDs",
+          "Lag, search bugs, data loss after updates or phone changes"
+        ]
+      }
+    ],
+    "mvpPlan": [
+      "Plant list with adaptive watering reminders: 'check soil' prompts with dry/moist/wet feedback that shifts the next date, plus snooze, backdating and recalculation from the actual watering date",
+      "Photo ID via an existing plant-ID API (top 3 suggestions) with manual name search and override for plants the model misses, plus free toxicity info",
+      "One combined daily task list with fertilize-with-water as a single task and optional or disableable misting and journal nags; no marketing notifications",
+      "Local weather and season awareness: auto-skip outdoor watering after rain and pause or lengthen intervals for winter dormancy",
+      "Household and plant-sitter sharing of the schedule, plus iCloud sync and backup so data survives phone changes",
+      "Transparent monetization: free reminders, a trial-end warning, visible cancel instructions, annual and lifetime options, no weekly plans"
+    ]
+  }
+}

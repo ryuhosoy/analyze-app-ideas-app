@@ -1,0 +1,593 @@
+{
+  "slug": "budget-app",
+  "title": "家計簿アプリ",
+  "idea": "レシートを撮るだけで支出を記録できる、一人暮らし向けのシンプルな家計簿",
+  "topCompetitor": "SimplyWise: Receipts, Expenses",
+  "reviewCount": 1693,
+  "competitors": [
+    {
+      "id": "1538521095",
+      "name": "SimplyWise: Receipts, Expenses",
+      "seller": "SimplyWise, Inc.",
+      "rating": 4.9,
+      "ratingCount": 38356,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/56/27/67/562767f8-b7f7-5c1e-5e1c-f45371f8fa73/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/simplywise-receipts-expenses/id1538521095",
+      "reviewsAnalyzed": 350
+    },
+    {
+      "id": "560481810",
+      "name": "Money Manager Expense & Budget",
+      "seller": "Realbyte Inc.",
+      "rating": 4.8,
+      "ratingCount": 19723,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2e/e4/01/2ee40119-0d6d-ffea-8ddd-5b2f08dd9e72/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/money-manager-expense-budget/id560481810",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1424280764",
+      "name": "Receipt Lens - Expense Tracker",
+      "seller": "Glority Global Group Ltd.",
+      "rating": 4.7,
+      "ratingCount": 4267,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2f/e9/35/2fe93502-5faa-cb1a-7408-816d4d6a29d3/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/receipt-lens-expense-tracker/id1424280764",
+      "reviewsAnalyzed": 143
+    },
+    {
+      "id": "548615579",
+      "name": "Spending Tracker",
+      "seller": "MH Riley Ltd",
+      "rating": 4.8,
+      "ratingCount": 19509,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/41/4b/6b/414b6bd5-c2fa-3a7b-a590-dd3156ccba56/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/spending-tracker/id548615579",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1492055171",
+      "name": "Expenses: Spending Tracker",
+      "seller": "BLUE COMET LABS LLC",
+      "rating": 4.8,
+      "ratingCount": 1838,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/98/7b/f5/987bf5ac-b76f-03ce-e73f-e9b0229bf636/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/expenses-spending-tracker/id1492055171",
+      "reviewsAnalyzed": 200
+    }
+  ],
+  "result": {
+    "verdict": {
+      "score": 62,
+      "label": "MAYBE",
+      "headline": "「シンプルな手入力家計簿」と「業務向けレシートアプリ」の間に空白はある。ただし勝負はOCRの精度と価格設計で決まる",
+      "summary": "手入力型の家計簿アプリ（Money Manager、Spending Tracker、Expenses）のユーザーからは、レシート写真の添付や読み取り機能を求める声が繰り返し出ています。一方、レシート読み取り型（SimplyWise、Receipt Lens）は確定申告や経費精算向けに作られており、年額約90〜100ドルの価格が個人ユーザーから強く拒否されています。そのため「個人向けで安く、シンプルで、レシートが撮れる家計簿」というポジションには需要の裏付けがあります。ただし、読み取りミス（合計金額やカテゴリの誤認識）は評価1の主要因です。また、個人ユーザーは買い切り数ドルに慣れているため、OCRのコストを抑えられないと事業として成り立ちません。さらに、分析対象のレビューは英語圏が中心なので、日本市場での需要は別途検証が必要です。"
+    },
+    "marketOverview": "競合は大きく2つに分かれます。1つは、手入力でシンプルさとプライバシーを売りにする家計簿アプリです（Money Manager、Spending Tracker、Expenses）。多くは広告付き無料版か、数ドルの買い切りで、高い評価と長期利用を得ています。もう1つは、AIによるレシート読み取りを核にした経費・税務向けアプリです（SimplyWise、Receipt Lens）。読み取りによる時短は高く評価される一方で、年額サブスクリプション、価格表示の不透明さ、読み取り精度への不満が評価1に集中しています。「個人の日常支出をレシート撮影で記録し、手入力アプリ並みに軽く安い」という製品は、今回の競合群には見当たりません。",
+    "whatUsersLove": [
+      {
+        "title": "余計な機能がないシンプルさ",
+        "detail": "手入力型アプリの高評価は「必要なものだけがあり、それ以外はない」という点に集中しています。機能が多すぎる家計簿や銀行連携型から乗り換えてきたユーザーも多く、ミニマルであること自体が選ばれる理由になっています。",
+        "mentions": 120,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "Exactly what I need and nothing I don’t"
+          },
+          {
+            "appId": "560481810",
+            "text": "It has everything you need with nothing more that you don't."
+          },
+          {
+            "appId": "1492055171",
+            "text": "It’s everything you need and nothing more."
+          }
+        ]
+      },
+      {
+        "title": "撮るだけで金額・日付・店名が入る時短",
+        "detail": "レシート読み取り型アプリでは、写真1枚で入力が終わることが最大の満足ポイントです。1件あたり数秒で記録できるため、記録を習慣として続けやすくなります。",
+        "mentions": 60,
+        "quotes": [
+          {
+            "appId": "1538521095",
+            "text": "You don’t have to manually type anything, one picture of the receipt and it does the work for you!"
+          },
+          {
+            "appId": "1424280764",
+            "text": "i use the free version and all I need to do it take a picture it records the date, time, amount, tax and store name automatically!"
+          },
+          {
+            "appId": "1538521095",
+            "text": "Takes 5-10 seconds when I make a purchase to load it in so I can easily track all of our spending."
+          }
+        ]
+      },
+      {
+        "title": "銀行連携・アカウント登録が不要という安心感",
+        "detail": "銀行口座の連携やメール・電話番号の登録を求めないことが、プライバシー面で強く支持されています。自分で入力するからこそ支出を意識できる、という声もあります。",
+        "mentions": 35,
+        "quotes": [
+          {
+            "appId": "560481810",
+            "text": "I love that I don’t have to link any bank accounts, or give my email or phone number to use this app"
+          },
+          {
+            "appId": "548615579",
+            "text": "No need to enter an email or make an account."
+          },
+          {
+            "appId": "1492055171",
+            "text": "It doesn’t attempt to sync with your bank accounts or cards which is the best way to go about it."
+          }
+        ]
+      },
+      {
+        "title": "カテゴリ別の円グラフで「お金の行き先」が見える",
+        "detail": "月末にカテゴリ別の円グラフで支出の内訳を確認できることが、節約行動のきっかけになっています。グラフによる可視化は、記録を続ける動機になっています。",
+        "mentions": 40,
+        "quotes": [
+          {
+            "appId": "560481810",
+            "text": "My favorite part of the app is at the end of the month, seeing the color coded pie chart that breaks down my spending categories"
+          },
+          {
+            "appId": "1538521095",
+            "text": "It’s crazy to see how much I spend on each category so I know where I can do better in a specific area of spending"
+          },
+          {
+            "appId": "548615579",
+            "text": "Tilt your phone to landscape and it’s a pie graph of your money"
+          }
+        ]
+      },
+      {
+        "title": "紙のレシートの山から解放される",
+        "detail": "財布やバッグに溜まるレシートや、感熱紙の色あせから解放されることが喜ばれています。撮影したら紙は捨てられる、という体験自体に価値があります。",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "1424280764",
+            "text": "This app solved the clutter problem and mastered the organization of this information in a matter of seconds!"
+          },
+          {
+            "appId": "1538521095",
+            "text": "No more trying to save a bunch of paper receipts in my office."
+          },
+          {
+            "appId": "1424280764",
+            "text": "Receipts fade, so it’s good to be able to take a picture in an organized folder that calculates the math for me."
+          }
+        ]
+      },
+      {
+        "title": "開発者の反応の早さ",
+        "detail": "個人開発の家計簿アプリでは、問い合わせへの迅速な返信や要望の反映が高評価につながっています。個人開発者でも差別化しやすいポイントです。",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1492055171",
+            "text": "Had a few questions/feedback and got answers from the developer immediately."
+          },
+          {
+            "appId": "1538521095",
+            "text": "They actually listen to user feedback, and I’ve seen my suggestions implemented in just a few weeks."
+          },
+          {
+            "appId": "548615579",
+            "text": "When I had a question, I received a reply within 24 hours. That’s customer service!"
+          }
+        ]
+      }
+    ],
+    "whatToAvoid": [
+      {
+        "title": "価格を隠した「無料」表示とトライアルの罠",
+        "detail": "「無料」と表示しておきながら、情報入力やセットアップを済ませた後に年額約90〜100ドルを提示する手法が、最も多い評価1の原因です。トライアル中の即時課金や、解約後の課金にも強い反発があります。",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "1538521095",
+            "text": "Makes you put in all your information before it tells you it’s not really free."
+          },
+          {
+            "appId": "1424280764",
+            "text": "Thought it was FREE. Until the moment I opened the app and it wants you to start a 7 day FREE TRIAL, and then PAY $99!!!"
+          },
+          {
+            "appId": "1538521095",
+            "text": "It was stated that there is a 7-day trial period, but the money was charged immediately."
+          }
+        ]
+      },
+      {
+        "title": "閉じられない全画面広告・入力中の広告",
+        "detail": "入力操作中に出る広告や、閉じるボタンが偽装された全画面広告、不適切な内容の広告は、高評価だったアプリでも評価を一気に下げています。",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "Blocks the full screen with click bait style ‘close’ options which are parts of the ad itself"
+          },
+          {
+            "appId": "560481810",
+            "text": "When I started use this app a few years ago it wasn’t like every input of words comes with ads."
+          }
+        ]
+      },
+      {
+        "title": "読み取りミス（合計金額・品目・カテゴリの誤認識）",
+        "detail": "合計金額の取り違え、品目と価格の対応ミス、明らかに誤ったカテゴリ分類は、撮影型アプリの存在意義を損ないます。毎回手で修正が必要になると「手入力と変わらない」と判断されます。",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1538521095",
+            "text": "I scanned one receipt… it got the total completely wrong and incorrectly paired items with prices in the item breakdown list."
+          },
+          {
+            "appId": "1424280764",
+            "text": "it took a Whole Foods receipt and categorised it as office supplies."
+          },
+          {
+            "appId": "1538521095",
+            "text": "I have to change the amount on every restaurant receipt. Never correct!"
+          }
+        ]
+      },
+      {
+        "title": "アップデートや機種変更でのデータ消失",
+        "detail": "お金の記録が消えることは、ユーザーにとって致命的な体験です。アップデート、アンインストール、機種変更の際にデータを失ったという報告が複数のアプリで見られます。",
+        "mentions": 15,
+        "quotes": [
+          {
+            "appId": "560481810",
+            "text": "To my horror when I opened the app after updating, all my data was gone"
+          },
+          {
+            "appId": "548615579",
+            "text": "However, I have a problem where I upgraded my phone and when it transferred it erased all my information."
+          },
+          {
+            "appId": "560481810",
+            "text": "Lost all my 2-3 months data when uninstalled erroneously"
+          }
+        ]
+      },
+      {
+        "title": "使う前に個人情報を求める重いオンボーディング",
+        "detail": "電話番号の登録、職業の入力、関係者の連絡先などを、アプリを試す前に求めると即アンインストールにつながります。",
+        "mentions": 10,
+        "quotes": [
+          {
+            "appId": "1538521095",
+            "text": "wants my employees contact info before I get any chance to see or experience the app."
+          },
+          {
+            "appId": "1538521095",
+            "text": "requires the user to enter a Phone number for registration seems super suspect in terms of privacy."
+          }
+        ]
+      },
+      {
+        "title": "ボタンや画面が多すぎて分かりにくい",
+        "detail": "多機能な家計簿は「チュートリアルなしでは使えない」と離脱される原因になります。初回の体験が複雑だと、記録の習慣化に失敗します。",
+        "mentions": 12,
+        "quotes": [
+          {
+            "appId": "560481810",
+            "text": "Useless without a very long 3hr tutorial."
+          },
+          {
+            "appId": "560481810",
+            "text": "if it was easier, im sure it would be a wonderful app, but there are just too many things."
+          },
+          {
+            "appId": "560481810",
+            "text": "This app is too complicated for my use."
+          }
+        ]
+      }
+    ],
+    "willingnessToPay": {
+      "summary": "個人の家計簿ユーザーは、数ドル（2.99〜5.99ドル）の買い切りや広告削除には喜んで払います。一方、年額約90〜100ドルのサブスクリプションは「高すぎる」として明確に拒否しています。高額でも払っているのは、確定申告の節税効果で元が取れる事業者や個人事業主です。個人からは「レシート撮影機能があれば有料版を買う」「同期や共有なら少額の月額でも払う」という条件付きの課金意向が見られます。",
+      "signals": [
+        {
+          "title": "買い切り・サブスクなしへの強い好意",
+          "detail": "「サブスクではなく一度払えば終わり」であることが、それ自体で高評価の理由になっています。応援の意味で購入するユーザーもいます。",
+          "mentions": 40,
+          "quotes": [
+            {
+              "appId": "548615579",
+              "text": "I'm so happy to pay a one-time fee which is less than a cup of coffee to support the developer and to own the ads-free app forever!"
+            },
+            {
+              "appId": "560481810",
+              "text": "It has a one time fee of $5.99 plus tax which is worth it for every penny."
+            },
+            {
+              "appId": "1492055171",
+              "text": "The best thing is that there's no monthly fee, just one payment upfront."
+            }
+          ]
+        },
+        {
+          "title": "年額90〜100ドルは個人には高すぎる",
+          "detail": "機能は気に入っていても、価格が理由で有料版を見送る声が多く見られます。年額10ドル程度を望む声もあります。",
+          "mentions": 25,
+          "quotes": [
+            {
+              "appId": "1424280764",
+              "text": "The App is not worth 99$ at all, it is too simple, and what it give you is not much."
+            },
+            {
+              "appId": "1538521095",
+              "text": "The only thing is the price is too high. I’m not able to get the full version."
+            },
+            {
+              "appId": "1538521095",
+              "text": "Price per year should be dropped to $10"
+            }
+          ]
+        },
+        {
+          "title": "高額でも払うのは税務で元が取れる事業者",
+          "detail": "年額90ドルを受け入れているのは、経費計上による節税効果を実感している事業者です。個人の家計簿とは支払い動機が異なります。",
+          "mentions": 20,
+          "quotes": [
+            {
+              "appId": "1538521095",
+              "text": "very quickly decided it was worth the $90 annual fee to be able to run reports"
+            },
+            {
+              "appId": "1424280764",
+              "text": "When I filed taxes, I owed >$1000. But when I applied the expenses that I recorded in this app, I then received $600 back."
+            },
+            {
+              "appId": "1538521095",
+              "text": "I write off the yearly membership also."
+            }
+          ]
+        },
+        {
+          "title": "「この機能があれば払う」という条件付きの課金意向",
+          "detail": "レシート写真の添付、端末間の共有、個人向けの安い買い切りなど、特定の機能や価格に対して支払う意思が示されています。",
+          "mentions": 10,
+          "quotes": [
+            {
+              "appId": "1492055171",
+              "text": "i’d really upgrade the app and pay the full version if it only had a way to add receipts!!"
+            },
+            {
+              "appId": "560481810",
+              "text": "I’d even pay a small monthly fee for that service."
+            },
+            {
+              "appId": "1538521095",
+              "text": "You should make a 1 time purchase of 20 dollars for personal use"
+            }
+          ]
+        }
+      ],
+      "suggestedPricing": ""
+    },
+    "featureRequests": [
+      {
+        "title": "手入力家計簿へのレシート撮影・写真添付",
+        "detail": "シンプル系家計簿の利用者から、レシート写真の添付や読み取り機能の要望が繰り返し出ています。今回のアイデアの中核ニーズと直接重なります。",
+        "mentions": 10,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "Just add the ability of add photo receipt."
+          },
+          {
+            "appId": "560481810",
+            "text": "I like it more if it has receipt scanner"
+          },
+          {
+            "appId": "548615579",
+            "text": "I wish you could add a photo to the notes section so you could capture your receipts for future viewing."
+          }
+        ]
+      },
+      {
+        "title": "端末間の自動同期・確実なバックアップ",
+        "detail": "Dropboxを経由した手動の同期や、アカウントがないためにバックアップできないことへの不満が根強くあります。iCloudによる自動同期や確実な復元を望む声が多数あります。",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "560481810",
+            "text": "Good app, I wished it syncs automatically across devices."
+          },
+          {
+            "appId": "548615579",
+            "text": "I don't understand why we cannot just back up to iCloud"
+          },
+          {
+            "appId": "560481810",
+            "text": "it should include login or signup option to make backup data"
+          }
+        ]
+      },
+      {
+        "title": "カテゴリ別の合計表示と明細へのドリルダウン",
+        "detail": "カテゴリをタップするとその明細一覧が見られる機能や、カテゴリごとの累計・年間合計を、レポートを開かずに確認したいという要望です。",
+        "mentions": 15,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "I wish it pulled up every transaction that I’ve placed in that category"
+          },
+          {
+            "appId": "1538521095",
+            "text": "where can I see a total in each category I’ve created."
+          },
+          {
+            "appId": "1538521095",
+            "text": "The app does not keep a running total except by month."
+          }
+        ]
+      },
+      {
+        "title": "1枚のレシートを複数カテゴリに分割・サブカテゴリ",
+        "detail": "スーパーのレシートに食費と日用品が混在するようなケースで、1件を複数カテゴリに分割したいという要望です。サブカテゴリの要望も多く見られます。",
+        "mentions": 15,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "It would be awesome if we could split an expense into multiple categories."
+          },
+          {
+            "appId": "560481810",
+            "text": "also needs a split payment option for different category purchases on the same bill."
+          },
+          {
+            "appId": "1492055171",
+            "text": "Wish they would add subcatagories like AUTOMOBILE / FUEL"
+          }
+        ]
+      },
+      {
+        "title": "カテゴリ別の予算上限と残額表示",
+        "detail": "食費や娯楽費などカテゴリごとに上限を設定し、使いすぎをひと目で把握したいという要望です。",
+        "mentions": 8,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "have each category allow for a max spend amount so I can see where I’m overspending within my categories."
+          },
+          {
+            "appId": "548615579",
+            "text": "I do wish there was a part of the app that you could do individual budgets for like Fun or Groceries"
+          }
+        ]
+      },
+      {
+        "title": "レシートがない支出のクイック入力（ウィジェット等）",
+        "detail": "Apple Payなどレシートが出ない支出も記録できる必要があります。ウィジェットやロック画面からの即時入力が支持されています。",
+        "mentions": 10,
+        "quotes": [
+          {
+            "appId": "1538521095",
+            "text": "I only wish I could add thing manually since if I use Apple Pay for a purchase, I can’t track that."
+          },
+          {
+            "appId": "1492055171",
+            "text": "A clean mobile widget is essential as well"
+          },
+          {
+            "appId": "548615579",
+            "text": "The addition of the lock screen widget makes adding expenses on the fly super easy"
+          }
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "「個人向けレシート撮影家計簿」という空きポジション",
+        "detail": "レシート読み取り型の競合は、確定申告・経費精算・事業者向けに最適化されています。一方、シンプル系家計簿は手入力のみです。一人暮らしの日常支出に特化し、撮影と手入力の両方を軽く扱える製品は、両方のユーザー層の不満を拾えます。"
+      },
+      {
+        "title": "価格の透明性を武器にする",
+        "detail": "「無料と見せかけて後から年額99ドル」への反発は非常に強いです。初回起動時に価格を明示し、無料枠と有料版の差を最初から見せるだけでも、レビューで差別化できます。"
+      },
+      {
+        "title": "端末内OCR＋読み取り箇所の確認UIで精度不満を和らげる",
+        "detail": "Receipt Lensでは、読み取った金額の横に元画像の切り抜きを表示する点が高く評価されています。端末内でのOCR（Apple Visionなど）でコストを抑えつつ、合計金額・日付・店名の該当箇所をハイライトしてワンタップで修正できる確認画面を用意すれば、誤読時の不満を最小化できます。"
+      },
+      {
+        "title": "アカウント不要・iCloudによる安全なデータ保全",
+        "detail": "登録不要のプライバシー性は強く支持されています。一方で、データ消失や機種変更時の移行は最大の不安要素です。アカウントなしで使え、iCloudに自動バックアップされる設計は、両方の要求を同時に満たします。"
+      },
+      {
+        "title": "品目レベルのデータを一人暮らしの節約に活かす",
+        "detail": "レシートの品目データを使い、食品・日用品の買い物傾向や同じ商品の価格比較に活用したいという潜在ニーズがあります。手入力アプリには真似できない価値として、将来の有料機能の候補になります。"
+      }
+    ],
+    "competitorNotes": [
+      {
+        "appId": "1538521095",
+        "strengths": [
+          "写真1枚で店名・金額・品目まで自動入力でき、時短効果が高く評価されている",
+          "フォルダ分類、Excelエクスポート、メールやAmazon連携など機能が豊富",
+          "サポートの反応が良く、要望が反映されるという評価"
+        ],
+        "weaknesses": [
+          "年額約90ドルで、価格提示が遅く「無料詐欺」と受け取られている",
+          "電話番号や職業などを求める重いオンボーディング",
+          "合計金額の誤読、レストランのチップ未対応、アップデートによる劣化、銀行連携の不具合",
+          "エクスポートが有料版限定で、ベンダーロックインと批判されている"
+        ]
+      },
+      {
+        "appId": "560481810",
+        "strengths": [
+          "無料でもほぼ全機能が使え、5.99ドルの買い切りで広告を削除できる",
+          "カテゴリやサブカテゴリのカスタマイズ性が高く、円グラフや期間別レポートが充実",
+          "銀行連携やアカウント登録が不要で、長期の継続利用者が多い"
+        ],
+        "weaknesses": [
+          "端末間の同期がなく、Android→iOSの移行やバックアップに不満",
+          "広告の増加（入力中のポップアップ、大音量広告）",
+          "画面が古く、初心者には複雑で分かりにくい",
+          "レシートスキャナーがない"
+        ]
+      },
+      {
+        "appId": "1424280764",
+        "strengths": [
+          "読み取りが速く正確で、金額横に元画像の切り抜きを表示して確認しやすい",
+          "税額の分離、Excel出力、QuickBooks連携",
+          "シンプルで迷わないUI"
+        ],
+        "weaknesses": [
+          "7日間トライアル後に年額59.99〜99.99ドルとなり、価格表示の不透明さに強い反発",
+          "複数品目レシートやカテゴリ分類の精度が低いという報告",
+          "サーバー障害、エクスポート不能、サポートが無反応",
+          "返品レシートがマイナス計上されない、日付でソートできないなど基本機能の欠如"
+        ]
+      },
+      {
+        "appId": "548615579",
+        "strengths": [
+          "極めてシンプルで、10年以上使い続けるユーザーもいる",
+          "2.99ドルの買い切りでPro化でき、ウィジェットやApple Watchから素早く入力できる",
+          "アカウント不要で、銀行連携しない手入力型"
+        ],
+        "weaknesses": [
+          "閉じられない全画面広告や不適切な広告",
+          "同期がDropbox依存で、iCloud非対応",
+          "デザインが古く、カテゴリから明細へのドリルダウンがない",
+          "レシート写真を添付できない"
+        ]
+      },
+      {
+        "appId": "1492055171",
+        "strengths": [
+          "Apple純正風の洗練されたUIで、iCloud同期やMac・iPad対応",
+          "買い切りのPro版と、開発者による迅速なサポート",
+          "Walletからの取り込みやウィジェットなど、入力が軽い"
+        ],
+        "weaknesses": [
+          "共有機能の不具合や、共有相手側にも購入が必要な点への不満",
+          "サブカテゴリ、支払方法、支払先の管理がない",
+          "アップグレードを促すポップアップが過剰",
+          "レシート写真の添付ができない"
+        ]
+      }
+    ],
+    "mvpPlan": [
+      "レシート撮影から合計金額・日付・店名を端末内OCRで自動抽出し、読み取り箇所をハイライト表示する確認・修正画面（ワンタップで訂正）",
+      "レシートがない支出向けのクイック手入力（ホーム画面・ロック画面ウィジェット、前回カテゴリの提案）",
+      "店名からのカテゴリ自動提案と、月次のカテゴリ別合計・円グラフ（タップで明細へドリルダウン）",
+      "月の予算と残額表示（全体＋食費などカテゴリ別の上限）",
+      "アカウント不要で使え、iCloudに自動バックアップ・復元。CSVエクスポートは無料で提供",
+      "初回起動時に価格を明示する無料枠＋低価格の買い切りPro（広告なし、またはバナーのみ）"
+    ]
+  }
+}

@@ -1,0 +1,577 @@
+{
+  "slug": "vocab-app",
+  "title": "Vocabulary app",
+  "idea": "Five minutes a day—vocabulary flashcards for your commute",
+  "topCompetitor": "Quizlet: More than Flashcards",
+  "reviewCount": 2264,
+  "competitors": [
+    {
+      "id": "1084540807",
+      "name": "Vocabulary - Learn words daily",
+      "seller": "Monkey Taps",
+      "rating": 4.8,
+      "ratingCount": 221685,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8a/eb/21/8aeb2135-f8be-9515-dfd7-ec7f6de95fdb/0_voc-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/vocabulary-learn-words-daily/id1084540807",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "987136347",
+      "name": "Word of the Day・Vocabulary",
+      "seller": "Vocabulous US, Inc.",
+      "rating": 4.7,
+      "ratingCount": 39014,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d1/97/f9/d197f931-1bd6-eb99-6358-63108c30e408/AppIcon_Sky-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/word-of-the-day-vocabulary/id987136347",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1365078730",
+      "name": "WordUp - Vocabulary Builder",
+      "seller": "Geeks ltd",
+      "rating": 4.8,
+      "ratingCount": 13853,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c9/2a/2b/c92a2b07-1da5-6ef4-fb6b-7617826aa32e/AppIcon-wordup_full-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/wordup-vocabulary-builder/id1365078730",
+      "reviewsAnalyzed": 450
+    },
+    {
+      "id": "1438344260",
+      "name": "Atlas・Daily Vocabulary Builder",
+      "seller": "SAYAN YAZILIM TEKNOLOJI ANONIM SIRKETI",
+      "rating": 4.8,
+      "ratingCount": 12594,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/31/0d/6b/310d6bbd-c193-9698-1260-d0724123a2fb/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/atlas-daily-vocabulary-builder/id1438344260",
+      "reviewsAnalyzed": 314
+    },
+    {
+      "id": "546473125",
+      "name": "Quizlet: More than Flashcards",
+      "seller": "Quizlet Inc",
+      "rating": 4.8,
+      "ratingCount": 1139410,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/89/63/1a/89631ab3-341a-541e-f7d9-cb8fdff31b60/AppIcon-production-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/quizlet-more-than-flashcards/id546473125",
+      "reviewsAnalyzed": 500
+    }
+  ],
+  "result": {
+    "verdict": {
+      "score": 62,
+      "label": "MAYBE",
+      "headline": "Real demand for short daily vocab, but the market is crowded. You can win only with honest pricing, real retention, and a true commute mode.",
+      "summary": "Reviews show strong love for bite-sized daily vocabulary: lock-screen widgets, swapping doomscrolling for learning, and spaced review. The category is dominated by highly rated apps with huge rating counts, so a generic 'word a day' clone will struggle. Those same leaders draw intense anger over hidden paywalls after long onboarding, trials billed without the promised reminder, inaccurate AI definitions and pronunciation, notification floods, and gamification clutter. No competitor reviewed offers a hands-free, offline 'commute mode,' and several users explicitly ask for listening while walking or driving. An indie app focused on a five-minute session with real spaced repetition, verified content, and transparent pricing has a credible wedge, but differentiation must be sharp."
+    },
+    "marketOverview": "The space splits into passive 'word of the day' apps (Vocabulary, Word of the Day) built around widgets and notifications, and active learning tools (WordUp, Atlas, Quizlet) built around quizzes and spaced repetition. All rely on subscriptions of roughly $35–60 per year, with aggressive onboarding paywalls and upsells, and all show rising review backlash against greed, AI-generated content, and disruptive redesigns. Users want something in between: low effort like a widget, but with actual retention. Quizlet's reviews show many study users will churn to Anki or Knowt when core study features are paywalled.",
+    "whatUsersLove": [
+      {
+        "title": "Passive learning via lock screen and widgets",
+        "detail": "The single most-praised feature in the passive apps is seeing words on the lock or home screen during idle moments. Learning feels effortless and fits into micro-moments like commutes and queues.",
+        "mentions": 45,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "Love the daily words in my lock screen"
+          },
+          {
+            "appId": "1084540807",
+            "text": "I see the hourly vocab update on my phone and frequently check it"
+          },
+          {
+            "appId": "987136347",
+            "text": "The widget and lock screen is so convenient."
+          }
+        ]
+      },
+      {
+        "title": "A healthy replacement for doomscrolling",
+        "detail": "Many users frame vocab apps as a guilt-free substitute for social media in short bursts. This maps directly onto a five-minute commute positioning.",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "good alternative to short form content for filling time/ compulsive phone use (best part imo)"
+          },
+          {
+            "appId": "1084540807",
+            "text": "I replaced scrolling in TikTok with this and I love it"
+          },
+          {
+            "appId": "1438344260",
+            "text": "Switched over to Atlas first thing in the morning rather than social media."
+          }
+        ]
+      },
+      {
+        "title": "Spaced repetition and review that makes words stick",
+        "detail": "Users of WordUp and Atlas credit review routines and mistake drills for retention. This is the key gap in the widget-first apps.",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1365078730",
+            "text": "their daily review routine is just amazing"
+          },
+          {
+            "appId": "1438344260",
+            "text": "What really makes this app effective in retaining what you learn is spaced repetition."
+          },
+          {
+            "appId": "1084540807",
+            "text": "I especially like the ‘mistakes’ practice tool to really reinforce my memory."
+          }
+        ]
+      },
+      {
+        "title": "Placement test and level-matched words",
+        "detail": "Starting at the right difficulty is valued. It avoids both boredom from easy words and frustration from archaic ones.",
+        "mentions": 15,
+        "quotes": [
+          {
+            "appId": "1438344260",
+            "text": "it first tests your level, then provides personalized sets of words that perfectly match your ability"
+          },
+          {
+            "appId": "1438344260",
+            "text": "I really like the fact that they quizzed my in the beginning too so I didn’t have to start at a base level of skill."
+          }
+        ]
+      },
+      {
+        "title": "Bite-sized, light, not overwhelming",
+        "detail": "Small daily doses with a few exercises are seen as sustainable and practical. This validates the five-minute framing.",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1438344260",
+            "text": "Nice format. Easy to follow. Not overwhelming."
+          },
+          {
+            "appId": "987136347",
+            "text": "A new word each day keeps learning light, consistent, and practical."
+          },
+          {
+            "appId": "1438344260",
+            "text": "The lesson it bite size with exercises to help me remember the words."
+          }
+        ]
+      },
+      {
+        "title": "Visuals and example sentences aid memory",
+        "detail": "Illustrations and contextual examples are frequently cited as memory hooks. Users push back when the art is AI-generated or irrelevant.",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "987136347",
+            "text": "The pictures help me with retention. Nice touch!"
+          },
+          {
+            "appId": "1365078730",
+            "text": "Lots of examples sentences help me understand words"
+          }
+        ]
+      }
+    ],
+    "whatToAvoid": [
+      {
+        "title": "Hidden paywall after long onboarding, and trials billed without the promised reminder",
+        "detail": "This is the largest complaint cluster by far. Users spend 5–20 minutes on questionnaires, only to hit a paywall. Many report being charged for a full year despite opting into a pre-renewal reminder or cancelling.",
+        "mentions": 120,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "Only after you spend 5 minutes setting up your preferences are you presented with the paywall stopping block."
+          },
+          {
+            "appId": "1084540807",
+            "text": "I explicitly checked the option to notify me before the subscription was renewed. It did not notify me, and I woke up to a $48 charge."
+          },
+          {
+            "appId": "987136347",
+            "text": "They actually charged me $10.91 for a 7 Day free trial."
+          }
+        ]
+      },
+      {
+        "title": "Paywalling the core learning loop (saved words, review, tests)",
+        "detail": "Users feel cheated when they can save words but must pay to view or practice them, or get only one test. Quizlet's paywall on Learn mode is pushing loyal users to Anki and Knowt.",
+        "mentions": 80,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "to view ur saved/hearted words, u have to join their membership"
+          },
+          {
+            "appId": "1084540807",
+            "text": "You need a subscription to practice words, revise, see your stats"
+          },
+          {
+            "appId": "546473125",
+            "text": "Literally can only test once then you have to pay. Lame"
+          }
+        ]
+      },
+      {
+        "title": "Notification and word floods with no pace control",
+        "detail": "Users who choose a few words a week still get bombarded. Constant cycling defeats retention and leads to uninstalls.",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "it keeps changing the word and notifying about 30 times a day"
+          },
+          {
+            "appId": "1084540807",
+            "text": "I want to learn one new word each day and have it remain on my Home Screen long enough to actually retain it."
+          },
+          {
+            "appId": "1438344260",
+            "text": "not reminded every 15 minutes after already using the app for 45mins"
+          }
+        ]
+      },
+      {
+        "title": "Inaccurate AI definitions, pronunciation, and images",
+        "detail": "Wrong or oversimplified definitions, hallucinated words, and mispronunciations destroy trust in a learning tool. AI art also triggers strong backlash and even cancellations.",
+        "mentions": 55,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "If the AI can't pronounce a word correctly, I can't trust it to teach me how to pronounce anything."
+          },
+          {
+            "appId": "1084540807",
+            "text": "I don’t want to memorize the wrong definitions."
+          },
+          {
+            "appId": "1365078730",
+            "text": "The AI generated images are confusing and misleading."
+          }
+        ]
+      },
+      {
+        "title": "Gamification clutter, buggy streaks, and ads gating the word",
+        "detail": "Streak-reset bugs, point animations, and ads before the daily word frustrate users who just want the content. Many ask for an option to turn this off.",
+        "mentions": 45,
+        "quotes": [
+          {
+            "appId": "987136347",
+            "text": "I just want to see the word, the definition, and the example sentence, that’s all."
+          },
+          {
+            "appId": "987136347",
+            "text": "Whenever I have a high streak, the app tells me that I have missed a day when I know I have not."
+          },
+          {
+            "appId": "1084540807",
+            "text": "let Me shut off these stupid streaks. I just want something casual to learn words"
+          }
+        ]
+      },
+      {
+        "title": "Redesigns and bugs that wipe saved words",
+        "detail": "Losing years of collected words or hours of flashcards after an update is a top reason for 1-star reviews across Word of the Day, Atlas, and Quizlet.",
+        "mentions": 35,
+        "quotes": [
+          {
+            "appId": "987136347",
+            "text": "all of my favorite words that I have been collecting for over 10 years are all gone forever"
+          },
+          {
+            "appId": "1438344260",
+            "text": "Over a year and half of adding words and it is all gone"
+          },
+          {
+            "appId": "546473125",
+            "text": "200 flash cards GONE"
+          }
+        ]
+      }
+    ],
+    "willingnessToPay": {
+      "summary": "Willingness to pay exists but is fragile and price-sensitive. Users push back hard on $50–60 per year subscriptions for 'a word a day' and resent subscription fatigue. They praise cheaper options, one-time or lifetime purchases, and ad-supported free tiers, and some happily pay for lifetime access when the value is clear.",
+      "signals": [
+        {
+          "title": "Strong resistance to $50–60/year",
+          "detail": "Dozens of reviews call the price ludicrous for a simple vocab app, often comparing it to a free dictionary.",
+          "mentions": 60,
+          "quotes": [
+            {
+              "appId": "1084540807",
+              "text": "Sorry, but ain’t nobody paying $60 for all that."
+            },
+            {
+              "appId": "987136347",
+              "text": "Reduce it by 50 percent and you’ll get triple the volume in memberships."
+            }
+          ]
+        },
+        {
+          "title": "Demand for one-time or lifetime purchase",
+          "detail": "Users explicitly ask to 'buy not rent,' and lifetime buyers report satisfaction.",
+          "mentions": 20,
+          "quotes": [
+            {
+              "appId": "1084540807",
+              "text": "Would have gave it five star if given the option for a one time payment"
+            },
+            {
+              "appId": "987136347",
+              "text": "I just wish the developers included a lifetime purchase option. I would totally buy it."
+            },
+            {
+              "appId": "1438344260",
+              "text": "I threw my $74.99 one time membership at this company with a ☺️"
+            }
+          ]
+        },
+        {
+          "title": "Ads acceptable for a usable free tier",
+          "detail": "Some users prefer ads over paywalls and get upset when watching ads to unlock content is removed.",
+          "mentions": 15,
+          "quotes": [
+            {
+              "appId": "1438344260",
+              "text": "I am okay with watching an ad or two to continue. I feel it’s worth it."
+            },
+            {
+              "appId": "1438344260",
+              "text": "why did you remove the option to watch ads instead considering you get paid for showing ads?"
+            }
+          ]
+        },
+        {
+          "title": "Affordable pricing converts",
+          "detail": "When the price feels fair, users subscribe and recommend the app.",
+          "mentions": 12,
+          "quotes": [
+            {
+              "appId": "1438344260",
+              "text": "this one is more affordable than the others and therefore I recommend it more."
+            },
+            {
+              "appId": "1084540807",
+              "text": "I just recently switched over to the paid subscription for its cheap yearly price"
+            }
+          ]
+        }
+      ],
+      "suggestedPricing": "Make the full core loop free: daily five-minute session, saving, search, and basic review, with no onboarding paywall. Show pricing up front in onboarding. Offer Pro (commute audio mode, offline packs, advanced spaced-repetition stats, themed word packs, export) at about $2.99/month or $19.99/year, plus a $29–39 lifetime option. If you offer a trial, send an in-app and push reminder 24 hours before billing and make cancellation one tap; use this as a marketing point given competitors' reputation."
+    },
+    "featureRequests": [
+      {
+        "title": "'I know this' and 'don't show again' buttons",
+        "detail": "Users want to skip known or irrelevant words so sessions focus on genuinely new vocabulary.",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "there should be a button to mark the words that you already know so you never see them / get tested on them again"
+          },
+          {
+            "appId": "1438344260",
+            "text": "It would be great to have a button \"I know this word\" or skip a word if we already know it"
+          }
+        ]
+      },
+      {
+        "title": "User-controlled pace and reminder windows",
+        "detail": "Users want to set words per day or week and quiet hours, and have the app actually respect those settings.",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "I want to do 1-2 words a week & use the words throughout the week then they’ll stick!"
+          },
+          {
+            "appId": "987136347",
+            "text": "It should be a new word weekly or biweekly, not daily."
+          },
+          {
+            "appId": "1084540807",
+            "text": "I would like to set timers for the reminders so I don’t receive words too early or way past my bed time."
+          }
+        ]
+      },
+      {
+        "title": "Review past words (real spaced repetition)",
+        "detail": "Widget-first apps keep pushing new words without resurfacing old ones, so users forget what they saw.",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "I wish I could review words again that showed up in past so I can remember them."
+          },
+          {
+            "appId": "1084540807",
+            "text": "there is no repetition of the new words you will learn"
+          },
+          {
+            "appId": "1438344260",
+            "text": "I think this app is great for LEARNing the word, but not RETAINing the word"
+          }
+        ]
+      },
+      {
+        "title": "Search and add words encountered elsewhere",
+        "detail": "Readers want to look up a word they found in a book or article and drop it into their review queue.",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "Nice app! But I wish I could search words through the app."
+          },
+          {
+            "appId": "987136347",
+            "text": "Why can’t I add the words from the daily quizzes to my bookmarks?"
+          }
+        ]
+      },
+      {
+        "title": "Hands-free audio and listening mode",
+        "detail": "Users ask for full-sentence audio and studying while walking or driving without tapping. This is a direct commute use case no competitor serves.",
+        "mentions": 10,
+        "quotes": [
+          {
+            "appId": "1438344260",
+            "text": "I wish it has a listening feature to be used when I walk or I am doing something else."
+          },
+          {
+            "appId": "546473125",
+            "text": "As when I am Driving like to use this app but I can’t with having tap the screen when section done each time."
+          },
+          {
+            "appId": "1084540807",
+            "text": "you should add whole sentences’ audio playing function"
+          }
+        ]
+      },
+      {
+        "title": "Phonetics on widget and native-language translations",
+        "detail": "Users want IPA or pronunciation visible at a glance, and ESL learners want translations on each card.",
+        "mentions": 12,
+        "quotes": [
+          {
+            "appId": "1084540807",
+            "text": "Need phonetic symbols on lock screen widget"
+          },
+          {
+            "appId": "1084540807",
+            "text": "an option to display a translation in another language directly on each word card"
+          }
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Own the 'commute mode'",
+        "detail": "Build a hands-free, offline, audio-first five-minute session: word, definition, example, a pause to recall, then the answer. Pair it with a one-thumb swipe mode for trains. This is explicitly requested, and none of the five competitors provide it."
+      },
+      {
+        "title": "Honesty as a brand",
+        "detail": "Competitors' biggest liability is trust: hidden paywalls, missing trial reminders, unreachable support. Market 'no onboarding paywall, price shown up front, reminder guaranteed, lifetime option,' and respond to reviews."
+      },
+      {
+        "title": "Verified, useful vocabulary",
+        "detail": "Use dictionary-sourced, human-reviewed definitions and real audio, and show frequency or usefulness labels. Avoid obscure or invented words and NSFW categories by default, with filters. This directly addresses the large inaccuracy and content-quality complaint cluster."
+      },
+      {
+        "title": "Retention engine in a calm interface",
+        "detail": "Combine widget-style passive exposure with true spaced repetition: each five-minute session mixes due reviews and a few new words, with 'I know this' skipping. Keep streaks and points optional so users don't get the guilt, clutter, or reset bugs competitors are criticized for."
+      },
+      {
+        "title": "Data safety and portability",
+        "detail": "Provide iCloud sync, never lose saved words across updates, and offer CSV/Anki export. Data-loss horror stories and 'export to Anki' requests show this is a meaningful trust and switching lever."
+      }
+    ],
+    "competitorNotes": [
+      {
+        "appId": "1084540807",
+        "strengths": [
+          "Beloved lock screen and home widgets, plus Apple Watch support",
+          "Polished, beautiful design and themes",
+          "Strong 'replace doomscrolling' positioning",
+          "Level selection and custom words"
+        ],
+        "weaknesses": [
+          "Paywall revealed only after long onboarding; quiz results gated",
+          "Many reports of trial charges without the promised reminder, and unreachable support",
+          "Inaccurate AI definitions, mispronunciations, and broken pronunciation button",
+          "Notification and word floods with no reliable pace control; no once-a-day widget option",
+          "Saved words and practice paywalled; NSFW and obscure words; no search"
+        ]
+      },
+      {
+        "appId": "987136347",
+        "strengths": [
+          "Human illustrations valued as memory aids",
+          "Word-of-the-day ritual with stories, quizzes, and games",
+          "Long-time loyal users with year-plus streaks"
+        ],
+        "weaknesses": [
+          "Ads or payment required just to see the daily word",
+          "Buggy streaks that falsely report missed days",
+          "Frequent redesigns that wiped saved words and removed search",
+          "Added gamification clutter, AI art backlash, and extra paid word packs on top of the subscription",
+          "Widgets broken or replaced with 'tap to reveal'"
+        ]
+      },
+      {
+        "appId": "1365078730",
+        "strengths": [
+          "Spaced repetition and daily review routine",
+          "Rich context: example sentences, videos, frequency-ranked lists",
+          "AI chat; strong with ESL learners, including Persian payment support"
+        ],
+        "weaknesses": [
+          "Frequent crashes, login failures, and sync failures after updates",
+          "Robotic TTS voices and irrelevant AI images",
+          "Premium not recognized after payment, with unresponsive support",
+          "Heavy ads in the free tier; limited recall-based testing"
+        ]
+      },
+      {
+        "appId": "1438344260",
+        "strengths": [
+          "Placement test with level-matched five-word sets",
+          "Varied exercises (definition, synonyms, fill-in-the-gap, spelling) and a journal",
+          "Lifetime option (~$75) and lower price than peers; praised support",
+          "Free tier was viable with ads"
+        ],
+        "weaknesses": [
+          "Removed watch-ad-to-unlock option, forcing a subscription",
+          "Journal and data loss; poor cross-device sync and login",
+          "No way to skip known words; tedious spelling drills",
+          "Some wrong definitions, grammar errors, and politically charged example sentences"
+        ]
+      },
+      {
+        "appId": "546473125",
+        "strengths": [
+          "Huge user base and shared sets; AI conversion of notes into flashcards",
+          "Multiple study modes, Learn mode, and newly added spaced repetition",
+          "Seen as worth paying for by exam-focused users"
+        ],
+        "weaknesses": [
+          "Learn mode and tests heavily paywalled, with tiered upsells even for paid users",
+          "Recent editor update loses unsaved cards; laggy, with constant 'are you a bot' prompts",
+          "Trial dark patterns and hard-to-cancel subscriptions",
+          "Users actively switching to Anki and Knowt"
+        ]
+      }
+    ],
+    "mvpPlan": [
+      "Five-minute daily session engine: a mix of due spaced-repetition reviews and 3–5 new words, with an 'I know this / don't show again' button and user-set words per day or week",
+      "Short placement check plus a curated, frequency-ranked word list with verified definitions, real example sentences, IPA, and natural-sounding audio (no AI-hallucinated content)",
+      "Hands-free commute mode: audio-only, offline-capable playback (word, pause to recall, definition, example) that runs without tapping, plus a one-thumb swipe card mode",
+      "Lock screen and home widget showing today's or due word with IPA, refreshing at the user's chosen rate (including once per day); quiet hours and a single daily reminder",
+      "Free search and 'add a word I saw' into the review queue, with iCloud sync so saved words are never lost",
+      "Transparent monetization: no onboarding paywall, price shown up front, optional low-cost Pro or lifetime purchase, and a guaranteed trial reminder"
+    ]
+  }
+}

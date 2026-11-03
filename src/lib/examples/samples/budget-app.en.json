@@ -1,0 +1,574 @@
+{
+  "slug": "budget-app",
+  "title": "Budget app",
+  "idea": "A simple budget app for solo living—log spending by snapping receipts",
+  "topCompetitor": "SimplyWise: Receipts, Expenses",
+  "reviewCount": 1657,
+  "competitors": [
+    {
+      "id": "1538521095",
+      "name": "SimplyWise: Receipts, Expenses",
+      "seller": "SimplyWise, Inc.",
+      "rating": 4.9,
+      "ratingCount": 38356,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/56/27/67/562767f8-b7f7-5c1e-5e1c-f45371f8fa73/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/simplywise-receipts-expenses/id1538521095",
+      "reviewsAnalyzed": 350
+    },
+    {
+      "id": "548615579",
+      "name": "Spending Tracker",
+      "seller": "MH Riley Ltd",
+      "rating": 4.8,
+      "ratingCount": 19509,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/41/4b/6b/414b6bd5-c2fa-3a7b-a590-dd3156ccba56/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/spending-tracker/id548615579",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "560481810",
+      "name": "Money Manager Expense & Budget",
+      "seller": "Realbyte Inc.",
+      "rating": 4.8,
+      "ratingCount": 19723,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2e/e4/01/2ee40119-0d6d-ffea-8ddd-5b2f08dd9e72/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/money-manager-expense-budget/id560481810",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1550270774",
+      "name": "Receipt Scanner・Track Expenses",
+      "seller": "Saldo Apps Inc.",
+      "rating": 4.6,
+      "ratingCount": 3857,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/97/75/7c/97757c61-1152-67b9-0fc3-47b8bf5e952f/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/receipt-scanner-track-expenses/id1550270774",
+      "reviewsAnalyzed": 107
+    },
+    {
+      "id": "1492055171",
+      "name": "Expenses: Spending Tracker",
+      "seller": "BLUE COMET LABS LLC",
+      "rating": 4.8,
+      "ratingCount": 1838,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/98/7b/f5/987bf5ac-b76f-03ce-e73f-e9b0229bf636/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/expenses-spending-tracker/id1492055171",
+      "reviewsAnalyzed": 200
+    }
+  ],
+  "result": {
+    "verdict": {
+      "score": 66,
+      "label": "MAYBE",
+      "headline": "There is a real gap between costly business receipt scanners and simple manual budget trackers, but success depends on accurate, cheap OCR and honest pricing.",
+      "summary": "Manual trackers (Spending Tracker, Money Manager, Expenses) are loved for simplicity, privacy and one-time pricing, and their users repeatedly ask to attach or scan receipts. Receipt apps (SimplyWise, Receipt Scanner) prove the snap-a-receipt flow delights people, but they are built for taxes and small businesses. They charge $90–$120/yr and draw heavy anger over hidden paywalls, OCR errors and lost data. A personal, solo-focused budget app that turns a receipt photo into a categorized expense, with a fallback to fast manual entry, fits this gap well. The risks are that personal users expect very low one-time prices while OCR accuracy is hard and server-side AI costs money, and that free manual trackers are deeply entrenched among long-time users."
+    },
+    "marketOverview": "The market splits in two. Receipt and expense scanners (SimplyWise 4.9★/38k, Receipt Scanner 4.6★/3.8k) target 1099 workers, landlords and small businesses with tax exports and subscriptions. Lightweight manual budget trackers (Spending Tracker 4.8★/19.5k, Money Manager 4.8★/19.7k, Expenses 4.8★/1.8k) win personal users with simplicity, no bank linking and cheap one-time upgrades. Personal-budget users keep asking for receipt photos, while receipt-app users complain about price and business-oriented complexity. No reviewed app owns the 'snap a receipt, see my monthly personal budget' use case.",
+    "whatUsersLove": [
+      {
+        "title": "Radical simplicity, no bloat",
+        "detail": "The most common praise across the budget trackers is that they do only what's needed. Users explicitly reject feature-heavy apps like YNAB, Rocket Money and QuickBooks as overwhelming.",
+        "mentions": 150,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "Exactly what I need and nothing I don’t"
+          },
+          {
+            "appId": "1492055171",
+            "text": "None of frills that make other apps seem bloated and over the top."
+          },
+          {
+            "appId": "560481810",
+            "text": "It has everything you need with nothing more that you don't."
+          }
+        ]
+      },
+      {
+        "title": "Snap a receipt and it fills itself in",
+        "detail": "Receipt-app users rave about taking one photo and having merchant, date and total extracted in seconds. This is the core magic the new app would bring to personal budgeting.",
+        "mentions": 70,
+        "quotes": [
+          {
+            "appId": "1538521095",
+            "text": "You don’t have to manually type anything, one picture of the receipt and it does the work for you!"
+          },
+          {
+            "appId": "1538521095",
+            "text": "Takes 5-10 seconds when I make a purchase to load it in so I can easily track all of our spending."
+          },
+          {
+            "appId": "1550270774",
+            "text": "Entering receipts is fast and easy, the AI grabs the total and merchant so that makes entry even quicker."
+          }
+        ]
+      },
+      {
+        "title": "No bank linking, no account, privacy",
+        "detail": "Many users chose these apps specifically because they don't require linking bank accounts or signing up. They see manual control as safer and more intentional.",
+        "mentions": 45,
+        "quotes": [
+          {
+            "appId": "560481810",
+            "text": "I love that I don’t have to link any bank accounts, or give my email or phone number to use this app"
+          },
+          {
+            "appId": "548615579",
+            "text": "Many apps out there try to convince me to share my bank accounts for \"auto\" tracking which is intrusive and also defeats the purpose of spending control."
+          },
+          {
+            "appId": "548615579",
+            "text": "It’s simple and easy to use, doesn’t require any kind of account"
+          }
+        ]
+      },
+      {
+        "title": "Category charts that reveal where money goes",
+        "detail": "Pie charts and category breakdowns create 'aha' moments that change spending behavior. This is especially valued for monthly reviews.",
+        "mentions": 50,
+        "quotes": [
+          {
+            "appId": "560481810",
+            "text": "seeing the color coded pie chart that breaks down my spending categories"
+          },
+          {
+            "appId": "1538521095",
+            "text": "It’s crazy to see how much I spend on each category so I know where I can do better in a specific area of spending"
+          },
+          {
+            "appId": "548615579",
+            "text": "Tilt your phone to landscape and it’s a pie graph of your money"
+          }
+        ]
+      },
+      {
+        "title": "Logging habit builds mindfulness",
+        "detail": "Users say quick, deliberate logging keeps them accountable and is the first habit they've stuck with. Widgets and daily allowance carryover make the habit easier and more rewarding.",
+        "mentions": 40,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "The fact that it’s all manual entry makes this even better. It forces you to be mindful of your spending."
+          },
+          {
+            "appId": "560481810",
+            "text": "This is the first one I’ve stuck with."
+          },
+          {
+            "appId": "548615579",
+            "text": "It’s fun to watch your money grow daily when you come in under budget, as it carries over to the next day."
+          }
+        ]
+      },
+      {
+        "title": "Responsive indie developer",
+        "detail": "Fast, human support and visible implementation of requests earn loyalty and upgraded ratings. This is a natural advantage for an indie developer.",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "1492055171",
+            "text": "Had a few questions/feedback and got answers from the developer immediately."
+          },
+          {
+            "appId": "1538521095",
+            "text": "They actually listen to user feedback, and I’ve seen my suggestions implemented in just a few weeks."
+          }
+        ]
+      }
+    ],
+    "whatToAvoid": [
+      {
+        "title": "Hidden pricing and paywalls after onboarding",
+        "detail": "This is the single biggest source of 1★ reviews for receipt apps. Users feel tricked when price appears only after account setup and initial scans, and some describe data being held hostage.",
+        "mentions": 35,
+        "quotes": [
+          {
+            "appId": "1538521095",
+            "text": "Makes you put in all your information before it tells you it’s not really free."
+          },
+          {
+            "appId": "1550270774",
+            "text": "You only find out after setting up your account, scanning your first receipt, and tagging it that it’s going to be 9.99 a month."
+          },
+          {
+            "appId": "1550270774",
+            "text": "They allow you to scan a few receipts for free then hold your data hostage"
+          }
+        ]
+      },
+      {
+        "title": "Inaccurate OCR (totals, dates, tips)",
+        "detail": "Wrong totals, off-by-one dates and missed restaurant tips force manual correction. Users say this erases the time-saving value of scanning.",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1538521095",
+            "text": "I scanned one receipt… it got the total completely wrong"
+          },
+          {
+            "appId": "1550270774",
+            "text": "Out of ten receipts scanned, ZERO were correct."
+          },
+          {
+            "appId": "1550270774",
+            "text": "the date after you scan a receipt is always one day prior to the date on the receipt"
+          }
+        ]
+      },
+      {
+        "title": "Data loss after updates or device changes",
+        "detail": "Losing months of records is catastrophic for trust in money apps. It happens in both receipt and budget apps, often after updates or phone switches.",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1550270774",
+            "text": "When I did, all my receipts for the last six months were missing."
+          },
+          {
+            "appId": "560481810",
+            "text": "To my horror when I opened the app after updating, all my data was gone"
+          },
+          {
+            "appId": "560481810",
+            "text": "Lost all my 2-3 months data when uninstalled erroneously"
+          }
+        ]
+      },
+      {
+        "title": "Intrusive, unclosable ads",
+        "detail": "Free budget trackers lose stars and users over full-screen ads that can't be dismissed. Ads appearing even after users paid for removal cause further anger.",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "Blocks the full screen with click bait style ‘close’ options which are parts of the ad itself"
+          },
+          {
+            "appId": "548615579",
+            "text": "I HATE FORCED ADS!"
+          },
+          {
+            "appId": "560481810",
+            "text": "Became so frustrated by too frequent ads."
+          }
+        ]
+      },
+      {
+        "title": "Crashes and freezes in scanning and reports",
+        "detail": "Multi-receipt scanning and report generation frequently crash or hang. These failures are especially damaging when users need the data.",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1550270774",
+            "text": "App crashes every time I use scan multiple receipts function."
+          },
+          {
+            "appId": "1550270774",
+            "text": "This app freeze up every time I open up a report and try to share it."
+          },
+          {
+            "appId": "1538521095",
+            "text": "App kept crashing on me."
+          }
+        ]
+      },
+      {
+        "title": "Heavy onboarding, data collection and online-only saving",
+        "detail": "Users bail on apps that demand phone numbers, job details or contacts before showing value. They also dislike apps that require internet just to save a receipt.",
+        "mentions": 12,
+        "quotes": [
+          {
+            "appId": "1538521095",
+            "text": "wants my employees contact info before I get any chance to see or experience the app"
+          },
+          {
+            "appId": "1538521095",
+            "text": "requires the user to enter a Phone number for registration seems super suspect in terms of privacy"
+          },
+          {
+            "appId": "1538521095",
+            "text": "Why should I need to be connected to the internet to be able to save a receipt?"
+          }
+        ]
+      }
+    ],
+    "willingnessToPay": {
+      "summary": "Personal budget users happily pay small one-time fees ($2.99–$5.99) and strongly reject subscriptions. Receipt-app subscriptions of $90–$120/yr are tolerated mainly by business users who can write them off. For a solo personal budget app, the realistic sweet spot is a low one-time unlock or a very cheap annual plan, with the price shown upfront.",
+      "signals": [
+        {
+          "title": "One-time upgrades are celebrated",
+          "detail": "Lifetime unlocks are repeatedly cited as a reason to choose and recommend an app.",
+          "mentions": 40,
+          "quotes": [
+            {
+              "appId": "548615579",
+              "text": "paid the 2.99 for lifetime use to get rid of the ads"
+            },
+            {
+              "appId": "560481810",
+              "text": "It has a one time fee of $5.99 plus tax which is worth it for every penny."
+            },
+            {
+              "appId": "1492055171",
+              "text": "Bonus point for charging an upfront cost and not a monthly fee."
+            }
+          ]
+        },
+        {
+          "title": "Receipt subscriptions seen as overpriced for personal use",
+          "detail": "Users explicitly name lower price points they would accept for personal use: about $10–$30/yr or $20 one-time.",
+          "mentions": 30,
+          "quotes": [
+            {
+              "appId": "1550270774",
+              "text": "$9.99 a month is absurd when there are other apps out there which offer $19.99 for a year."
+            },
+            {
+              "appId": "1538521095",
+              "text": "You should make a 1 time purchase of 20 dollars for personal use"
+            },
+            {
+              "appId": "1538521095",
+              "text": "Price per year should be dropped to $10"
+            }
+          ]
+        },
+        {
+          "title": "Business users pay when there is tax ROI",
+          "detail": "The $90/yr tier works for users who deduct it or save on bookkeeping. That justification is weaker for solo personal budgeters.",
+          "mentions": 15,
+          "quotes": [
+            {
+              "appId": "1538521095",
+              "text": "Now that’s a great return on a $90 investment!"
+            },
+            {
+              "appId": "1538521095",
+              "text": "I write off the yearly membership also."
+            }
+          ]
+        },
+        {
+          "title": "Light ads are acceptable for free tiers",
+          "detail": "Ads are tolerated if they are rare and non-blocking.",
+          "mentions": 15,
+          "quotes": [
+            {
+              "appId": "560481810",
+              "text": "There are ads but kept to a minimum, not annoying at all and worth the $0 cost."
+            }
+          ]
+        }
+      ],
+      "suggestedPricing": "Use a free core with manual entry and a generous number of on-device OCR scans per month, and keep it ad-free or limit it to small non-blocking banners. Offer a one-time Pro unlock around $9.99–$14.99 covering unlimited scans, budgets, export and iCloud sync. If cloud AI OCR is needed, offer an optional cheap annual plan (about $9.99–$14.99/yr). Show pricing on the first screen and never paywall existing data."
+    },
+    "featureRequests": [
+      {
+        "title": "Attach or scan receipt photos in budget trackers",
+        "detail": "Users of manual trackers explicitly ask for receipt photo capture, which directly validates the core idea.",
+        "mentions": 10,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "I wish you could add a photo to the notes section so you could capture your receipts for future viewing."
+          },
+          {
+            "appId": "560481810",
+            "text": "I like it more if it has receipt scanner"
+          },
+          {
+            "appId": "1492055171",
+            "text": "if it only had a way to add receipts!!"
+          }
+        ]
+      },
+      {
+        "title": "Category drill-down and running totals",
+        "detail": "Users want to tap a category to see its transactions and want automatic totals per category and over time.",
+        "mentions": 15,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "I wish it pulled up every transaction that I’ve placed in that category"
+          },
+          {
+            "appId": "1538521095",
+            "text": "where can I see a total in each category I’ve created"
+          },
+          {
+            "appId": "1550270774",
+            "text": "it doesn’t add the receipts up to give you a total."
+          }
+        ]
+      },
+      {
+        "title": "Per-category budget limits",
+        "detail": "Users want spending caps per category, such as groceries or fun, with remaining amounts shown.",
+        "mentions": 8,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "have each category allow for a max spend amount so I can see where I’m overspending within my categories"
+          },
+          {
+            "appId": "548615579",
+            "text": "I do wish there was a part of the app that you could do individual budgets for like Fun or Groceries"
+          }
+        ]
+      },
+      {
+        "title": "Fast manual entry for non-receipt purchases",
+        "detail": "Photo-only flows frustrate users who pay with Apple Pay or get no paper receipt, so manual entry must be instant.",
+        "mentions": 6,
+        "quotes": [
+          {
+            "appId": "1538521095",
+            "text": "I only wish I could add thing manually since if I use Apple Pay for a purchase, I can’t track that."
+          },
+          {
+            "appId": "1538521095",
+            "text": "if u click skip to enter manually it holds u for few seconds which waste time"
+          },
+          {
+            "appId": "1492055171",
+            "text": "I love that the app imports transactions from wallet!"
+          }
+        ]
+      },
+      {
+        "title": "Reliable iCloud backup and sync",
+        "detail": "Users want painless backup and cross-device sync without Dropbox or extra accounts.",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "548615579",
+            "text": "I don't understand why we cannot just back up to iCloud"
+          },
+          {
+            "appId": "560481810",
+            "text": "Good one but it should include login or signup option to make backup data"
+          },
+          {
+            "appId": "560481810",
+            "text": "Good app, I wished it syncs automatically across devices."
+          }
+        ]
+      },
+      {
+        "title": "Store and line-item insights",
+        "detail": "Users want to see spend by store and to export itemized grocery data. Receipts uniquely enable this, unlike manual trackers.",
+        "mentions": 6,
+        "quotes": [
+          {
+            "appId": "1538521095",
+            "text": "The reason i got this app was to be able to export itemized lists of grocery items i’m buying"
+          },
+          {
+            "appId": "560481810",
+            "text": "Needs payee category so one can chart how much is spent at different stores"
+          }
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Own the personal 'snap → budget' niche",
+        "detail": "Receipt apps are tax and business tools; budget trackers lack scanning. A personal budget app built around receipt capture fills a gap users explicitly describe on both sides."
+      },
+      {
+        "title": "Solo-first design avoids broken sharing complexity",
+        "detail": "Shared and collaboration features are a frequent failure point in Expenses and SimplyWise. A solo-living app can skip them and focus on solo needs: rent and utility recurring bills, a daily allowance with carryover, and a 'left to spend this month' view."
+      },
+      {
+        "title": "Honest pricing as a marketing weapon",
+        "detail": "Hidden paywalls generate the angriest reviews in the category. Upfront, one-time pricing with no data hostage is a differentiator that reviewers actively reward."
+      },
+      {
+        "title": "Privacy-first, offline-first with on-device OCR",
+        "detail": "Use on-device text recognition so receipts save offline without accounts or phone numbers. Add automatic iCloud backup to address data-loss fears and keep per-scan costs near zero."
+      },
+      {
+        "title": "Store and item-level insights from receipts",
+        "detail": "Line items and merchant data enable 'how much did I spend at grocery store X' insights that manual trackers can't offer. This gives receipt capture value beyond saving typing."
+      }
+    ],
+    "competitorNotes": [
+      {
+        "appId": "1538521095",
+        "strengths": [
+          "Fast, accurate-feeling snap-and-categorize flow with folders",
+          "Excel/PDF reports loved by tax and small-business users",
+          "Responsive team that ships user requests"
+        ],
+        "weaknesses": [
+          "$90/yr pricing revealed after lengthy onboarding; trial/charge complaints",
+          "OCR misses totals and tips, and photo quality regressed",
+          "Bank/Amazon/email sync breaks; crashes; requires phone number and internet"
+        ]
+      },
+      {
+        "appId": "548615579",
+        "strengths": [
+          "Extremely simple manual ledger used for 10+ years by some users",
+          "$2.99 one-time Pro, no account, no bank linking",
+          "Widgets, Apple Watch, charts, category customization"
+        ],
+        "weaknesses": [
+          "Unclosable full-screen and inappropriate ads in the free tier",
+          "Dated UI; Dropbox-only sync; occasional data loss",
+          "No receipt photo or category drill-down"
+        ]
+      },
+      {
+        "appId": "560481810",
+        "strengths": [
+          "Feature-rich yet free, with a cheap one-time premium",
+          "Subcategories, calendar view, pie charts, multi-account",
+          "Strong global and multilingual user base"
+        ],
+        "weaknesses": [
+          "Confusing for beginners, with no tutorial",
+          "No automatic cloud sync or login, so data is lost on device change",
+          "Increasingly frequent ads; no receipt scanning"
+        ]
+      },
+      {
+        "appId": "1550270774",
+        "strengths": [
+          "Slick interface and quick receipt cropping and capture"
+        ],
+        "weaknesses": [
+          "$9.99/week–$14.99/mo pricing widely called predatory; 2–3 free receipts",
+          "Poor OCR accuracy and wrong dates",
+          "Crashes, lost receipts, broken reports; no totals or sorting"
+        ]
+      },
+      {
+        "appId": "1492055171",
+        "strengths": [
+          "Clean native Apple design with iCloud sync on iPhone, iPad and Mac",
+          "One-time lifetime purchase; very responsive solo developer",
+          "Wallet transaction import and widgets"
+        ],
+        "weaknesses": [
+          "Sharing/collaboration often broken",
+          "Lacks subcategories, payees, grand totals and receipt attachments",
+          "Aggressive upgrade pop-ups; removed CSV export in an update"
+        ]
+      }
+    ],
+    "mvpPlan": [
+      "Receipt snap with on-device OCR that extracts total, date and merchant, plus a one-tap confirm/edit screen (tip and total correction), saving offline",
+      "Instant manual entry (amount + category in two taps), with a home-screen and lock-screen widget for Apple Pay and cash purchases",
+      "Monthly budget for solo living: recurring bills (rent, utilities, subscriptions), per-category limits and a 'left to spend today/this month' allowance with carryover",
+      "Category drill-down with pie chart, monthly totals and spend-by-store view",
+      "No-account setup with automatic iCloud backup and a stored receipt image attached to every expense",
+      "Transparent pricing shown upfront: free core, one-time Pro unlock (unlimited scans, CSV export, advanced insights), with no blocking ads"
+    ]
+  }
+}

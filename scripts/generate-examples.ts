@@ -9,7 +9,7 @@ import { pathToFileURL } from "url";
 import { EXAMPLE_SPECS } from "../src/lib/examples/manifest";
 import type { Locale } from "../src/i18n/config";
 
-const dataDir = join(process.cwd(), "src/lib/examples/data");
+const dataDir = join(process.cwd(), "src/lib/examples/samples");
 const force = process.argv.includes("--force");
 
 async function main() {

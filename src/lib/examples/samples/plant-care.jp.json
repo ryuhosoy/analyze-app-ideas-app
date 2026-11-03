@@ -1,0 +1,569 @@
+{
+  "slug": "plant-care",
+  "title": "植物の水やりアプリ",
+  "idea": "写真から植物を判定して、水やりのタイミングを通知してくれるアプリ",
+  "topCompetitor": "PictureThis - Plant Identifier",
+  "reviewCount": 2200,
+  "competitors": [
+    {
+      "id": "1252497129",
+      "name": "PictureThis - Plant Identifier",
+      "seller": "Glority Global Group Ltd.",
+      "rating": 4.8,
+      "ratingCount": 1122130,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ea/af/f0/eaaff0c6-768e-9d0c-df44-128ab0c8d258/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/picturethis-plant-identifier/id1252497129",
+      "reviewsAnalyzed": 200
+    },
+    {
+      "id": "1410126781",
+      "name": "Planta: Plant & Garden Care",
+      "seller": "Planta AB",
+      "rating": 4.8,
+      "ratingCount": 114450,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f1/86/72/f18672ab-858f-5f41-0ecf-773a505280f2/AppIcon-Prod-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/planta-plant-garden-care/id1410126781",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1527399597",
+      "name": "PlantIn: Plant Identifier・Care",
+      "seller": "Vortemol Limited",
+      "rating": 4.6,
+      "ratingCount": 230474,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/13/f9/10/13f91081-be88-cab1-4538-0be15ff0c679/AppIconGlass-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/plantin-plant-identifier-care/id1527399597",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1612792132",
+      "name": "Plant Parent: Plant Care Guide",
+      "seller": "Glority Global Group Ltd.",
+      "rating": 4.7,
+      "ratingCount": 92854,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3d/3e/fb/3d3efbda-93f0-b2e2-f0f9-5a9058f86227/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/plant-parent-plant-care-guide/id1612792132",
+      "reviewsAnalyzed": 500
+    },
+    {
+      "id": "1512912236",
+      "name": "Greg: Plant Identifier & Care",
+      "seller": "GREGARIOUS, INC",
+      "rating": 4.6,
+      "ratingCount": 20725,
+      "price": "Free",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e8/39/4f/e8394f2d-3da6-ab4f-d716-f78f58b66167/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
+      "url": "https://apps.apple.com/us/app/greg-plant-identifier-care/id1512912236",
+      "reviewsAnalyzed": 500
+    }
+  ],
+  "result": {
+    "verdict": {
+      "score": 52,
+      "label": "MAYBE",
+      "headline": "「写真判定＋水やり通知」自体は飽和市場だが、水やり精度・価格の透明性・シンプルさで勝てる余地がある",
+      "summary": "PictureThis、Planta、PlantIn、Plant Parent、Greg の5アプリは、いずれも写真による植物判定と水やりリマインダーをすでに備えています。機能の組み合わせだけでは差別化できません。一方でレビューには共通の不満がはっきり表れています。具体的には、スケジュール通りに水をやって枯らした（過湿）、無料トライアルで課金された、基本的なリマインダーまで有料、判定の精度が低い、機能過多で重い、の5点です。個人開発で勝つには、判定をあくまで補助と位置づけ、水やりの精度とシンプルさ、誠実な価格設計に集中するのが現実的な戦略です。"
+    },
+    "marketOverview": "競合は評価数100万超のPictureThisを筆頭に、Planta、PlantIn、Plant Parent、Gregと大手がひしめく成熟市場です。どのアプリも「判定・診断・水やり/施肥リマインダー・コミュニティ」をフルセットで提供し、年$30〜$50のサブスクと短期の無料トライアルで収益化しています。高評価レビューの多くは「リマインダーのおかげで植物が枯れなくなった」という声です。一方、低評価は課金トラブル、過湿を招くスケジュール、判定ミス、AIや物販の押し付けに集中しています。ChatGPTやGoogle Lensで判定や診断が無料でできるようになり、「判定」単体の価値は下がりつつあります。",
+    "whatUsersLove": [
+      {
+        "title": "忘れっぽくても枯らさないリマインダー",
+        "detail": "最も多い好評の声は「通知のおかげで水やりを忘れなくなった」というものです。ADHDの人、子育て中の人、記憶力に不安がある人から特に強く支持されており、アプリの中核価値はリマインダーにあります。",
+        "mentions": 120,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "My ADHD brain needs the reminders to keep my plants alive!"
+          },
+          {
+            "appId": "1612792132",
+            "text": "As memory slips this app is an absolute lifesaver use it every day"
+          },
+          {
+            "appId": "1512912236",
+            "text": "I used to constantly forget to water my plants or overwater them, which led to them dying"
+          }
+        ]
+      },
+      {
+        "title": "散歩・旅行先での手軽な植物判定",
+        "detail": "PictureThisを中心に、ハイキングや旅行中に見かけた植物を調べる用途が好評です。判定精度が他アプリより高いと評価されることがアプリ選びの決め手になっています。",
+        "mentions": 70,
+        "quotes": [
+          {
+            "appId": "1252497129",
+            "text": "It is right probably 95% the time"
+          },
+          {
+            "appId": "1252497129",
+            "text": "Great to use on nature walks"
+          },
+          {
+            "appId": "1527399597",
+            "text": "Better at identifying plants than others I’ve tested, including Seek"
+          }
+        ]
+      },
+      {
+        "title": "多数の植物の一元管理",
+        "detail": "数十〜数百鉢を持つコレクターは、植物ごとに異なるスケジュールを「今日やること」リストにまとめてくれる点を高く評価しています。カスタムスケジュールへの支持も強いです。",
+        "mentions": 45,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "I have over 40 different plants (so far) and the daily to-do lists keep everything organized and not overwhelming."
+          },
+          {
+            "appId": "1612792132",
+            "text": "Great app for scheduling and reminders on when to water and fertilize my 60+ plants."
+          },
+          {
+            "appId": "1410126781",
+            "text": "The option to create a custom care schedule has been extremely helpful to me."
+          }
+        ]
+      },
+      {
+        "title": "家庭にあるもので試せる診断・対処法",
+        "detail": "不調の原因と、身近な材料で試せる対処法を教えてくれる点が好評です。高価な薬剤を勧めないことが信頼につながっています。",
+        "mentions": 40,
+        "quotes": [
+          {
+            "appId": "1612792132",
+            "text": "The basic remedies are made of common household items so no need for expensive chemicals."
+          },
+          {
+            "appId": "1252497129",
+            "text": "Identification, diagnosis, organic disease treatment options. Does it all very well."
+          }
+        ]
+      },
+      {
+        "title": "地域・天気に合わせたスケジュール調整",
+        "detail": "居住地や天気を考慮して水やりを調整してくれる点が評価されています。「賢いリマインダー」への期待は大きいと言えます。",
+        "mentions": 20,
+        "quotes": [
+          {
+            "appId": "1612792132",
+            "text": "reminders when to water accordingly to my city and the weather it’s wonderful"
+          },
+          {
+            "appId": "1410126781",
+            "text": "I love that the water schedule adjusts based on so many different factors."
+          }
+        ]
+      },
+      {
+        "title": "成長記録の写真とコミュニティ",
+        "detail": "定期的な写真で成長を振り返れる機能や、優しいユーザーコミュニティが継続利用の動機になっています。",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "It’s fun to look at the monthly photos of your plants and see how much they’ve grown over a growing season."
+          },
+          {
+            "appId": "1512912236",
+            "text": "This is one of the few (if not only) social media communities where we’re all just kind to each other."
+          }
+        ]
+      }
+    ],
+    "whatToAvoid": [
+      {
+        "title": "アプリ通りに水をやると過湿で枯れる",
+        "detail": "全アプリに共通する最大の不満です。種ごとの一律スケジュールでは鉢・土・環境の差を吸収できず、根腐れを招いています。「アプリに従ったせいで枯れた」という体験は強い怒りと解約につながります。",
+        "mentions": 80,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "This app constantly requests you overwater indoor plants and they die."
+          },
+          {
+            "appId": "1512912236",
+            "text": "within two weeks all my plants had been way overwatered"
+          },
+          {
+            "appId": "1252497129",
+            "text": "The app caused the death of my beloved Money Tree"
+          }
+        ]
+      },
+      {
+        "title": "無料トライアルの即時課金・返金拒否",
+        "detail": "トライアル中に解約しても年額が請求された、終了通知が来なかった、返金されない、という苦情が大量にあります。最高額の週額プランに誘導する手口も「詐欺」と見なされ、星1の主因になっています。",
+        "mentions": 110,
+        "quotes": [
+          {
+            "appId": "1252497129",
+            "text": "I signed up for what I understood to be a free trial and canceled on the day it was supposed to end, yet I was still left with a $40 charge."
+          },
+          {
+            "appId": "1410126781",
+            "text": "I specifically selected the option that would work for me, 2 days before the trial ends. Woke up today charged over $50 total, and not a peep about the free trial ending."
+          },
+          {
+            "appId": "1527399597",
+            "text": "They sign you up for the $17.99 weekly premium membership but the trial only lasts three days."
+          }
+        ]
+      },
+      {
+        "title": "「無料」表記と基本機能のペイウォール",
+        "detail": "「無料」と表示しながら、アカウント登録や植物登録を済ませた後で課金を求める流れに強い反発があります。水やりリマインダーのような基本機能を後から有料化したことも離反の原因になっています。",
+        "mentions": 100,
+        "quotes": [
+          {
+            "appId": "1512912236",
+            "text": "why should i have to be paying a subscription for watering reminders?!"
+          },
+          {
+            "appId": "1512912236",
+            "text": "I was very disappointed today to learn they have completely gotten rid of their free version"
+          },
+          {
+            "appId": "1410126781",
+            "text": "Forcing you to sign up for an account before using the app is not a good user experience."
+          }
+        ]
+      },
+      {
+        "title": "判定ミス・撮るたびに結果が変わる",
+        "detail": "同じ植物でも撮影ごとに別の名前が出る、一般的な観葉植物すら外れる、という不満が多くあります。判定を誤ったまま登録されるとケア情報も誤りになり、信頼を失います。",
+        "mentions": 120,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "Literally identified a palm tree as lettuce"
+          },
+          {
+            "appId": "1512912236",
+            "text": "Out of 23 plants, it didn’t get a single one right!"
+          },
+          {
+            "appId": "1252497129",
+            "text": "give different plant names for the same plant I took picture of the same tree and got 4 different plant types"
+          }
+        ]
+      },
+      {
+        "title": "汎用的すぎる診断と「病気です、続きは有料」",
+        "detail": "診断結果が「水のやりすぎか不足」ばかりで役に立たない、という声が目立ちます。健康な株でも「病気」と表示して課金に誘導するやり方は特に嫌われています。",
+        "mentions": 60,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "every single response has been that the issue is “either too much or not enough water.”"
+          },
+          {
+            "appId": "1527399597",
+            "text": "Pretty scammy that they claim all plants “look sick” when you’re using the free version, in order to get you to pay for help."
+          },
+          {
+            "appId": "1612792132",
+            "text": "Too much water, too little water, too much light, too little light"
+          }
+        ]
+      },
+      {
+        "title": "機能過多・広告通知・不具合とデータ消失",
+        "detail": "AI機能や物販の追加、マーケティング通知、レビュー依頼、動作の重さ、アップデート後のフリーズに不満が集まっています。特にデータが消えると、長年のユーザーでも即離脱します。",
+        "mentions": 70,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "I just want to log watering, misting, feeding, etc. And be reminded when to do so next."
+          },
+          {
+            "appId": "1410126781",
+            "text": "I can’t disable it as I want the notifications about watering my plants."
+          },
+          {
+            "appId": "1410126781",
+            "text": "all 100+ of my plants are just gone!"
+          }
+        ]
+      }
+    ],
+    "willingnessToPay": {
+      "summary": "「本当に枯らさない」と実感できれば年$30〜40を払う層は確実にいて、植物の買い替え費用と比べて元が取れると考えています。ただし、リマインダーだけに年$40や週額課金を払うことへの抵抗は強く、買い切りや低価格を求める声が多く見られます。判定・診断は無料AIと比較されるため、課金の根拠になりにくくなっています。",
+      "signals": [
+        {
+          "title": "枯らさない価値には年額を払う",
+          "detail": "植物の買い替えコストと比較して、年$35〜40を妥当と感じる継続ユーザーがいます。",
+          "mentions": 30,
+          "quotes": [
+            {
+              "appId": "1410126781",
+              "text": "i figure it’s a dollar and some change per plant"
+            },
+            {
+              "appId": "1410126781",
+              "text": "I think the $40 a year cost is reasonable based on the money I’ve lost from killing plants in the past."
+            }
+          ]
+        },
+        {
+          "title": "リマインダーだけに高額は払わない",
+          "detail": "判定機能は使わずリマインダーだけが欲しい層にとって、年$40や月$10は高すぎると受け止められています。",
+          "mentions": 40,
+          "quotes": [
+            {
+              "appId": "1252497129",
+              "text": "$40 a year for basic reminders is too steep"
+            },
+            {
+              "appId": "1512912236",
+              "text": "I’d have paid $10 for lifetime usage but not monthly or annually for this."
+            }
+          ]
+        },
+        {
+          "title": "買い切り・低価格プランへの支持",
+          "detail": "一度払えば終わる買い切り型は歓迎されています。$15〜25程度なら払うという具体的な声もあります。",
+          "mentions": 20,
+          "quotes": [
+            {
+              "appId": "1527399597",
+              "text": "I love that I can now just pay once and never again…like back in the day!"
+            },
+            {
+              "appId": "1612792132",
+              "text": "I would probably pay around $15-$25 for this app but even $50 is way too steep for me."
+            }
+          ]
+        },
+        {
+          "title": "無料AIとの比較で判定・診断の価値が低下",
+          "detail": "ChatGPTやGoogle Lensで代替できるという理由で、解約や不課金を選ぶユーザーが増えています。",
+          "mentions": 30,
+          "quotes": [
+            {
+              "appId": "1252497129",
+              "text": "I can use AI for free to get significantly more information."
+            },
+            {
+              "appId": "1410126781",
+              "text": "Just use ChatGPT if there’s something wrong with your plant and google lens to identify plants."
+            }
+          ]
+        }
+      ],
+      "suggestedPricing": "水やりリマインダーと基本的な判定は少数の鉢（例：5鉢）まで無料にし、アカウント登録なしで使えるようにします。鉢数無制限・天気連動・家族共有などは買い切り（$15〜20）か年$10〜15の低価格プランで解放します。トライアルを設ける場合は終了の数日前に必ず通知し、週額プランは置かないことを「誠実な課金」として前面に打ち出します。"
+    },
+    "featureRequests": [
+      {
+        "title": "土の状態を入力して学習する水やり",
+        "detail": "「まだ湿っている」「乾いていた」を記録し、遅れて水をやった日や早めにやった日も含めて実績から間隔を補正してほしいという要望です。過湿問題への直接の解決策になります。",
+        "mentions": 40,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "I feel like the check moisture task should have input on what the soil feels/looks like to advise the best schedule."
+          },
+          {
+            "appId": "1612792132",
+            "text": "The app doesn’t seem to reset if I’m late or if I water early"
+          },
+          {
+            "appId": "1512912236",
+            "text": "most importantly that my plant is still wet when it recommends watering"
+          }
+        ]
+      },
+      {
+        "title": "施肥を水やりと統合",
+        "detail": "液肥は実質的に水やりなので、水やりの翌日に施肥を指示されると過湿になります。両者を1つのタスクにまとめてほしいという声が多数あります。",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "it treats watering and fertilizing with water separately"
+          },
+          {
+            "appId": "1252497129",
+            "text": "Why would you fertilize a day or two after watering?"
+          },
+          {
+            "appId": "1410126781",
+            "text": "Just combine all plant tasks into ONEEEEEEE LINNEEEEEEE."
+          }
+        ]
+      },
+      {
+        "title": "季節・休眠・雨・灌漑への対応",
+        "detail": "雪の日に屋外植物への水やり通知が来る、冬でも夏と同じ指示が出る、といった不満があります。雨天時のスキップや自動灌漑の扱いも求められています。",
+        "mentions": 30,
+        "quotes": [
+          {
+            "appId": "1612792132",
+            "text": "Today in Omaha, it is bitter cold with three inches of snow, and the app reminder tells me to water the outside plants."
+          },
+          {
+            "appId": "1410126781",
+            "text": "I really wish the app would be able to account for seasonal care."
+          },
+          {
+            "appId": "1410126781",
+            "text": "I wish there was an option to account for irrigation systems on timers"
+          }
+        ]
+      },
+      {
+        "title": "家族・植物シッターとの共有",
+        "detail": "同居人と水やりを分担したい、留守中に預ける人にスケジュールを見せたい、という要望です。共有できないことで水やりの重複による過湿も起きています。",
+        "mentions": 15,
+        "quotes": [
+          {
+            "appId": "1252497129",
+            "text": "will update and give 5 Stars when I can share this app with at least 2 household family members"
+          },
+          {
+            "appId": "1512912236",
+            "text": "I want others in my household to be able to see what plants need watering to avoid somebody accidentally over watering"
+          },
+          {
+            "appId": "1612792132",
+            "text": "it would be great if more than one person could have access to the account at the same time"
+          }
+        ]
+      },
+      {
+        "title": "一括操作と過去日付での記録",
+        "detail": "大量の鉢を持つユーザーが、複数の植物をまとめて完了にしたり、過去の日付で記録したりする機能を求めています。",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1410126781",
+            "text": "It would be incredibly helpful if there were an option to disable fertilizing reminders for all plants at once"
+          },
+          {
+            "appId": "1612792132",
+            "text": "I wish there was a way to select several plants at once to water when you’re a day late."
+          }
+        ]
+      },
+      {
+        "title": "写真なしで名前から手動登録",
+        "detail": "品種名がわかっていても写真判定を強制されるのは不便だという声です。誤判定を修正できない点も含め、名前検索や手動入力での登録が求められています。",
+        "mentions": 25,
+        "quotes": [
+          {
+            "appId": "1512912236",
+            "text": "I hate that I HAVE to take a picture. I already know what my plants look like, just let me type it in."
+          },
+          {
+            "appId": "1527399597",
+            "text": "The app would be improved if you had the ability to manually enter the identification of your plants"
+          }
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "「水やりだけ、ちゃんと」に特化したシンプルなアプリ",
+        "detail": "競合はAI、物販、コミュニティで機能が膨らみ、動作の重さや通知の煩わしさを招いています。「水やりのログとリマインドだけでいい」という層は明確に存在するので、タップ数の少ないUIと広告通知ゼロで差別化できます。"
+      },
+      {
+        "title": "過湿を防ぐ「フィードバック学習型」スケジュール",
+        "detail": "通知に「水やった／まだ湿ってる」の2ボタンを付け、植物ごとの実績から間隔を自動補正します。施肥は水やりに統合します。「アプリに従ったら枯れた」という最大の不満を逆手に取り、「枯らさないための保守的な設計」を訴求点にできます。"
+      },
+      {
+        "title": "誠実な課金を差別化要素にする",
+        "detail": "課金トラブルへの怒りが市場全体に蓄積しています。登録なしで無料利用でき、トライアル終了の通知を確実に送り、週額プランを置かず、買い切りの選択肢を用意します。これをストア説明で明示すれば、乗り換え層を獲得できます。"
+      },
+      {
+        "title": "季節・屋内外・天気を考慮した通知",
+        "detail": "屋内か屋外かの区別、雨天時のスキップ、冬の休眠モード、旅行中の調整を備えます。地域の気候差に悩むユーザーの不満を拾えます。"
+      },
+      {
+        "title": "判定は「補助」と割り切りつつ、家族共有で継続利用を生む",
+        "detail": "判定は既存のAPIで候補を提示し、名前検索や手動修正を前提にします。精度競争は避け、家族やシッターとの共有でリテンションと口コミを生みます。"
+      }
+    ],
+    "competitorNotes": [
+      {
+        "appId": "1252497129",
+        "strengths": [
+          "判定精度とブランド力が最も高く、散歩・旅行用途で強い支持",
+          "診断や家庭でできる対処法、植物の豆知識が充実",
+          "My Gardenでの管理と水やり・施肥リマインダー"
+        ],
+        "weaknesses": [
+          "無料トライアル後の$40年額課金や週額課金への苦情が大量",
+          "水やり・施肥の指示がちぐはぐで、植物を枯らしたとの報告",
+          "起動時の待ち時間・動画が遅く、家族共有ができない",
+          "AI生成風の誇大広告で信頼を失っている"
+        ]
+      },
+      {
+        "appId": "1410126781",
+        "strengths": [
+          "多数の鉢を管理するタスクUI、カスタムスケジュール、天気連動",
+          "成長写真の記録やコミュニティで継続利用が強い",
+          "年$36前後で比較的安いと評価する層もいる"
+        ],
+        "weaknesses": [
+          "水やり頻度が多すぎて過湿・根腐れを招くとの報告が非常に多い",
+          "判定精度が低く、Dr. Plantaの診断も汎用的",
+          "無料版はほぼ水やりのみで、登録後に課金を迫られる",
+          "物販の押し付け・マーケティング通知・動作の重さ・データ消失"
+        ]
+      },
+      {
+        "appId": "1527399597",
+        "strengths": [
+          "判定が速く、無料版でもある程度使える",
+          "買い切り（ライフタイム）プランが歓迎されている",
+          "リマインダーと手軽なケアのヒント"
+        ],
+        "weaknesses": [
+          "週$7〜17.99の高額週額課金と二重請求の苦情",
+          "健康な株を「病気」と表示して課金に誘導",
+          "買い切り後も診断や植物ごとの機能で追加課金",
+          "アップデート後に画面が固まって使えなくなる不具合"
+        ]
+      },
+      {
+        "appId": "1612792132",
+        "strengths": [
+          "判定・診断・家庭でできる対処法の評価が高い",
+          "居住地の天気を考慮したリマインダー",
+          "無料版でも使えるという声が比較的多い"
+        ],
+        "weaknesses": [
+          "雪の日や冬でも水やり通知が来るなど、季節対応が弱い",
+          "水やりスケジュールが早すぎて過湿を招く",
+          "データベースにない植物を手動で追加できない",
+          "「無料」表記とトライアル課金、通知が届かない不具合"
+        ]
+      },
+      {
+        "appId": "1512912236",
+        "strengths": [
+          "かわいいキャラクター性と、名前を自動で付ける楽しさ",
+          "温かいコミュニティと丁寧なサポート対応",
+          "年$30と比較的安価"
+        ],
+        "weaknesses": [
+          "判定精度が非常に低く、写真がないと登録できない",
+          "水やりリマインダーまで有料化し、無料ユーザーが離反",
+          "スケジュールを手動で変更できず過湿になる",
+          "ログイン不能・ボタンが反応しない・データ消失などバグが多い"
+        ]
+      }
+    ],
+    "mvpPlan": [
+      "植物登録：名前検索での手動登録を基本とし、写真判定（既存の判定APIを利用）は候補を提示して選ばせる補助機能にする。誤判定はいつでも修正可能にする",
+      "植物ごとの水やりリマインダー：通知から「水やった／まだ湿ってる（延期）」を選べるようにし、実績から間隔を自動補正する。過去日付での記録にも対応する",
+      "施肥を水やりタスクに統合するオプション：液肥派は「肥料入りの水やり」として1タスクで完了できるようにする",
+      "1日1回のまとめ通知と一括完了：どの植物に水が必要かを通知本文に表示する。マーケティング通知やレビュー依頼は送らない",
+      "屋内／屋外の区別と簡易的な天気連動：雨の日は屋外の通知をスキップし、冬の休眠モードを用意する",
+      "誠実な課金：登録なしで5鉢まで無料、鉢数無制限は低価格の買い切りで解放する。トライアルを設ける場合は終了前に必ず通知する"
+    ]
+  }
+}
