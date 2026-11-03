@@ -57,6 +57,9 @@ export const jp = {
     createReport: "レポートを作成",
     creditsBadge: (n: number) => `残り ${n}`,
     buyReport: `レポートを購入（${reportPrice}）`,
+    submitConnectionError: "通信エラーでレポート画面を開けませんでした。",
+    submitReportsHint: "分析はサーバーで始まっている可能性があります。完了後の結果も、レポート一覧から確認できます。",
+    submitReportsLink: "レポート一覧を開く →",
     tipsTitle: "🐽 上手な書き方のコツ",
     tips: [
       "アプリは1つだけ書いてください",

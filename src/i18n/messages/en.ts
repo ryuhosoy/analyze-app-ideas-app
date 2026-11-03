@@ -57,6 +57,9 @@ export const en = {
     createReport: "Create report",
     creditsBadge: (n: number) => `${n} left`,
     buyReport: `Buy a report (${reportPrice})`,
+    submitConnectionError: "We couldn't open the report page because of a connection error.",
+    submitReportsHint: "Analysis may already have started on our servers. Check the reports list for progress and results.",
+    submitReportsLink: "Open reports list →",
     tipsTitle: "🐽 Tips for a great prompt",
     tips: [
       "Describe one app only",

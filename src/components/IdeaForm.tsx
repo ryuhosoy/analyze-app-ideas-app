@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getCountries } from "@/lib/countries";
-import { useI18n } from "./I18nProvider";
+import { L, useI18n } from "./I18nProvider";
 import { localePath } from "@/i18n/paths";
 
 export function IdeaForm({
@@ -22,29 +22,47 @@ export function IdeaForm({
   const [idea, setIdea] = useState(initialIdea);
   const [country, setCountry] = useState("us");
   const [error, setError] = useState("");
+  const [connectionIssue, setConnectionIssue] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  function showReportsListHint() {
+    setConnectionIssue(true);
+    setError("");
+    setLoading(false);
+  }
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
+    setConnectionIssue(false);
     const back = localePath(locale, `/?idea=${encodeURIComponent(idea)}`);
     if (!loggedIn) return router.push(localePath(locale, `/signup?next=${encodeURIComponent(back)}`));
     if (credits < 1) return router.push(localePath(locale, `/credits?next=${encodeURIComponent(back)}`));
 
     setLoading(true);
-    const res = await fetch("/api/reports", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Locale": locale },
-      body: JSON.stringify({ idea, country }),
-    });
-    const data = await res.json();
-    if (!res.ok) {
-      setLoading(false);
-      if (res.status === 402) return router.push(localePath(locale, `/credits?next=${encodeURIComponent(back)}`));
-      return setError(data.error ?? dict.common.genericError);
+    try {
+      const res = await fetch("/api/reports", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Locale": locale },
+        body: JSON.stringify({ idea, country }),
+      });
+      let data: { id?: string; error?: string };
+      try {
+        data = await res.json();
+      } catch {
+        return showReportsListHint();
+      }
+      if (!res.ok) {
+        setLoading(false);
+        if (res.status === 402) return router.push(localePath(locale, `/credits?next=${encodeURIComponent(back)}`));
+        return setError(data.error ?? dict.common.genericError);
+      }
+      if (!data.id) return showReportsListHint();
+      router.push(localePath(locale, `/reports/${data.id}`));
+      router.refresh();
+    } catch {
+      showReportsListHint();
     }
-    router.push(localePath(locale, `/reports/${data.id}`));
-    router.refresh();
   }
 
   return (
@@ -86,6 +104,15 @@ export function IdeaForm({
           )}
         </button>
       </div>
+      {connectionIssue && (
+        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm">
+          <p className="font-bold text-amber-900">{t.submitConnectionError}</p>
+          <p className="mt-1.5 leading-relaxed text-amber-950/80">{t.submitReportsHint}</p>
+          <L href="/reports" className="mt-3 inline-block font-bold text-oink-600 underline">
+            {t.submitReportsLink}
+          </L>
+        </div>
+      )}
       {error && <p className="text-sm font-bold text-rose-600">{error}</p>}
       <details className="text-sm text-ink/70">
         <summary className="cursor-pointer font-bold text-oink-600">{t.tipsTitle}</summary>
