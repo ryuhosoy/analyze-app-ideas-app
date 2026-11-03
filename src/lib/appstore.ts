@@ -1,5 +1,3 @@
-import "server-only";
-
 export type AppInfo = {
   id: string;
   name: string;

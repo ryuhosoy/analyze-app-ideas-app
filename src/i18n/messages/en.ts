@@ -26,7 +26,7 @@ export const en = {
     samplesTitle: "Sample reports",
     topCompetitor: "Top competitor",
     viewReport: "View report →",
-    samplesDisclaimer: "Samples use fictional apps and reviews.",
+    samplesDisclaimer: "Samples are reports from real App Store reviews (US store, as of when generated).",
     stepsTitle: "Three simple steps",
     steps: [
       { t: "Describe your idea", d: "One sentence is enough. We find the best-matching competitors on the App Store." },
@@ -135,7 +135,7 @@ export const en = {
     },
   },
   example: {
-    banner: "📝 Sample report (fictional apps and reviews)",
+    banner: "Sample report (analyzed from real App Store reviews)",
     tryYours: "Try with your idea →",
   },
   support: {

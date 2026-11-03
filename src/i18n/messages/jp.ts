@@ -26,7 +26,7 @@ export const jp = {
     samplesTitle: "サンプルレポートを見る",
     topCompetitor: "トップ競合",
     viewReport: "レポートを見る →",
-    samplesDisclaimer: "※サンプルは架空のアプリ・レビューで作成したものです。",
+    samplesDisclaimer: "※サンプルは App Store の実レビューを分析したレポートです（米国ストア・分析時点のデータ）。",
     stepsTitle: "使い方はかんたん3ステップ",
     steps: [
       { t: "アイデアを書く", d: "1文で十分です。それをもとにApp Storeで最適な競合アプリを探します。" },
@@ -135,7 +135,7 @@ export const jp = {
     },
   },
   example: {
-    banner: "📝 これはサンプルレポートです（架空のアプリ・レビューで作成）",
+    banner: "サンプルレポート（App Store の実レビューを分析）",
     tryYours: "自分のアイデアで試す →",
   },
   support: {

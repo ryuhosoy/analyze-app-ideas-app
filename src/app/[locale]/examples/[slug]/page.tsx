@@ -26,6 +26,7 @@ export default async function ExamplePage({ params }: { params: Promise<{ locale
         result={ex.result}
         labels={dict.reportView}
         pigAria={dict.pigAria}
+        emojiIconPlaceholder
       />
       <div className="mt-8 text-center">
         <L href="/#new-report" className="btn-primary text-lg">

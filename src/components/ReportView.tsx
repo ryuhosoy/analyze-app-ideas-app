@@ -10,7 +10,22 @@ function normalizeQuote(q: LegacyQuote): { appId?: string; text: string } {
   return typeof q === "string" ? { text: q } : q;
 }
 
-function QuoteAttribution({ app }: { app?: CompetitorSummary }) {
+function AppIconFallback({ size, emojiPlaceholder }: { size: "sm" | "lg"; emojiPlaceholder: boolean }) {
+  if (emojiPlaceholder) {
+    return size === "sm" ? (
+      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-oink-100 text-xs">📱</span>
+    ) : (
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-oink-100 text-xl">📱</div>
+    );
+  }
+  return size === "sm" ? (
+    <span className="h-6 w-6 shrink-0 rounded-md bg-oink-100" aria-hidden />
+  ) : (
+    <div className="h-12 w-12 shrink-0 rounded-xl bg-oink-100" aria-hidden />
+  );
+}
+
+function QuoteAttribution({ app, emojiPlaceholder }: { app?: CompetitorSummary; emojiPlaceholder: boolean }) {
   if (!app) return null;
   return (
     <div className="mb-1 flex items-center gap-2 not-italic">
@@ -18,7 +33,7 @@ function QuoteAttribution({ app }: { app?: CompetitorSummary }) {
         // eslint-disable-next-line @next/next/no-img-element
         <img src={app.icon} alt="" className="h-6 w-6 shrink-0 rounded-md" />
       ) : (
-        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-oink-100 text-xs">📱</span>
+        <AppIconFallback size="sm" emojiPlaceholder={emojiPlaceholder} />
       )}
       <span className="truncate text-xs font-bold text-ink/70">{app.name}</span>
     </div>
@@ -40,11 +55,13 @@ function InsightList({
   tone,
   competitorsById,
   labels,
+  emojiPlaceholder,
 }: {
   items: Insight[];
   tone: "good" | "bad" | "neutral";
   competitorsById: Map<string, CompetitorSummary>;
   labels: Labels;
+  emojiPlaceholder: boolean;
 }) {
   const dot = tone === "good" ? "bg-emerald-400" : tone === "bad" ? "bg-rose-400" : "bg-oink-400";
   return (
@@ -68,7 +85,7 @@ function InsightList({
                 const app = q.appId ? competitorsById.get(q.appId) : undefined;
                 return (
                   <blockquote key={qi} className="rounded-xl border border-oink-100 bg-white/80 px-3 py-2 text-sm text-ink/60">
-                    <QuoteAttribution app={app} />
+                    <QuoteAttribution app={app} emojiPlaceholder={emojiPlaceholder} />
                     <p className="italic">&ldquo;{q.text}&rdquo;</p>
                   </blockquote>
                 );
@@ -81,13 +98,10 @@ function InsightList({
   );
 }
 
-function Section({ emoji, title, children }: { emoji: string; title: string; children: React.ReactNode }) {
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="card">
-      <h3 className="mb-4 flex items-center gap-2 text-lg font-extrabold">
-        <span className="text-2xl">{emoji}</span>
-        {title}
-      </h3>
+      <h3 className="mb-4 text-lg font-extrabold">{title}</h3>
       {children}
     </section>
   );
@@ -100,6 +114,7 @@ export function ReportView({
   result,
   labels,
   pigAria,
+  emojiIconPlaceholder = false,
 }: {
   idea: string;
   competitors: CompetitorSummary[];
@@ -107,6 +122,8 @@ export function ReportView({
   result: ReportResult;
   labels: Labels;
   pigAria: string;
+  /** サンプルレポート用: アイコン未設定時に 📱 を表示 */
+  emojiIconPlaceholder?: boolean;
 }) {
   const v = verdictStyle(result.verdict.label, labels);
   const notes = new Map(result.competitorNotes.map((n) => [n.appId, n]));
@@ -141,7 +158,7 @@ export function ReportView({
         </div>
       </section>
 
-      <Section emoji="🏁" title={labels.competitors}>
+      <Section title={labels.competitors}>
         <div className="grid gap-3 sm:grid-cols-2">
           {competitors.map((c) => {
             const n = notes.get(c.id);
@@ -152,7 +169,7 @@ export function ReportView({
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={c.icon} alt="" className="h-12 w-12 rounded-xl" />
                   ) : (
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-oink-100 text-xl">📱</div>
+                    <AppIconFallback size="lg" emojiPlaceholder={emojiIconPlaceholder} />
                   )}
                   <div className="min-w-0">
                     <p className="truncate font-bold">{c.name}</p>
@@ -191,28 +208,52 @@ export function ReportView({
       </Section>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <Section emoji="💖" title={labels.love}>
-          <InsightList items={result.whatUsersLove} tone="good" competitorsById={competitorsById} labels={labels} />
+        <Section title={labels.love}>
+          <InsightList
+            items={result.whatUsersLove}
+            tone="good"
+            competitorsById={competitorsById}
+            labels={labels}
+            emojiPlaceholder={emojiIconPlaceholder}
+          />
         </Section>
-        <Section emoji="⚠️" title={labels.avoid}>
-          <InsightList items={result.whatToAvoid} tone="bad" competitorsById={competitorsById} labels={labels} />
+        <Section title={labels.avoid}>
+          <InsightList
+            items={result.whatToAvoid}
+            tone="bad"
+            competitorsById={competitorsById}
+            labels={labels}
+            emojiPlaceholder={emojiIconPlaceholder}
+          />
         </Section>
       </div>
 
-      <Section emoji="🐷💰" title={labels.pay}>
+      <Section title={labels.pay}>
         <p className="mb-4 leading-relaxed">{result.willingnessToPay.summary}</p>
-        <InsightList items={result.willingnessToPay.signals} tone="neutral" competitorsById={competitorsById} labels={labels} />
+        <InsightList
+          items={result.willingnessToPay.signals}
+          tone="neutral"
+          competitorsById={competitorsById}
+          labels={labels}
+          emojiPlaceholder={emojiIconPlaceholder}
+        />
         <div className="mt-4 rounded-2xl border-2 border-dashed border-oink-300 bg-white p-4">
           <p className="text-sm font-bold text-oink-600">{labels.pricingTip}</p>
           <p className="mt-1">{result.willingnessToPay.suggestedPricing}</p>
         </div>
       </Section>
 
-      <Section emoji="🙋" title={labels.features}>
-        <InsightList items={result.featureRequests} tone="neutral" competitorsById={competitorsById} labels={labels} />
+      <Section title={labels.features}>
+        <InsightList
+          items={result.featureRequests}
+          tone="neutral"
+          competitorsById={competitorsById}
+          labels={labels}
+          emojiPlaceholder={emojiIconPlaceholder}
+        />
       </Section>
 
-      <Section emoji="🌱" title={labels.opportunities}>
+      <Section title={labels.opportunities}>
         <div className="grid gap-3 sm:grid-cols-2">
           {result.opportunities.map((o, idx) => (
             <div key={idx} className="rounded-2xl bg-gradient-to-br from-emerald-50 to-white p-4">
@@ -223,7 +264,7 @@ export function ReportView({
         </div>
       </Section>
 
-      <Section emoji="🛠️" title={labels.mvp}>
+      <Section title={labels.mvp}>
         <ol className="space-y-2">
           {result.mvpPlan.map((m, idx) => (
             <li key={idx} className="flex items-start gap-3">

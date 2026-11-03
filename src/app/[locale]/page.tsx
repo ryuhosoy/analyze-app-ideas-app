@@ -66,7 +66,7 @@ export default async function Home({
           <Pig size={48} mood="wow" ariaLabel={dict.pigAria} />
           <h2 className="text-2xl font-extrabold">{h.samplesTitle}</h2>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {examples.map((ex) => (
             <L key={ex.slug} href={`/examples/${ex.slug}`} className="card transition hover:-translate-y-1 hover:border-oink-300">
               <p className="font-extrabold">{ex.title}</p>

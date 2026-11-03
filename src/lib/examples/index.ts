@@ -1,8 +1,9 @@
 import type { Locale } from "@/i18n/config";
-import { EXAMPLES as EXAMPLES_JP, type ExampleReport } from "./jp";
+import { EXAMPLES as EXAMPLES_JP } from "./jp";
 import { EXAMPLES_EN } from "./en";
+import type { ExampleReport } from "./types";
 
-export type { ExampleReport } from "./jp";
+export type { ExampleReport } from "./types";
 
 export function getExamples(locale: Locale): ExampleReport[] {
   return locale === "en" ? EXAMPLES_EN : EXAMPLES_JP;

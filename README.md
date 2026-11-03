@@ -10,7 +10,7 @@
   - 失敗したらクレジットを自動で返す
 - **マジックリンク認証**（パスワードなし。リンクは15分有効・1回だけ使える）
 - **クレジット購入**（Stripe Checkout。1〜20個まとめ買い、サブスクなし）
-- **サンプルレポート4件**（架空データ）、レポート一覧、サポートフォーム（240文字まで）、プライバシーポリシー、利用規約
+- **サンプルレポート3件**（App Store 実レビュー分析。`src/lib/examples/data/*.json`）、レポート一覧、サポートフォーム（240文字まで）、プライバシーポリシー、利用規約
 
 ## セットアップ
 
@@ -37,7 +37,9 @@ Node.js 22.5以上が必要です（DBにNode内蔵の `node:sqlite` を使っ�
 
 | パス | 内容 |
 | --- | --- |
-| `src/lib/analyze.ts` | レポート生成パイプライン（Claude `claude-opus-5-5`、構造化出力） |
+| `src/lib/analyze.ts` | レポート生成ジョブ（DB連携） |
+| `src/lib/run-analysis.ts` | 分析パイプライン本体（Claude `claude-opus-5-5`、構造化出力） |
+| `npm run generate-examples` | サンプル3件×日英を再生成（`--force` で上書き） |
 | `src/lib/appstore.ts` | iTunes Search API / レビューRSS |
 | `src/lib/auth.ts` | マジックリンクとセッション |
 | `src/lib/payments.ts` | Stripe Checkout と、二重付与しない付与処理 |
