@@ -83,6 +83,10 @@ function open(): DatabaseSync {
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
   `);
+  const reportCols = db.prepare("PRAGMA table_info(reports)").all() as { name: string }[];
+  if (!reportCols.some((c) => c.name === "locale")) {
+    db.exec("ALTER TABLE reports ADD COLUMN locale TEXT NOT NULL DEFAULT 'jp'");
+  }
   return db;
 }
 

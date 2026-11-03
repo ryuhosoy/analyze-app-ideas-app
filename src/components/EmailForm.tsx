@@ -2,9 +2,12 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useI18n } from "./I18nProvider";
+import { localePath } from "@/i18n/paths";
 
 export function EmailForm({ next, cta }: { next?: string; cta: string }) {
   const router = useRouter();
+  const { locale, dict } = useI18n();
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -15,14 +18,19 @@ export function EmailForm({ next, cta }: { next?: string; cta: string }) {
     setError("");
     const res = await fetch("/api/auth/request", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "X-Locale": locale },
       body: JSON.stringify({ email, next }),
     });
     if (!res.ok) {
       setLoading(false);
-      return setError((await res.json()).error ?? "エラーが発生しました");
+      return setError((await res.json()).error ?? dict.common.genericError);
     }
-    router.push(`/check-email?email=${encodeURIComponent(email)}${next ? `&next=${encodeURIComponent(next)}` : ""}`);
+    router.push(
+      localePath(
+        locale,
+        `/check-email?email=${encodeURIComponent(email)}${next ? `&next=${encodeURIComponent(next)}` : ""}`,
+      ),
+    );
   }
 
   return (
@@ -37,7 +45,7 @@ export function EmailForm({ next, cta }: { next?: string; cta: string }) {
         autoFocus
       />
       <button className="btn-primary w-full" disabled={loading}>
-        {loading ? "送信中…" : cta}
+        {loading ? dict.auth.sending : cta}
       </button>
       {error && <p className="text-sm font-bold text-rose-600">{error}</p>}
     </form>

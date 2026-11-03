@@ -6,11 +6,13 @@ export function Pig({
   mood = "happy",
   magnifier = false,
   className,
+  ariaLabel = "ブーちゃん",
 }: {
   size?: number;
   mood?: Mood;
   magnifier?: boolean;
   className?: string;
+  ariaLabel?: string;
 }) {
   return (
     <svg
@@ -19,7 +21,7 @@ export function Pig({
       height={size}
       className={className}
       role="img"
-      aria-label="ブーちゃん"
+      aria-label={ariaLabel}
     >
       {/* 耳 */}
       <g transform="translate(0 5)">

@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 import { SUPPORT_MESSAGE_MAX } from "@/lib/config";
+import { useI18n } from "./I18nProvider";
 
 export function SupportForm({ loggedInEmail }: { loggedInEmail?: string }) {
+  const { locale, dict } = useI18n();
+  const t = dict.support;
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
@@ -16,12 +19,12 @@ export function SupportForm({ loggedInEmail }: { loggedInEmail?: string }) {
     setError("");
     const res = await fetch("/api/support", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "X-Locale": locale },
       body: JSON.stringify({ email, subject, message }),
     });
     if (!res.ok) {
       setState("idle");
-      return setError((await res.json()).error ?? "エラーが発生しました");
+      return setError((await res.json()).error ?? dict.common.genericError);
     }
     setState("sent");
   }
@@ -30,7 +33,7 @@ export function SupportForm({ loggedInEmail }: { loggedInEmail?: string }) {
     return (
       <div className="card text-center">
         <p className="text-4xl">💌</p>
-        <p className="mt-2 font-bold">送信しました！ブーちゃんが急いでお返事します。</p>
+        <p className="mt-2 font-bold">{t.sent}</p>
       </div>
     );
   }
@@ -38,20 +41,22 @@ export function SupportForm({ loggedInEmail }: { loggedInEmail?: string }) {
   return (
     <form onSubmit={submit} className="card space-y-4">
       {loggedInEmail ? (
-        <p className="text-sm text-ink/60">返信先: {loggedInEmail}</p>
+        <p className="text-sm text-ink/60">
+          {t.replyTo}: {loggedInEmail}
+        </p>
       ) : (
         <label className="block">
-          <span className="mb-2 block font-bold">返信用メールアドレス</span>
+          <span className="mb-2 block font-bold">{t.emailLabel}</span>
           <input type="email" className="input" value={email} onChange={(e) => setEmail(e.target.value)} required />
         </label>
       )}
       <label className="block">
-        <span className="mb-2 block font-bold">件名</span>
+        <span className="mb-2 block font-bold">{t.subject}</span>
         <input className="input" value={subject} onChange={(e) => setSubject(e.target.value)} maxLength={100} required />
       </label>
       <label className="block">
         <span className="mb-2 flex justify-between font-bold">
-          メッセージ
+          {t.message}
           <span className="text-sm font-normal text-ink/50">
             {message.length}/{SUPPORT_MESSAGE_MAX}
           </span>
@@ -65,7 +70,7 @@ export function SupportForm({ loggedInEmail }: { loggedInEmail?: string }) {
         />
       </label>
       <button className="btn-primary w-full" disabled={state === "sending"}>
-        {state === "sending" ? "送信中…" : "送信する"}
+        {state === "sending" ? dict.auth.sending : t.send}
       </button>
       {error && <p className="text-sm font-bold text-rose-600">{error}</p>}
     </form>

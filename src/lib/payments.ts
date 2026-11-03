@@ -3,6 +3,8 @@ import Stripe from "stripe";
 import { db } from "./db";
 import { APP_NAME, appUrl, REPORT_PRICE_CENTS, SPREADSHEET_PRICE_CENTS } from "./config";
 import { fulfillReviewOrder } from "./review-orders";
+import type { Locale } from "@/i18n/config";
+import { localePath } from "@/i18n/paths";
 
 /** Managed Payments: AIaaS (cloud AI report credits) */
 const TAX_CODE_REPORT_CREDIT = "txcd_10105002";
@@ -15,7 +17,12 @@ export function getStripe(): Stripe {
   return stripe;
 }
 
-export async function createCreditsCheckout(userId: string, email: string, quantity: number): Promise<string> {
+export async function createCreditsCheckout(
+  userId: string,
+  email: string,
+  quantity: number,
+  locale: Locale = "jp",
+): Promise<string> {
   const session = await getStripe().checkout.sessions.create({
     mode: "payment",
     customer_email: email,
@@ -26,8 +33,8 @@ export async function createCreditsCheckout(userId: string, email: string, quant
           currency: "usd",
           unit_amount: REPORT_PRICE_CENTS,
           product_data: {
-            name: `${APP_NAME} レポートクレジット`,
-            description: "1クレジット = 競合分析レポート1件",
+            name: locale === "en" ? `${APP_NAME} report credits` : `${APP_NAME} レポートクレジット`,
+            description: locale === "en" ? "1 credit = 1 competitor analysis report" : "1クレジット = 競合分析レポート1件",
             tax_code: TAX_CODE_REPORT_CREDIT,
           },
         },
@@ -35,12 +42,17 @@ export async function createCreditsCheckout(userId: string, email: string, quant
     ],
     metadata: { kind: "credits", userId, quantity: String(quantity) },
     success_url: `${appUrl()}/api/checkout/confirm?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${appUrl()}/credits?canceled=1`,
+    cancel_url: `${appUrl()}${localePath(locale, "/credits?canceled=1")}`,
   });
   return session.url!;
 }
 
-export async function createSpreadsheetCheckout(orderId: string, email: string, appName: string): Promise<string> {
+export async function createSpreadsheetCheckout(
+  orderId: string,
+  email: string,
+  appName: string,
+  locale: Locale = "jp",
+): Promise<string> {
   const session = await getStripe().checkout.sessions.create({
     mode: "payment",
     customer_email: email,
@@ -51,7 +63,7 @@ export async function createSpreadsheetCheckout(orderId: string, email: string, 
           currency: "usd",
           unit_amount: SPREADSHEET_PRICE_CENTS,
           product_data: {
-            name: `レビュースプレッドシート: ${appName}`.slice(0, 120),
+            name: (locale === "en" ? `Review spreadsheet: ${appName}` : `レビュースプレッドシート: ${appName}`).slice(0, 120),
             tax_code: TAX_CODE_REVIEW_CSV,
           },
         },
@@ -59,7 +71,7 @@ export async function createSpreadsheetCheckout(orderId: string, email: string, 
     ],
     metadata: { kind: "spreadsheet", orderId },
     success_url: `${appUrl()}/api/checkout/confirm?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${appUrl()}/reviews?canceled=1`,
+    cancel_url: `${appUrl()}${localePath(locale, "/reviews?canceled=1")}`,
   });
   db.prepare("UPDATE review_orders SET stripe_session_id = ? WHERE id = ?").run(session.id, orderId);
   return session.url!;

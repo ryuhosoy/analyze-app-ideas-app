@@ -4,6 +4,7 @@ import { createHash, randomBytes } from "node:crypto";
 import { db, id } from "./db";
 import { sendEmail } from "./email";
 import { APP_NAME, appUrl } from "./config";
+import type { Locale } from "@/i18n/config";
 
 const SESSION_COOKIE = "booscout_session";
 const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
@@ -18,7 +19,7 @@ export function normalizeEmail(email: string): string | null {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e) && e.length <= 254 ? e : null;
 }
 
-export async function sendMagicLink(email: string, next?: string): Promise<void> {
+export async function sendMagicLink(email: string, next?: string, locale: Locale = "jp"): Promise<void> {
   const token = randomBytes(32).toString("base64url");
   db.prepare("INSERT INTO login_tokens (token_hash, email, expires_at) VALUES (?, ?, ?)").run(
     hash(token),
@@ -28,10 +29,13 @@ export async function sendMagicLink(email: string, next?: string): Promise<void>
   const url = new URL(`${appUrl()}/api/auth/verify`);
   url.searchParams.set("token", token);
   if (next?.startsWith("/")) url.searchParams.set("next", next);
+  const en = locale === "en";
   await sendEmail({
     to: email,
-    subject: `${APP_NAME} のログインリンク 🐷`,
-    text: `ブーちゃんからのお届けものです！\n\n下のリンクをクリックして ${APP_NAME} にログインしてください（15分間有効）。\n\n${url}\n\n心当たりがない場合はこのメールを無視してください。`,
+    subject: en ? `${APP_NAME} login link 🐷` : `${APP_NAME} のログインリンク 🐷`,
+    text: en
+      ? `Here's your link to sign in to ${APP_NAME} (valid for 15 minutes):\n\n${url}\n\nIf you didn't request this, you can ignore this email.`
+      : `ブーちゃんからのお届けものです！\n\n下のリンクをクリックして ${APP_NAME} にログインしてください（15分間有効）。\n\n${url}\n\n心当たりがない場合はこのメールを無視してください。`,
   });
 }
 

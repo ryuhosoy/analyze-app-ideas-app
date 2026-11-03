@@ -3,9 +3,12 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Pig } from "./Pig";
+import { useI18n } from "./I18nProvider";
 
 export function ReportProgress({ reportId, initialProgress }: { reportId: string; initialProgress: string | null }) {
   const router = useRouter();
+  const { dict } = useI18n();
+  const t = dict.reports;
   const [progress, setProgress] = useState(initialProgress);
 
   useEffect(() => {
@@ -25,11 +28,11 @@ export function ReportProgress({ reportId, initialProgress }: { reportId: string
   return (
     <div className="card flex flex-col items-center gap-4 py-12 text-center">
       <div className="animate-wiggle">
-        <Pig size={140} mood="thinking" magnifier />
+        <Pig size={140} mood="thinking" magnifier ariaLabel={dict.pigAria} />
       </div>
-      <p className="text-lg font-extrabold">ブーちゃんがレビューを読み込み中…</p>
-      <p className="text-ink/70">{progress ?? "準備しています…"}</p>
-      <p className="text-sm text-ink/50">レポートの作成には数分かかります。このページを閉じても大丈夫です。</p>
+      <p className="text-lg font-extrabold">{t.progressTitle}</p>
+      <p className="text-ink/70">{progress ?? t.progressFallback}</p>
+      <p className="text-sm text-ink/50">{t.progressHint}</p>
     </div>
   );
 }

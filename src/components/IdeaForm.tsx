@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { COUNTRIES } from "@/lib/countries";
+import { getCountries } from "@/lib/countries";
+import { useI18n } from "./I18nProvider";
+import { localePath } from "@/i18n/paths";
 
 export function IdeaForm({
   loggedIn,
@@ -14,6 +16,9 @@ export function IdeaForm({
   initialIdea?: string;
 }) {
   const router = useRouter();
+  const { locale, dict } = useI18n();
+  const t = dict.ideaForm;
+  const countries = getCountries(locale);
   const [idea, setIdea] = useState(initialIdea);
   const [country, setCountry] = useState("us");
   const [error, setError] = useState("");
@@ -22,33 +27,33 @@ export function IdeaForm({
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
-    const back = `/?idea=${encodeURIComponent(idea)}`;
-    if (!loggedIn) return router.push(`/signup?next=${encodeURIComponent(back)}`);
-    if (credits < 1) return router.push(`/credits?next=${encodeURIComponent(back)}`);
+    const back = localePath(locale, `/?idea=${encodeURIComponent(idea)}`);
+    if (!loggedIn) return router.push(localePath(locale, `/signup?next=${encodeURIComponent(back)}`));
+    if (credits < 1) return router.push(localePath(locale, `/credits?next=${encodeURIComponent(back)}`));
 
     setLoading(true);
     const res = await fetch("/api/reports", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "X-Locale": locale },
       body: JSON.stringify({ idea, country }),
     });
     const data = await res.json();
     if (!res.ok) {
       setLoading(false);
-      if (res.status === 402) return router.push(`/credits?next=${encodeURIComponent(back)}`);
-      return setError(data.error ?? "エラーが発生しました");
+      if (res.status === 402) return router.push(localePath(locale, `/credits?next=${encodeURIComponent(back)}`));
+      return setError(data.error ?? dict.common.genericError);
     }
-    router.push(`/reports/${data.id}`);
+    router.push(localePath(locale, `/reports/${data.id}`));
     router.refresh();
   }
 
   return (
     <form onSubmit={submit} className="card space-y-4 text-left">
       <label className="block">
-        <span className="mb-2 block font-bold">どんなアプリを作りたいですか？</span>
+        <span className="mb-2 block font-bold">{t.label}</span>
         <textarea
           className="input min-h-28 resize-none"
-          placeholder="例：猫のごはんの成分をスキャンして安全か教えてくれるアプリ"
+          placeholder={t.placeholder}
           value={idea}
           onChange={(e) => setIdea(e.target.value)}
           maxLength={300}
@@ -57,24 +62,25 @@ export function IdeaForm({
         />
       </label>
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <select className="input sm:w-auto" value={country} onChange={(e) => setCountry(e.target.value)} aria-label="App Storeの国">
-          {COUNTRIES.map((c) => (
+        <select className="input sm:w-auto" value={country} onChange={(e) => setCountry(e.target.value)} aria-label={t.storeLabel}>
+          {countries.map((c) => (
             <option key={c.code} value={c.code}>
-              {c.label}のApp Store
+              {c.label}
+              {t.storeSuffix}
             </option>
           ))}
         </select>
         <button className="btn-primary flex-1" disabled={loading || idea.trim().length < 5}>
-          {loading ? "ブーちゃん出動中…" : loggedIn && credits > 0 ? `レポートを作成（残り${credits}クレジット）` : "レポートを購入（$5.99）"}
+          {loading ? t.loading : loggedIn && credits > 0 ? t.createWithCredits(credits) : t.buyReport}
         </button>
       </div>
       {error && <p className="text-sm font-bold text-rose-600">{error}</p>}
       <details className="text-sm text-ink/70">
-        <summary className="cursor-pointer font-bold text-oink-600">🐽 上手な書き方のコツ</summary>
+        <summary className="cursor-pointer font-bold text-oink-600">{t.tipsTitle}</summary>
         <ul className="mt-2 list-disc space-y-1 pl-5">
-          <li>アプリは1つだけ書いてください</li>
-          <li>1文で十分です。短いほど正確に競合を見つけられます</li>
-          <li>細かい機能、技術スタック、ビジネスモデルは書かなくてOK</li>
+          {t.tips.map((tip) => (
+            <li key={tip}>{tip}</li>
+          ))}
         </ul>
       </details>
     </form>
