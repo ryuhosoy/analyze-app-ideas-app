@@ -22,10 +22,12 @@ export function Pig({
       aria-label="ブーちゃん"
     >
       {/* 耳 */}
-      <path d="M38 72 C30 38 44 22 58 26 C70 30 78 48 80 62 Z" fill="#FFB3C9" stroke="#E7799C" strokeWidth="4" strokeLinejoin="round" />
-      <path d="M48 62 C45 44 52 36 59 38 C65 41 69 50 70 58 Z" fill="#FF8FB1" />
-      <path d="M162 72 C170 38 156 22 142 26 C130 30 122 48 120 62 Z" fill="#FFB3C9" stroke="#E7799C" strokeWidth="4" strokeLinejoin="round" />
-      <path d="M152 62 C155 44 148 36 141 38 C135 41 131 50 130 58 Z" fill="#FF8FB1" />
+      <g transform="translate(0 5)">
+        <path d="M38 72 C30 38 44 22 58 26 C70 30 78 48 80 62 Z" fill="#FFB3C9" stroke="#E7799C" strokeWidth="4" strokeLinejoin="round" />
+        <path d="M48 62 C45 44 52 36 59 38 C65 41 69 50 70 58 Z" fill="#FF8FB1" />
+        <path d="M162 72 C170 38 156 22 142 26 C130 30 122 48 120 62 Z" fill="#FFB3C9" stroke="#E7799C" strokeWidth="4" strokeLinejoin="round" />
+        <path d="M152 62 C155 44 148 36 141 38 C135 41 131 50 130 58 Z" fill="#FF8FB1" />
+      </g>
 
       {/* 顔 */}
       <ellipse cx="100" cy="112" rx="72" ry="64" fill="#FFC8D8" stroke="#E7799C" strokeWidth="4" />
