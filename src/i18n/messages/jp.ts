@@ -1,3 +1,7 @@
+import { formatUsd, REPORT_PRICE_CENTS } from "@/lib/config";
+
+const reportPrice = formatUsd(REPORT_PRICE_CENTS);
+
 export const jp = {
   meta: {
     title: "作る前にアプリのアイデアを検証しよう",
@@ -42,7 +46,7 @@ export const jp = {
       "🐽 好き・嫌い・課金ポイント・チャンス",
       "🐽 MVPで作るべき機能の提案",
     ],
-    buyReport: "レポートを購入（$5.99）",
+    buyReport: `レポートを購入（${reportPrice}）`,
   },
   ideaForm: {
     label: "どんなアプリを作りたいですか？",
@@ -52,7 +56,7 @@ export const jp = {
     loading: "ブーちゃん出動中…",
     createReport: "レポートを作成",
     creditsBadge: (n: number) => `残り ${n}`,
-    buyReport: "レポートを購入（$5.99）",
+    buyReport: `レポートを購入（${reportPrice}）`,
     tipsTitle: "🐽 上手な書き方のコツ",
     tips: [
       "アプリは1つだけ書いてください",
@@ -81,7 +85,7 @@ export const jp = {
   credits: {
     title: "レポートクレジットを購入",
     subtitle: "1クレジットで競合分析レポートを1件作成できます。",
-    priceNote: "1レポート $5.99・いつでも使える・サブスクなし",
+    priceNote: `1レポート ${reportPrice}・いつでも使える・サブスクなし`,
     balance: "現在のクレジット",
     purchased: (n: string) => `🎉 ${n}クレジットを追加しました！`,
     createReport: "レポートを作成する →",

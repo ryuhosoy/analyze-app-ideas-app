@@ -1,6 +1,6 @@
 export const APP_NAME = "BooScout";
 export const MASCOT_NAME = "ブーちゃん";
-export const REPORT_PRICE_CENTS = 599;
+export const REPORT_PRICE_CENTS = 126;
 export const SUPPORT_MESSAGE_MAX = 240;
 
 export function appUrl(): string {

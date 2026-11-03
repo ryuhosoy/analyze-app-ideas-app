@@ -1,3 +1,7 @@
+import { formatUsd, REPORT_PRICE_CENTS } from "@/lib/config";
+
+const reportPrice = formatUsd(REPORT_PRICE_CENTS);
+
 export const en = {
   meta: {
     title: "Validate your app idea before you build",
@@ -42,7 +46,7 @@ export const en = {
       "🐽 Loves, pains, monetization, opportunities",
       "🐽 MVP feature suggestions",
     ],
-    buyReport: "Buy a report ($5.99)",
+    buyReport: `Buy a report (${reportPrice})`,
   },
   ideaForm: {
     label: "What app do you want to build?",
@@ -52,7 +56,7 @@ export const en = {
     loading: "Boo is on the case…",
     createReport: "Create report",
     creditsBadge: (n: number) => `${n} left`,
-    buyReport: "Buy a report ($5.99)",
+    buyReport: `Buy a report (${reportPrice})`,
     tipsTitle: "🐽 Tips for a great prompt",
     tips: [
       "Describe one app only",
@@ -81,7 +85,7 @@ export const en = {
   credits: {
     title: "Buy report credits",
     subtitle: "One credit creates one competitor analysis report.",
-    priceNote: "$5.99 per report · use anytime · no subscription",
+    priceNote: `${reportPrice} per report · use anytime · no subscription`,
     balance: "Your credits",
     purchased: (n: string) => `🎉 Added ${n} credits!`,
     createReport: "Create a report →",

@@ -5,6 +5,7 @@ import { getExamples } from "@/lib/examples";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { L } from "@/components/I18nProvider";
+import { formatUsd, REPORT_PRICE_CENTS } from "@/lib/config";
 import { notFound } from "next/navigation";
 
 export default async function Home({
@@ -100,7 +101,7 @@ export default async function Home({
         <h2 className="mb-6 text-center text-2xl font-extrabold">{h.pricingTitle}</h2>
         <div className="card mx-auto max-w-md border-oink-300 text-center">
           <p className="font-bold text-oink-600">{h.reportProduct}</p>
-          <p className="my-3 text-5xl font-extrabold">$5.99</p>
+          <p className="my-3 text-5xl font-extrabold">{formatUsd(REPORT_PRICE_CENTS)}</p>
           <p className="text-sm text-ink/60">{h.reportPriceNote}</p>
           <ul className="my-5 space-y-1.5 text-left text-sm">
             {h.reportFeatures.map((line) => (
