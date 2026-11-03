@@ -4,6 +4,7 @@ import { db } from "./db";
 import { APP_NAME, appUrl, REPORT_PRICE_CENTS } from "./config";
 import type { Locale } from "@/i18n/config";
 import { localePath } from "@/i18n/paths";
+import { stripeCheckoutLocale } from "@/i18n/server";
 
 /** Managed Payments: AIaaS (cloud AI report credits) */
 const TAX_CODE_REPORT_CREDIT = "txcd_10105002";
@@ -20,9 +21,19 @@ export async function createCreditsCheckout(
   quantity: number,
   locale: Locale = "jp",
 ): Promise<string> {
+  const stripeLocale = stripeCheckoutLocale(locale);
   const session = await getStripe().checkout.sessions.create({
     mode: "payment",
+    locale: stripeLocale,
     customer_email: email,
+    custom_text: {
+      submit: {
+        message:
+          locale === "en"
+            ? "Credits are added to your account right after payment."
+            : "お支払い完了後、すぐにアカウントへクレジットが付与されます。",
+      },
+    },
     line_items: [
       {
         quantity,
@@ -37,7 +48,7 @@ export async function createCreditsCheckout(
         },
       },
     ],
-    metadata: { kind: "credits", userId, quantity: String(quantity) },
+    metadata: { kind: "credits", userId, quantity: String(quantity), locale },
     success_url: `${appUrl()}/api/checkout/confirm?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${appUrl()}${localePath(locale, "/credits?canceled=1")}`,
   });

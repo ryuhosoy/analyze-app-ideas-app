@@ -31,6 +31,11 @@ export function dateLocale(locale: Locale): string {
   return locale === "en" ? "en-US" : "ja-JP";
 }
 
+/** Stripe Checkout Session の `locale`（アプリの jp → ja） */
+export function stripeCheckoutLocale(locale: Locale): "en" | "ja" {
+  return locale === "en" ? "en" : "ja";
+}
+
 /** Stripe 等の API リダイレクト用 */
 export async function appPath(path: string): Promise<string> {
   const locale = await getLocaleFromCookie();
