@@ -50,7 +50,8 @@ export const en = {
     storeLabel: "App Store country",
     storeSuffix: " App Store",
     loading: "Boo is on the case…",
-    createWithCredits: (n: number) => `Create report (${n} credits left)`,
+    createReport: "Create report",
+    creditsBadge: (n: number) => `${n} left`,
     buyReport: "Buy a report ($5.99)",
     tipsTitle: "🐽 Tips for a great prompt",
     tips: [

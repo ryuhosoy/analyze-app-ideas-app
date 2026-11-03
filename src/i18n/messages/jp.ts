@@ -50,7 +50,8 @@ export const jp = {
     storeLabel: "App Storeの国",
     storeSuffix: "のApp Store",
     loading: "ブーちゃん出動中…",
-    createWithCredits: (n: number) => `レポートを作成（残り${n}クレジット）`,
+    createReport: "レポートを作成",
+    creditsBadge: (n: number) => `残り ${n}`,
     buyReport: "レポートを購入（$5.99）",
     tipsTitle: "🐽 上手な書き方のコツ",
     tips: [

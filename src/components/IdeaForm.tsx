@@ -61,8 +61,8 @@ export function IdeaForm({
           minLength={5}
         />
       </label>
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <select className="input sm:w-auto" value={country} onChange={(e) => setCountry(e.target.value)} aria-label={t.storeLabel}>
+      <div className="flex flex-col gap-3">
+        <select className="input w-full" value={country} onChange={(e) => setCountry(e.target.value)} aria-label={t.storeLabel}>
           {countries.map((c) => (
             <option key={c.code} value={c.code}>
               {c.label}
@@ -70,8 +70,20 @@ export function IdeaForm({
             </option>
           ))}
         </select>
-        <button className="btn-primary flex-1" disabled={loading || idea.trim().length < 5}>
-          {loading ? t.loading : loggedIn && credits > 0 ? t.createWithCredits(credits) : t.buyReport}
+        <button className="btn-primary min-h-11 w-full px-4 py-2.5" disabled={loading || idea.trim().length < 5}>
+          {loading ? (
+            t.loading
+          ) : loggedIn && credits > 0 ? (
+            <span className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap">
+              <span>{t.createReport}</span>
+              <span className="inline-flex items-center gap-1 rounded-full border border-white/35 bg-white/20 px-2.5 py-0.5 text-sm font-extrabold tabular-nums">
+                <span aria-hidden>🪙</span>
+                {t.creditsBadge(credits)}
+              </span>
+            </span>
+          ) : (
+            t.buyReport
+          )}
         </button>
       </div>
       {error && <p className="text-sm font-bold text-rose-600">{error}</p>}
