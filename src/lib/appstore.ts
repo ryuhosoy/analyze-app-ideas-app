@@ -28,21 +28,6 @@ export type Review = {
 const label = (v: unknown): string =>
   v && typeof v === "object" && "label" in v ? String((v as { label: unknown }).label ?? "") : "";
 
-/** App StoreのURLから国コードとアプリIDを取り出す */
-export function parseAppStoreUrl(raw: string): { appId: string; country: string } | null {
-  let url: URL;
-  try {
-    url = new URL(raw.trim());
-  } catch {
-    return null;
-  }
-  if (!/(^|\.)apps?\.apple\.com$|(^|\.)itunes\.apple\.com$/.test(url.hostname)) return null;
-  const appId = url.pathname.match(/id(\d{5,})/)?.[1];
-  if (!appId) return null;
-  const country = url.pathname.match(/^\/([a-z]{2})\//i)?.[1]?.toLowerCase() ?? "us";
-  return { appId, country };
-}
-
 type ItunesResult = {
   trackId: number;
   trackName: string;
@@ -83,13 +68,6 @@ export async function searchApps(term: string, country: string, limit = 15): Pro
   return data.results.map(toAppInfo);
 }
 
-export async function lookupApp(appId: string, country: string): Promise<AppInfo | null> {
-  const res = await fetch(`https://itunes.apple.com/lookup?id=${appId}&country=${country}`, { cache: "no-store" });
-  if (!res.ok) return null;
-  const data = (await res.json()) as { results: ItunesResult[] };
-  return data.results[0] ? toAppInfo(data.results[0]) : null;
-}
-
 /**
  * 公開RSSから最新レビューを取得する（Appleの仕様で国ごと最大10ページ×50件）
  */
@@ -126,17 +104,4 @@ export async function fetchReviews(appId: string, country: string, maxPages = 10
     if (list.length < 50) break;
   }
   return reviews;
-}
-
-export function reviewsToCsv(app: AppInfo | null, reviews: Review[]): string {
-  const esc = (v: string | number) => {
-    const s = String(v);
-    return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
-  };
-  const header = ["app_name", "review_id", "date", "rating", "title", "review", "author", "app_version", "helpful_votes"];
-  const rows = reviews.map((r) =>
-    [app?.name ?? r.appId, r.id, r.date, r.rating, r.title, r.content, r.author, r.version, r.votes].map(esc).join(","),
-  );
-  // ExcelでのUTF-8文字化け対策にBOMを付ける
-  return "﻿" + [header.join(","), ...rows].join("\r\n");
 }

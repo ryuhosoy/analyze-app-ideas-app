@@ -88,9 +88,6 @@ export default async function LocaleLayout({
                 <span>© 2026 {APP_NAME}</span>
               </div>
               <div className="flex flex-wrap justify-center gap-4">
-                <L href="/reviews" className="hover:text-oink-600">
-                  {dict.nav.reviewSheet}
-                </L>
                 <L href="/support" className="hover:text-oink-600">
                   {dict.nav.support}
                 </L>

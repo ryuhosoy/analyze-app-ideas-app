@@ -99,45 +99,17 @@ export default async function Home({
 
       <section id="pricing" className="mx-auto max-w-5xl scroll-mt-20 px-4 py-12">
         <h2 className="mb-6 text-center text-2xl font-extrabold">{h.pricingTitle}</h2>
-        <div className="mx-auto grid max-w-3xl gap-4 md:grid-cols-2">
-          <div className="card border-oink-300 text-center">
-            <p className="font-bold text-oink-600">{h.reportProduct}</p>
-            <p className="my-3 text-5xl font-extrabold">$5.99</p>
-            <p className="text-sm text-ink/60">{h.reportPriceNote}</p>
-            <ul className="my-5 space-y-1.5 text-left text-sm">
-              {h.reportFeatures.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-            <L href="/credits" className="btn-primary w-full">
-              {h.buyReport}
-            </L>
-          </div>
-          <div className="card text-center">
-            <p className="font-bold text-oink-600">{h.sheetProduct}</p>
-            <p className="my-3 text-5xl font-extrabold">$0.99</p>
-            <p className="text-sm text-ink/60">{h.sheetPriceNote}</p>
-            <ul className="my-5 space-y-1.5 text-left text-sm">
-              {h.sheetFeatures.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-            <L href="/reviews" className="btn-secondary w-full">
-              {h.getSheet}
-            </L>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-5xl px-4 py-12">
-        <div className="card flex flex-col items-center gap-6 bg-gradient-to-r from-oink-50 to-white md:flex-row">
-          <Pig size={110} mood="wow" ariaLabel={dict.pigAria} />
-          <div className="flex-1 text-center md:text-left">
-            <h3 className="text-xl font-extrabold">{h.sheetCtaTitle}</h3>
-            <p className="mt-1 text-ink/70">{h.sheetCtaBody}</p>
-          </div>
-          <L href="/reviews" className="btn-primary shrink-0">
-            {h.sheetCtaButton}
+        <div className="card mx-auto max-w-md border-oink-300 text-center">
+          <p className="font-bold text-oink-600">{h.reportProduct}</p>
+          <p className="my-3 text-5xl font-extrabold">$5.99</p>
+          <p className="text-sm text-ink/60">{h.reportPriceNote}</p>
+          <ul className="my-5 space-y-1.5 text-left text-sm">
+            {h.reportFeatures.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+          <L href="/credits" className="btn-primary w-full">
+            {h.buyReport}
           </L>
         </div>
       </section>

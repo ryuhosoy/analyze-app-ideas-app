@@ -13,6 +13,5 @@ export async function GET(req: Request) {
   const result = await fulfillCheckout(session);
   if (result?.kind === "credits")
     return NextResponse.redirect(`${appUrl()}${localePath(locale, `/credits?purchased=${result.quantity}`)}`);
-  if (result?.kind === "spreadsheet") return NextResponse.redirect(`${appUrl()}${localePath(locale, "/reviews/thanks")}`);
   return NextResponse.redirect(`${appUrl()}${localePath(locale, "/credits?canceled=1")}`);
 }
