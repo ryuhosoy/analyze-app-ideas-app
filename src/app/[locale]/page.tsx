@@ -69,8 +69,7 @@ export default async function Home({
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {examples.map((ex) => (
             <L key={ex.slug} href={`/examples/${ex.slug}`} className="card transition hover:-translate-y-1 hover:border-oink-300">
-              <p className="text-4xl">{ex.emoji}</p>
-              <p className="mt-3 font-extrabold">{ex.title}</p>
+              <p className="font-extrabold">{ex.title}</p>
               <p className="mt-1 text-sm text-ink/60">
                 {h.topCompetitor}: {ex.topCompetitor}
               </p>

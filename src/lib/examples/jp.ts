@@ -2,7 +2,6 @@ import type { CompetitorSummary, ReportResult } from "../report-schema";
 
 export type ExampleReport = {
   slug: string;
-  emoji: string;
   title: string;
   idea: string;
   topCompetitor: string;
@@ -35,7 +34,6 @@ const i = (title: string, detail: string, mentions: number, quotes: { appId: str
 export const EXAMPLES: ExampleReport[] = [
   {
     slug: "habit-tracker",
-    emoji: "✅",
     title: "習慣トラッカー",
     idea: "毎日の習慣をワンタップで記録できる、かわいいキャラが励ましてくれる習慣トラッカー",
     topCompetitor: "HabitBloom",
@@ -101,7 +99,6 @@ export const EXAMPLES: ExampleReport[] = [
   },
   {
     slug: "budget-app",
-    emoji: "💰",
     title: "家計簿アプリ",
     idea: "レシートを撮るだけで支出を記録できる、一人暮らし向けのシンプルな家計簿",
     topCompetitor: "CoinNote",
@@ -156,7 +153,6 @@ export const EXAMPLES: ExampleReport[] = [
   },
   {
     slug: "plant-care",
-    emoji: "🪴",
     title: "植物の水やりアプリ",
     idea: "写真から植物を判定して、水やりのタイミングを通知してくれるアプリ",
     topCompetitor: "LeafPal",
@@ -206,7 +202,6 @@ export const EXAMPLES: ExampleReport[] = [
   },
   {
     slug: "vocab-app",
-    emoji: "📚",
     title: "英単語アプリ",
     idea: "1日5分、通勤中に使える英単語の暗記アプリ",
     topCompetitor: "WordDash",

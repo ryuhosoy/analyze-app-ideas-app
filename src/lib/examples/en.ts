@@ -2,7 +2,6 @@ import type { CompetitorSummary, ReportResult } from "../report-schema";
 
 export type ExampleReport = {
   slug: string;
-  emoji: string;
   title: string;
   idea: string;
   topCompetitor: string;
@@ -35,7 +34,6 @@ const i = (title: string, detail: string, mentions: number, quotes: { appId: str
 export const EXAMPLES_EN: ExampleReport[] = [
   {
     slug: "habit-tracker",
-    emoji: "✅",
     title: "Habit tracker",
     idea: "A cute habit tracker with one-tap daily logging and a character that cheers you on",
     topCompetitor: "HabitBloom",
@@ -101,7 +99,6 @@ export const EXAMPLES_EN: ExampleReport[] = [
   },
   {
     slug: "budget-app",
-    emoji: "💰",
     title: "Budget app",
     idea: "A simple budget app for solo living—snap receipts to log spending",
     topCompetitor: "CoinNote",
@@ -156,7 +153,6 @@ export const EXAMPLES_EN: ExampleReport[] = [
   },
   {
     slug: "plant-care",
-    emoji: "🪴",
     title: "Plant care app",
     idea: "Identify plants from photos and get watering reminders",
     topCompetitor: "LeafPal",
@@ -206,7 +202,6 @@ export const EXAMPLES_EN: ExampleReport[] = [
   },
   {
     slug: "vocab-app",
-    emoji: "📚",
     title: "Vocabulary app",
     idea: "Five minutes a day vocabulary drills for your commute",
     topCompetitor: "WordDash",

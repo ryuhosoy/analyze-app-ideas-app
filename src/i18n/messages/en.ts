@@ -22,7 +22,7 @@ export const en = {
       "Detective Boo reads thousands of competitor App Store reviews and summarizes what users love, hate, and pay for.",
     seeSamples: "See samples",
     seePricing: "See pricing",
-    newReportBadge: "✨ New report",
+    newReportBadge: "New report",
     samplesTitle: "Sample reports",
     topCompetitor: "Top competitor",
     viewReport: "View report →",

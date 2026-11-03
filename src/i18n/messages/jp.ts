@@ -22,7 +22,7 @@ export const jp = {
       "探偵のブーちゃんが、競合アプリの何千件ものApp Storeレビューを読み込んで、ユーザーが好きなこと・嫌いなこと・お金を払うポイントをレポートにまとめます。",
     seeSamples: "サンプルを見る",
     seePricing: "料金を見る",
-    newReportBadge: "✨ 新規レポート",
+    newReportBadge: "新規レポート",
     samplesTitle: "サンプルレポートを見る",
     topCompetitor: "トップ競合",
     viewReport: "レポートを見る →",
