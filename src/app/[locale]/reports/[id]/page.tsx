@@ -50,7 +50,8 @@ export default async function ReportPage({ params }: { params: Promise<{ locale:
         <div className="card flex flex-col items-center gap-3 py-12 text-center">
           <Pig size={120} mood="sleepy" ariaLabel={dict.pigAria} />
           <p className="text-lg font-extrabold">{t.failedTitle}</p>
-          <p className="text-sm text-ink/60">{report.error}</p>
+          <p className="text-sm leading-relaxed text-ink/60">{t.failedBusyHint}</p>
+          {report.error && <p className="text-sm text-ink/50">{report.error}</p>}
           <p className="text-sm text-ink/60">{t.creditRefunded}</p>
           <L href={`/?idea=${encodeURIComponent(report.idea)}`} className="btn-primary mt-2">
             {t.retry}
