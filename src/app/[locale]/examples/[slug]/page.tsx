@@ -17,7 +17,7 @@ export default async function ExamplePage({ params }: { params: Promise<{ locale
   const ex = getExample(slug, locale);
   if (!ex) notFound();
   return (
-    <div className="mx-auto max-w-4xl px-4 py-10">
+    <div className="mx-auto w-full min-w-0 max-w-4xl px-4 py-10">
       <div className="mb-4 rounded-2xl bg-amber-50 p-3 text-center text-sm font-bold text-amber-700">{dict.example.banner}</div>
       <ReportView
         idea={ex.idea}

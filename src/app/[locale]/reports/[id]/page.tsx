@@ -33,7 +33,7 @@ export default async function ReportPage({ params }: { params: Promise<{ locale:
   if (!report) notFound();
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-10">
+    <div className="mx-auto w-full min-w-0 max-w-4xl px-4 py-10">
       <L href="/reports" className="mb-4 inline-block text-sm font-bold text-oink-600">
         {t.back}
       </L>

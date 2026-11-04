@@ -100,7 +100,7 @@ function InsightList({
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="card">
+    <section className="card min-w-0">
       <h3 className="mb-4 text-lg font-extrabold">{title}</h3>
       {children}
     </section>
@@ -129,8 +129,12 @@ export function ReportView({
   const notes = new Map(result.competitorNotes.map((n) => [n.appId, n]));
   const competitorsById = new Map(competitors.map((c) => [c.id, c]));
 
+  const competitorCardClass =
+    "min-w-0 max-w-full rounded-2xl border-2 border-oink-100 p-4 [overflow-wrap:anywhere]";
+  const competitorCardLinkClass = `${competitorCardClass} transition hover:border-oink-300`;
+
   return (
-    <div className="space-y-6">
+    <div className="min-w-0 space-y-6">
       <section className="card overflow-hidden !p-0">
         <div className="flex flex-col items-center gap-6 bg-gradient-to-br from-oink-100 to-white p-6 sm:flex-row sm:p-8">
           <div className="relative shrink-0">
@@ -159,27 +163,27 @@ export function ReportView({
       </section>
 
       <Section title={labels.competitors}>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2">
           {competitors.map((c) => {
             const n = notes.get(c.id);
             const inner = (
               <>
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 items-start gap-3">
                   {c.icon ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={c.icon} alt="" className="h-12 w-12 rounded-xl" />
+                    <img src={c.icon} alt="" className="h-12 w-12 shrink-0 rounded-xl" />
                   ) : (
                     <AppIconFallback size="lg" emojiPlaceholder={emojiIconPlaceholder} />
                   )}
-                  <div className="min-w-0">
-                    <p className="truncate font-bold">{c.name}</p>
-                    <p className="text-xs text-ink/60">
+                  <div className="min-w-0 flex-1">
+                    <p className="break-words font-bold leading-snug">{c.name}</p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-ink/60 break-words">
                       ★{c.rating} ({c.ratingCount.toLocaleString()}) · {c.price} · {labels.reviewsAnalyzed(c.reviewsAnalyzed)}
                     </p>
                   </div>
                 </div>
                 {n && (
-                  <div className="mt-3 space-y-1 text-xs">
+                  <div className="mt-3 space-y-1 text-xs break-words leading-relaxed">
                     {n.strengths.length > 0 && (
                       <p>
                         <span className="font-bold text-emerald-600">{labels.strengths}</span> {n.strengths.join(" / ")}
@@ -195,11 +199,11 @@ export function ReportView({
               </>
             );
             return c.url ? (
-              <a key={c.id} href={c.url} target="_blank" rel="noreferrer" className="rounded-2xl border-2 border-oink-100 p-4 transition hover:border-oink-300">
+              <a key={c.id} href={c.url} target="_blank" rel="noreferrer" className={competitorCardLinkClass}>
                 {inner}
               </a>
             ) : (
-              <div key={c.id} className="rounded-2xl border-2 border-oink-100 p-4">
+              <div key={c.id} className={competitorCardClass}>
                 {inner}
               </div>
             );
