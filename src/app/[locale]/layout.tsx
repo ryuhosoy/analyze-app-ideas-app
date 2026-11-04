@@ -3,13 +3,12 @@ import { M_PLUS_Rounded_1c } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Pig } from "@/components/Pig";
 import { getUser } from "@/lib/auth";
-import { LogoutButton } from "@/components/LogoutButton";
+import { SiteHeader } from "@/components/SiteHeader";
 import { APP_NAME } from "@/lib/config";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { htmlLang } from "@/i18n/server";
 import { I18nProvider, L } from "@/components/I18nProvider";
-import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 
 const rounded = M_PLUS_Rounded_1c({
   variable: "--font-rounded",
@@ -46,40 +45,7 @@ export default async function LocaleLayout({
     <html lang={htmlLang(locale)}>
       <body className={`${rounded.variable} antialiased min-h-screen flex flex-col`}>
         <I18nProvider locale={locale}>
-          <header className="sticky top-0 z-20 border-b-2 border-oink-100 bg-white/90 backdrop-blur">
-            <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
-              <L href="/" className="flex items-center gap-2 text-xl font-extrabold text-oink-600">
-                <Pig size={36} ariaLabel={dict.pigAria} />
-                {APP_NAME}
-              </L>
-              <nav className="flex items-center gap-1 text-sm font-bold sm:gap-3">
-                <LocaleSwitcher locale={locale} />
-                {user ? (
-                  <>
-                    <L href="/" className="rounded-full px-3 py-1.5 hover:bg-oink-50">
-                      {dict.nav.newReport}
-                    </L>
-                    <L href="/reports" className="rounded-full px-3 py-1.5 hover:bg-oink-50">
-                      {dict.nav.reports}
-                    </L>
-                    <L href="/credits" className="rounded-full bg-oink-50 px-3 py-1.5 text-oink-700 hover:bg-oink-100">
-                      🪙 {user.credits}
-                    </L>
-                    <LogoutButton />
-                  </>
-                ) : (
-                  <>
-                    <L href="/login" className="rounded-full px-3 py-1.5 hover:bg-oink-50">
-                      {dict.nav.login}
-                    </L>
-                    <L href="/signup" className="btn-primary !px-4 !py-1.5 text-sm">
-                      {dict.nav.signup}
-                    </L>
-                  </>
-                )}
-              </nav>
-            </div>
-          </header>
+          <SiteHeader loggedIn={!!user} credits={user?.credits ?? 0} />
           <main className="flex-1">{children}</main>
           <footer className="mt-16 border-t-2 border-oink-100 bg-white">
             <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-ink/70 sm:flex-row">

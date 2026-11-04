@@ -9,6 +9,9 @@ export const jp = {
   },
   pigAria: "ブーちゃん",
   nav: {
+    mainNav: "メインメニュー",
+    menuOpen: "メニューを開く",
+    menuClose: "メニューを閉じる",
     newReport: "新規レポート",
     reports: "レポート",
     login: "ログイン",

@@ -9,6 +9,9 @@ export const en = {
   },
   pigAria: "Boo the pig",
   nav: {
+    mainNav: "Main navigation",
+    menuOpen: "Open menu",
+    menuClose: "Close menu",
     newReport: "New report",
     reports: "Reports",
     login: "Log in",
