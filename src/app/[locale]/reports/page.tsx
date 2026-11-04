@@ -18,7 +18,9 @@ export default async function ReportsPage({ params }: { params: Promise<{ locale
   const user = await getUser();
   if (!user) redirect(localePath(locale, `/login?next=${encodeURIComponent(localePath(locale, "/reports"))}`));
   const reports = db
-    .prepare("SELECT id, idea, status, review_count, created_at FROM reports WHERE user_id = ? ORDER BY created_at DESC")
+    .prepare(
+      "SELECT id, idea, status, review_count, created_at FROM reports WHERE user_id = ? AND status != 'failed' ORDER BY created_at DESC",
+    )
     .all(user.id) as { id: string; idea: string; status: string; review_count: number; created_at: string }[];
 
   return (
@@ -43,11 +45,7 @@ export default async function ReportsPage({ params }: { params: Promise<{ locale
           {reports.map((r) => {
             const status = t.status[r.status as keyof typeof t.status] ?? r.status;
             const statusCls =
-              r.status === "done"
-                ? "bg-emerald-100 text-emerald-700"
-                : r.status === "failed"
-                  ? "bg-rose-100 text-rose-700"
-                  : "bg-amber-100 text-amber-700";
+              r.status === "done" ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700";
             return (
               <li key={r.id}>
                 <L href={`/reports/${r.id}`} className="card flex items-center justify-between gap-4 !p-5 transition hover:border-oink-300">
