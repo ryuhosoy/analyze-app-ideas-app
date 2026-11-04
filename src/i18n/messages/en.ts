@@ -132,7 +132,7 @@ export const en = {
     love: "What users love",
     avoid: "What to avoid",
     pay: "Willingness to pay",
-    pricingTip: "💡 Suggested pricing",
+    pricingTip: "Suggested pricing",
     features: "Top feature requests",
     opportunities: "Opportunities",
     mvp: "MVP to build first",

@@ -132,7 +132,7 @@ export const jp = {
     love: "ユーザーが気に入っている点",
     avoid: "避けるべき点",
     pay: "お金を払ってくれるポイント",
-    pricingTip: "💡 おすすめの価格戦略",
+    pricingTip: "おすすめの価格戦略",
     features: "要望の多い機能",
     opportunities: "参入チャンス",
     mvp: "最初に作るべきMVP",
