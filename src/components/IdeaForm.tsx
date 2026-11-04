@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getCountries } from "@/lib/countries";
+import { CountrySelect } from "./CountrySelect";
 import { L, useI18n } from "./I18nProvider";
 import { localePath } from "@/i18n/paths";
 
@@ -80,14 +81,13 @@ export function IdeaForm({
         />
       </label>
       <div className="flex flex-col gap-3">
-        <select className="input w-full" value={country} onChange={(e) => setCountry(e.target.value)} aria-label={t.storeLabel}>
-          {countries.map((c) => (
-            <option key={c.code} value={c.code}>
-              {c.label}
-              {t.storeSuffix}
-            </option>
-          ))}
-        </select>
+        <CountrySelect
+          value={country}
+          onChange={setCountry}
+          countries={countries}
+          storeSuffix={t.storeSuffix}
+          ariaLabel={t.storeLabel}
+        />
         <button className="btn-primary min-h-11 w-full px-4 py-2.5" disabled={loading || idea.trim().length < 5}>
           {loading ? (
             t.loading
