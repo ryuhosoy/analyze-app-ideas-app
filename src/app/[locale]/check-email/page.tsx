@@ -1,8 +1,23 @@
+import type { Metadata } from "next";
 import { Pig } from "@/components/Pig";
 import { L } from "@/components/I18nProvider";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) return {};
+  const dict = getDictionary(raw);
+  return pageMetadata({
+    locale: raw,
+    path: "/check-email",
+    title: dict.auth.checkEmailTitle,
+    description: dict.meta.description,
+    index: false,
+  });
+}
 
 export default async function CheckEmailPage({
   params,

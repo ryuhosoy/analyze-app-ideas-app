@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import { APP_NAME } from "@/lib/config";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) return {};
+  const m = getDictionary(raw).meta.privacy;
+  return pageMetadata({ locale: raw, path: "/privacy", title: m.title, description: m.description });
+}
 
 export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: raw } = await params;

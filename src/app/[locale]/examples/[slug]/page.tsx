@@ -1,12 +1,32 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ReportView } from "@/components/ReportView";
 import { getExample, exampleSlugs } from "@/lib/examples";
 import { L } from "@/components/I18nProvider";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return exampleSlugs().flatMap((slug) => [{ slug, locale: "jp" }, { slug, locale: "en" }]);
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { locale: raw, slug } = await params;
+  if (!isLocale(raw)) return {};
+  const ex = getExample(slug, raw);
+  if (!ex) return {};
+  const m = getDictionary(raw).meta.example;
+  return pageMetadata({
+    locale: raw,
+    path: `/examples/${slug}`,
+    title: m.title(ex.title),
+    description: m.description(ex.title),
+  });
 }
 
 export default async function ExamplePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {

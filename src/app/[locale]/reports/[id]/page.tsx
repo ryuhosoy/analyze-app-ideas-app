@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { Pig } from "@/components/Pig";
 import { ReportView } from "@/components/ReportView";
@@ -9,6 +10,24 @@ import { L } from "@/components/I18nProvider";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { localePath } from "@/i18n/paths";
+import { pageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; id: string }>;
+}): Promise<Metadata> {
+  const { locale: raw, id } = await params;
+  if (!isLocale(raw)) return {};
+  const m = getDictionary(raw).meta.reports;
+  return pageMetadata({
+    locale: raw,
+    path: `/reports/${id}`,
+    title: m.title,
+    description: m.description,
+    index: false,
+  });
+}
 
 type Row = {
   id: string;

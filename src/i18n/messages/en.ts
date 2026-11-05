@@ -6,6 +6,39 @@ export const en = {
   meta: {
     title: "Validate your app idea before you build",
     description: "Analyze competitor App Store reviews to validate your app idea before you start building.",
+    login: {
+      title: "Log in",
+      description: "We'll email you a magic login link. Sign in to BooScout with no password.",
+    },
+    signup: {
+      title: "Get started",
+      description: "No password—start BooScout from the link in your email.",
+    },
+    credits: {
+      title: "Buy report credits",
+      description: "One credit creates one competitor analysis report. No subscription—use anytime.",
+    },
+    reports: {
+      title: "Reports",
+      description: "Your competitor analysis reports.",
+    },
+    support: {
+      title: "Support",
+      description: "Contact BooScout support for questions or issues.",
+    },
+    privacy: {
+      title: "Privacy policy",
+      description: "How BooScout handles your personal information.",
+    },
+    terms: {
+      title: "Terms of use",
+      description: "Terms and conditions for using BooScout.",
+    },
+    example: {
+      title: (name: string) => `${name} sample report`,
+      description: (name: string) =>
+        `A sample BooScout report for a ${name} idea, analyzed from real App Store reviews.`,
+    },
   },
   pigAria: "Boo the pig",
   nav: {

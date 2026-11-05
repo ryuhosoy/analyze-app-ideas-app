@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import { Pig } from "@/components/Pig";
 import { SupportForm } from "@/components/SupportForm";
 import { getUser } from "@/lib/auth";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) return {};
+  const m = getDictionary(raw).meta.support;
+  return pageMetadata({ locale: raw, path: "/support", title: m.title, description: m.description });
+}
 
 export default async function SupportPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: raw } = await params;

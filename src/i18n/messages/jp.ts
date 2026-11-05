@@ -6,6 +6,39 @@ export const jp = {
   meta: {
     title: "作る前にアプリのアイデアを検証しよう",
     description: "競合アプリのApp Storeレビューを分析して、あなたのアプリのアイデアを作る前に検証します。",
+    login: {
+      title: "ログイン",
+      description: "メールアドレスにログインリンクを送ります。パスワード不要でBooScoutにサインインできます。",
+    },
+    signup: {
+      title: "はじめる",
+      description: "パスワード不要。メールのリンクからBooScoutをはじめられます。",
+    },
+    credits: {
+      title: "レポートクレジットを購入",
+      description: "1クレジットで競合分析レポートを1件作成。サブスクなし、いつでも使えます。",
+    },
+    reports: {
+      title: "レポート",
+      description: "作成した競合分析レポートの一覧です。",
+    },
+    support: {
+      title: "サポート",
+      description: "BooScoutへのお問い合わせ・サポートはこちらから。",
+    },
+    privacy: {
+      title: "プライバシーポリシー",
+      description: "BooScoutの個人情報の取り扱いについての方針です。",
+    },
+    terms: {
+      title: "利用規約",
+      description: "BooScoutの利用条件を定めた利用規約です。",
+    },
+    example: {
+      title: (name: string) => `${name}のサンプルレポート`,
+      description: (name: string) =>
+        `${name}のアイデアについて、App Storeの実レビューを分析したサンプルレポートです。`,
+    },
   },
   pigAria: "ブーちゃん",
   nav: {

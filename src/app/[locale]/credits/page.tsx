@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Pig } from "@/components/Pig";
 import { BuyCredits } from "@/components/BuyCredits";
 import { getUser } from "@/lib/auth";
@@ -5,7 +6,15 @@ import { isDemoPayments } from "@/lib/config";
 import { L } from "@/components/I18nProvider";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) return {};
+  const m = getDictionary(raw).meta.credits;
+  return pageMetadata({ locale: raw, path: "/credits", title: m.title, description: m.description });
+}
 
 export default async function CreditsPage({
   params,

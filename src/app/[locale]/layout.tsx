@@ -4,11 +4,12 @@ import { notFound } from "next/navigation";
 import { Pig } from "@/components/Pig";
 import { getUser } from "@/lib/auth";
 import { SiteHeader } from "@/components/SiteHeader";
-import { APP_NAME } from "@/lib/config";
+import { APP_NAME, appUrl } from "@/lib/config";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { htmlLang } from "@/i18n/server";
 import { I18nProvider, L } from "@/components/I18nProvider";
+import { localeAlternates } from "@/lib/seo";
 
 const rounded = M_PLUS_Rounded_1c({
   variable: "--font-rounded",
@@ -24,10 +25,33 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: raw } = await params;
   if (!isLocale(raw)) return {};
-  const dict = getDictionary(raw);
+  const locale = raw as Locale;
+  const dict = getDictionary(locale);
+  const title = `${APP_NAME} — ${dict.meta.title}`;
+  const description = dict.meta.description;
+
   return {
-    title: `${APP_NAME} — ${dict.meta.title}`,
-    description: dict.meta.description,
+    metadataBase: new URL(appUrl()),
+    title: {
+      default: title,
+      template: `%s | ${APP_NAME}`,
+    },
+    description,
+    applicationName: APP_NAME,
+    alternates: localeAlternates(locale),
+    openGraph: {
+      type: "website",
+      siteName: APP_NAME,
+      locale: locale === "en" ? "en_US" : "ja_JP",
+      title,
+      description,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+    robots: { index: true, follow: true },
   };
 }
 
